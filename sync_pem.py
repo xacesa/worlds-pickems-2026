@@ -52,7 +52,10 @@ def sections(html):
             for idx, (pos, qid) in enumerate(ordered)}
 
 def first_number(lines, pattern):
-    for value in lines[:18]:
+    for idx, value in enumerate(lines[:18]):
+        # Ignore the rank "1" before the top statistic on PEM.LOL.
+        if idx == 0 and value == "1" and len(lines) > 1 and re.fullmatch(pattern, lines[1]):
+            continue
         if re.fullmatch(pattern, value):
             return float(value.replace(",", "."))
     return None
