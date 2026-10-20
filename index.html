@@ -123,6 +123,13 @@
     .answer-value{font-size:14px;font-weight:750;color:#e5edf1;overflow-wrap:anywhere;line-height:1.3}
     .answer-icon{margin-left:auto;font-weight:900;font-size:18px;color:var(--correct);padding-right:3px}
     .answer.incorrect .answer-icon{color:var(--wrong)}
+    .live-result{margin-top:14px;display:flex;align-items:center;flex-wrap:wrap;gap:7px 12px;border:1px solid #3b5264;background:#112435;border-radius:9px;padding:11px 14px}
+    .live-kicker{color:#d6bd8b;font-size:10px;letter-spacing:1px;font-weight:850;text-transform:uppercase}
+    .live-value{color:#e8e8e1;font-size:13px;font-weight:800}
+    .live-detail{color:#91afbc;font-size:12px}
+    .live-note{font-size:11px;color:#91acaf;margin-left:auto}
+    .live-result.confirmed{border-color:#578371;background:#172f29}
+    .live-result.confirmed .live-kicker{color:#93d5b2}
     .result-editor{margin-top:16px;border-top:1px solid #304458;padding-top:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
     .result-caption{font-size:11px;text-transform:uppercase;color:#bfad87;font-weight:900;letter-spacing:1.1px;min-width:135px}
     .result-editor select,.result-editor input{background:#0a1724;border:1px solid #425a6c;border-radius:8px;color:#e7edf1;padding:10px 12px;height:41px;font-size:13px;outline:none;min-width:225px;max-width:100%}
@@ -154,6 +161,54 @@
     .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
     .toast{position:fixed;bottom:23px;left:50%;transform:translate(-50%,30px);background:#e5c68c;color:#14202b;border-radius:9px;padding:11px 19px;font-size:13px;font-weight:800;z-index:50;box-shadow:0 14px 45px #0008;opacity:0;pointer-events:none;transition:.25s;max-width:calc(100% - 30px);text-align:center}
     .toast.show{opacity:1;transform:translate(-50%,0)}
+
+    .hero-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px;max-width:720px}
+    .showcase-card{position:relative;display:flex;align-items:center;gap:12px;padding:12px 13px;border-radius:14px;border:1px solid #3c5266;background:linear-gradient(145deg,#132230,#0d1926 68%);overflow:hidden;min-height:78px}
+    .showcase-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0%, color-mix(in srgb,var(--accent), transparent 78%), transparent 55%);opacity:.9}
+    .showcase-card > *{position:relative;z-index:1}
+    .showcase-avatar{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-weight:900;color:#08131d;background:var(--accent);box-shadow:0 0 0 1px #ffffff18 inset,0 10px 30px color-mix(in srgb,var(--accent), transparent 78%)}
+    .showcase-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .showcase-copy strong{font-size:14px}
+    .showcase-copy span{font-size:11px;color:#98adba;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .showcase-chip{margin-left:auto;display:inline-flex;align-items:center;gap:8px;border:1px solid #415a6f;border-radius:999px;background:#0d1721;padding:6px 8px 6px 6px;color:#dbe6eb;font-size:11px;font-weight:800;max-width:145px}
+    .showcase-chip img{width:24px;height:24px;border-radius:50%;border:1px solid #7d93a3;object-fit:cover;background:#101820}
+    .showcase-chip .team-mark{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#111c28;border:1px solid #4c6276;font-size:9px}
+    .person-feature{margin-top:14px;display:flex;align-items:center;gap:10px;position:relative;z-index:1;padding-top:13px;border-top:1px solid #2c4152}
+    .feature-visual{width:44px;height:44px;border-radius:12px;overflow:hidden;display:grid;place-items:center;background:#0e1720;border:1px solid #486174;flex:none}
+    .feature-visual img{width:100%;height:100%;object-fit:cover}
+    .feature-team,.feature-player,.feature-stat{font-size:11px;font-weight:900;letter-spacing:.5px;color:#ecf4f7}
+    .feature-team{display:grid;place-items:center;background:linear-gradient(145deg,#182738,#0f1722)}
+    .feature-meta{display:flex;flex-direction:column;gap:3px;min-width:0}
+    .feature-label{font-size:10px;color:#8ea4b3;text-transform:uppercase;letter-spacing:1.2px}
+    .feature-value{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .question-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:100%}
+    .question-card:before{content:"";position:absolute;top:0;right:0;width:200px;height:120px;background:radial-gradient(circle at 100% 0%, #e3bf7633, transparent 65%);pointer-events:none}
+    .question-card[data-cat="Champions"]:before{background:radial-gradient(circle at 100% 0%, #6fc6c744, transparent 60%)}
+    .question-card[data-cat="Profis"]:before{background:radial-gradient(circle at 100% 0%, #ca91ec3d, transparent 60%)}
+    .question-card[data-cat="Teams"]:before{background:radial-gradient(circle at 100% 0%, #f5b27d42, transparent 60%)}
+    .question-topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 0 14px;padding:10px 12px;border-radius:12px;background:#0d1621;border:1px solid #304558}
+    .question-topline strong{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#e2c58d}
+    .question-topline span{font-size:12px;color:#b5c2cb}
+    .questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.answers{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .answer{padding:12px 12px 10px;border-radius:14px;min-height:130px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px;background:linear-gradient(160deg,#152434,#0f1a27 76%)}
+    .answer-media{width:56px;height:56px;border-radius:14px;overflow:hidden;background:#0f1722;border:1px solid #496174;display:grid;place-items:center;flex:none;box-shadow:0 10px 25px #00000020}
+    .answer-media img{width:100%;height:100%;object-fit:cover}
+    .answer-media .team-mark,.answer-media .player-mark,.answer-media .stat-mark{width:100%;height:100%;display:grid;place-items:center;font-size:11px;font-weight:900;color:#edf4f7;background:linear-gradient(145deg,#172536,#0f1722);text-align:center;padding:6px}
+    .answer-media .player-mark{font-size:16px;font-family:Georgia,serif}
+    .answer-main{flex:1;min-width:0;align-items:flex-start;gap:4px;flex-direction:column;width:100%}
+    .answer-label{width:auto;color:#a0b4c0;letter-spacing:1.4px;font-size:10px;text-transform:uppercase;font-weight:900}
+    .answer-value{display:block;white-space:normal;overflow:visible;text-overflow:initial;max-width:100%;font-size:14px;line-height:1.35;font-weight:800}
+    .answer-sub{font-size:11px;color:#7f95a5;margin-top:auto}
+    .answer-icon{position:absolute;top:12px;right:12px;margin-left:0;align-self:auto;font-weight:900}
+    .compare-head{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}.compare-col{padding:7px 10px;border-radius:10px;background:#0b141f;border:1px solid #2b4152;color:#8fa5b4;font-size:10px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;text-align:left}.compare-col strong{display:block;color:#edf4f8;font-size:12px;letter-spacing:0;text-transform:none;margin-top:2px}.live-result{margin-top:12px}
+    .live-media{width:42px;height:42px;border-radius:12px;overflow:hidden;border:1px solid #486274;background:#0d1621;display:grid;place-items:center;flex:none}
+    .live-media img{width:100%;height:100%;object-fit:cover}
+    .live-media .team-mark,.live-media .player-mark,.live-media .stat-mark{width:100%;height:100%;display:grid;place-items:center;font-size:10px;font-weight:900;color:#edf4f7;background:linear-gradient(145deg,#172536,#0f1722);text-align:center;padding:4px}
+    .live-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .live-value{font-size:14px}
+    @media(max-width:1100px){.questions{grid-template-columns:1fr}.answers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:950px){.hero-showcase{grid-template-columns:1fr 1fr 1fr;max-width:none}}
+    @media(max-width:700px){.hero-showcase{grid-template-columns:1fr}.showcase-chip{max-width:none}.questions{grid-template-columns:1fr}.compare-head{display:none}.answers{grid-template-columns:1fr}.answer{gap:10px;min-height:unset;padding-right:40px}.answer-media{width:44px;height:44px}.question-topline{display:block}.question-topline span{display:block;margin-top:5px}}
     @media(max-width:950px){
       .hero{grid-template-columns:1fr .7fr;gap:0;padding-top:62px}.hero-art{transform:scale(.83);transform-origin:center}
       h1{font-size:clamp(61px,8vw,84px)}.container{width:min(1200px,calc(100% - 42px))}
@@ -199,11 +254,12 @@
     <div>
       <div class="eyebrow">League of Legends · World Championship</div>
       <h1 id="hero-title"><span class="soft">WORLDS</span><span class="bright">PICK'EMS.</span></h1>
-      <p class="hero-copy"><strong>Drei Leute. 18 Fragen. Ein Sieger.</strong><br />Die Worlds-Tipps von Judith, Tony und Alex im direkten Vergleich. Wer kennt die Meta, wer vertraut auf den richtigen Spieler und wer hat einfach nur Glück?</p>
+      <p class="hero-copy"><strong>Drei Leute. 18 Fragen. Ein Sieger.</strong><br />Die Worlds-Tipps von Judith, Tony und Alex im kompakten Broadcast-Layout. Mehr Vergleich auf einen Blick, mehr Worlds-Vibe, weniger Scroll-Chaos.</p>
       <div class="hero-actions">
         <button type="button" class="primary-btn" data-scroll="board"><span class="btn-icon">↗</span> ALLE TIPPS ANSEHEN</button>
         <button type="button" class="secondary-btn" id="heroGrading"><span class="btn-icon">◇</span> ERGEBNISSE EINTRAGEN</button>
       </div>
+      <div class="hero-showcase" id="heroShowcase" aria-label="Spieler-Highlights"></div>
     </div>
     <div class="hero-art" aria-hidden="true">
       <div class="orbit orbit-3"></div><div class="orbit"></div><div class="orbit orbit-2"></div>
@@ -222,7 +278,7 @@
   <section id="leaderboard" aria-labelledby="leaderboard-title">
     <div class="section-top">
       <div><p class="section-kicker">The contenders</p><h2 id="leaderboard-title">Das Leaderboard</h2></div>
-      <div class="section-note">Je richtigem Tipp gibt es einen Punkt. Die Auswertung startet, sobald ihr Ergebnisse eintragt.</div>
+      <div class="section-note">Je richtigem Tipp gibt es einen Punkt. Aktuelle Zwischenstände werden angezeigt. Punkte gibt es erst für bestätigte Ergebnisse.</div>
     </div>
     <div class="leaderboard" id="leaderboardCards" aria-live="polite"></div>
   </section>
@@ -251,7 +307,7 @@
     <div class="management-top">
       <div>
         <h3>Pick'em-Auswertung</h3>
-        <p>Trage nach den Spielen die richtigen Antworten ein und die Punkte werden automatisch berechnet. Deine Ergebnisse bleiben in diesem Browser gespeichert. Die zentrale Ergebnisdatei wird beim Öffnen geladen. Solange keine automatische Quelle eingerichtet ist, kannst du Ergebnisse weiterhin selbst eintragen und als JSON exportieren oder importieren. Manuelle Einträge werden nur in deinem Browser gespeichert.</p>
+        <p>Die aktuellen Zwischenstände stammen von PEM.LOL und werden auf dem veröffentlichten Projekt täglich abgeglichen. Solange ein Ergebnis noch nicht endgültig feststeht, gibt es dafür keine Punkte. Bestätigte Resultate gelten für alle Besucher. Eigene manuelle Einträge bleiben nur in diesem Browser gespeichert.</p>
       </div>
       <div class="manage-actions">
         <button type="button" class="small-btn" id="syncBtn">↻ Synchronisieren</button>
@@ -266,13 +322,13 @@
       <span id="syncDot" class="sync-dot" aria-hidden="true"></span>
       <div class="sync-copy">
         <span id="syncStatus" class="sync-title">Ergebnisse werden geprüft …</span>
-        <span id="syncDescription" class="sync-caption">Die automatische Datenquelle wird vorbereitet.</span>
+        <span id="syncDescription" class="sync-caption">Gemeinsame Live-Daten werden geladen.</span>
       </div>
       <a class="sync-source" id="syncSource" href="#" target="_blank" rel="noopener noreferrer" hidden>Ergebnisquelle ansehen ↗</a>
     </div>
   </section>
 </main>
-<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Ergebnisse werden nur übernommen, wenn eine Datenquelle eingerichtet wurde.</div></div></footer>
+<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Punkte nur für bestätigte Resultate.</div></div></footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
 "use strict";
@@ -300,10 +356,37 @@
   ];
   const PLAYERS=[{name:"Judith",initial:"J",color:"var(--judith)"},{name:"Tony",initial:"T",color:"var(--tony)"},{name:"Alex",initial:"A",color:"var(--alex)"}];
   const CATEGORIES=["Alle","Champions","Profis","Rekorde","Turnier","Teams"];
+  const CHAMPION_IDS={Cassiopeia:"Cassiopeia",Qiyana:"Qiyana",Vi:"Vi",Camille:"Camille","Lee Sin":"LeeSin",Yone:"Yone",Rell:"Rell",Nautilus:"Nautilus",Teemo:"Teemo",Nocturne:"Nocturne","K'Sante":"KSante"};
+  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#ff7a33"},"T1":{abbr:"T1",color:"#ef4444"},"Gen.G":{abbr:"GEN",color:"#cfaa57"},"G2 Esports":{abbr:"G2",color:"#d5b25f"},"Team Liquid":{abbr:"TL",color:"#5fa8ff"}};
+  const PLAYER_META={Judith:{headline:"Meta read",feature:"Cassiopeia"},Tony:{headline:"Dark horse",feature:"Lee Sin"},Alex:{headline:"Bold calls",feature:"Peyz"},Knight:{team:"MID"},"Hans Sama":{team:"ADC"},Peyz:{team:"ADC"},Viper:{team:"ADC"},Duro:{team:"SUP"},Delight:{team:"SUP"},Tarzan:{team:"JGL"},Gumayusi:{team:"ADC"},Faker:{team:"MID"}};
+
   const STORE_KEY="worlds2026-private-pickems-v1";
   const $ = (selector) => document.querySelector(selector);
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
   const clean = (value) => String(value??"").trim().toLocaleLowerCase("de").replace(/\s+/g," ").replace(/[.]/g,"").replace(/[–—−]/g,"-").replace(/^ad[ -]?carry$/,"adc").replace(/^mid[ -]?lane$/,"mid lane");
+  const initialsOf=(value)=>String(value||"").split(/\s+/).filter(Boolean).slice(0,2).map(v=>v[0]).join("").toUpperCase() || "?";
+  const hashColor=(value)=>{const palette=["#c08d3d","#6fc6c7","#ca91ec","#f5b27d","#77c5ed","#a0d48a"];let n=0;for(const ch of String(value))n=(n+ch.charCodeAt(0))%palette.length;return palette[n]};
+  const champUrl=(name)=>{const id=CHAMPION_IDS[name];return id?`https://ddragon.leagueoflegends.com/cdn/15.20.1/img/champion/${id}.png`:""};
+  const classifyValue=(value, q)=>{
+    const raw=String(value||"").trim();
+    const low=clean(raw);
+    const champ=champUrl(raw);
+    if(champ) return {type:"champion",label:"Champion",image:champ,sub:q.cat};
+    if(TEAM_META[raw]) return {type:"team",label:"Team",abbr:TEAM_META[raw].abbr,color:TEAM_META[raw].color,sub:q.cat};
+    if(["ja","nein","vor","nach","gleichstand","noch offen"].includes(low) || /^\d/.test(raw)) return {type:"stat",label:"Stat",abbr:raw.replace(/\s+/g," "),sub:q.cat};
+    return {type:"player",label:"Pro",abbr:initialsOf(raw),sub:PLAYER_META[raw]?.team||q.cat};
+  };
+  const visualMarkup=(meta, cls="answer-media")=>{
+    if(meta.type==="champion") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.label)}" loading="lazy" /></span>`;
+    if(meta.type==="team") return `<span class="${cls}"><span class="team-mark" style="box-shadow:inset 0 0 0 1px #ffffff10;background:linear-gradient(145deg, ${meta.color}22, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
+    if(meta.type==="player") return `<span class="${cls}"><span class="player-mark" style="background:linear-gradient(145deg, ${hashColor(meta.abbr)}33, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
+    return `<span class="${cls}"><span class="stat-mark">${escapeHTML(meta.abbr.length>6?meta.abbr.slice(0,6):meta.abbr)}</span></span>`;
+  };
+  const signaturePick=(playerIndex)=>{
+    const firstInteresting = QUESTIONS.find(q=>q.p[playerIndex] && !/^(Ja|Nein|Vor|Nach|\d)/i.test(q.p[playerIndex]));
+    return firstInteresting ? {value:firstInteresting.p[playerIndex], question:firstInteresting.title, cat:firstInteresting.cat} : {value:QUESTIONS[0].p[playerIndex], question:QUESTIONS[0].title, cat:QUESTIONS[0].cat};
+  };
+
   function baseState(){return {results:{}}}
   function loadState(){try {const data=JSON.parse(localStorage.getItem(STORE_KEY) || "null");return sanitizeState(data)}catch{return baseState()}}
   function sanitizeState(data){
@@ -312,7 +395,7 @@
     }
     return {results};
   }
-  let state=loadState(); let sharedResults={}; let sharedUpdatedAt=null; let sharedSourceUrl=null; let category="Alle";let onlyDifferent=false;let query="";let grading=false;let toastTimer;const customOpen=new Set();
+  let state=loadState(); let sharedResults={}; let sharedLive={}; let sharedUpdatedAt=null; let sharedSourceUrl=null; let category="Alle";let onlyDifferent=false;let query="";let grading=false;let toastTimer;const customOpen=new Set();
   const byId=(id)=>QUESTIONS.find(q=>q.id===Number(id));
   const uniquePicks=(q)=>[...new Map(q.p.map(p=>[clean(p),p])).values()];
   const unanimous=(q)=>uniquePicks(q).length===1;
@@ -326,12 +409,18 @@
     $("#statQuestions").textContent=QUESTIONS.length;
     $("#statAgreement").textContent=QUESTIONS.filter(unanimous).length;
     $("#statGraded").textContent=`${count}/${QUESTIONS.length}`;
-    $("#leaderboardCards").innerHTML=PLAYERS.map((p,i)=>`
+    $("#leaderboardCards").innerHTML=PLAYERS.map((p,i)=>{
+      const sig=signaturePick(i);
+      const meta=classifyValue(sig.value,{cat:sig.cat});
+      return `
       <article class="person" style="--accent:${p.color}" data-initial="${p.initial}">
-        <div class="person-head"><div class="avatar" aria-hidden="true">${p.initial}</div><div><div class="person-name">${p.name}</div><div class="person-id">PLAYER 0${i+1}</div></div></div>
+        <div class="person-head"><div class="avatar" aria-hidden="true">${p.initial}</div><div><div class="person-name">${p.name}</div><div class="person-id">PLAYER 0${i+1} · ${escapeHTML(PLAYER_META[p.name]?.headline || "Pick\'em Player")}</div></div></div>
         <div class="score-row"><div class="score-line"><strong>${score(i)}</strong><small>${score(i)===1?"Punkt":"Punkte"}</small></div><div class="score-hint">${count?`von ${count} ausgewerteten`:"Noch keine Auswertung"}</div></div>
         <div class="progress" role="progressbar" aria-label="${p.name}: richtige Tipps" aria-valuemin="0" aria-valuemax="${count}" aria-valuenow="${score(i)}"><span style="width:${count?score(i)/count*100:0}%"></span></div>
-      </article>`).join("");
+        <div class="person-feature">${visualMarkup(meta,'feature-visual')}<div class="feature-meta"><span class="feature-label">Signature Pick</span><span class="feature-value">${escapeHTML(sig.value)}</span></div></div>
+      </article>`}).join("");
+    const showcase=$("#heroShowcase");
+    if(showcase) showcase.innerHTML=PLAYERS.map((p,i)=>{const sig=signaturePick(i);const meta=classifyValue(sig.value,{cat:sig.cat});return `<div class="showcase-card" style="--accent:${p.color}"><div class="showcase-avatar">${p.initial}</div><div class="showcase-copy"><strong>${p.name}</strong><span>${escapeHTML(PLAYER_META[p.name]?.headline || "Worlds Pick\'em")}</span></div><div class="showcase-chip">${meta.type==='champion' && meta.image?`<img src="${meta.image}" alt="" loading="lazy" />`:`<span class="team-mark">${escapeHTML(meta.abbr || initialsOf(sig.value))}</span>`}<span>${escapeHTML(sig.value)}</span></div></div>`}).join("");
   }
   function renderTabs(){
     $("#categoryTabs").innerHTML=CATEGORIES.map(cat=>{
@@ -339,13 +428,15 @@
       return `<button type="button" class="tab ${category===cat?"active":""}" data-category="${cat}" aria-pressed="${category===cat}">${cat}<span class="count">${n}</span></button>`;
     }).join("");
   }
-  function renderAnswer(p,index,result){
+  function renderAnswer(p,index,result,q){
     const same = result && clean(p)===clean(result);
     const wrong = result && !same;
     const person=PLAYERS[index];
-    return `<div class="answer ${same?"correct":wrong?"incorrect":""}" style="--accent:${person.color}" aria-label="${person.name}: ${escapeHTML(p)}${result?same?", richtig":", falsch":""}">
+    const meta=classifyValue(p,q);
+    return `<div class="answer ${same?"correct":wrong?"incorrect":""}" style="--accent:${person.color};position:relative" aria-label="${person.name}: ${escapeHTML(p)}${result?same?", richtig":", falsch":""}">
       <div class="answer-person" aria-hidden="true">${person.initial}</div>
-      <div class="answer-main"><span class="answer-label">${person.name}</span><span class="answer-value">${escapeHTML(p)}</span></div>
+      ${visualMarkup(meta)}
+      <div class="answer-main"><span class="answer-label">${person.name}</span><span class="answer-value">${escapeHTML(p)}</span><span class="answer-sub">${escapeHTML(meta.sub || q.cat)}</span></div>
       ${result?`<div class="answer-icon" aria-hidden="true">${same?"✓":"×"}</div>`:""}
     </div>`;
   }
@@ -369,11 +460,16 @@
     const result=effectiveResult(q.id);
     const different=uniquePicks(q).length;
     const badge=different===1?"Alle einig":different===2?"2 gleiche Tipps":"3 verschiedene Tipps";
-    return `<article class="question-card ${result?"graded":""}" id="frage-${q.id}">
+    const leadValue=sharedLive[q.id]?.value || q.p[0];
+    const liveMeta=classifyValue(leadValue,q);
+    return `<article class="question-card ${result?"graded":""}" data-cat="${escapeHTML(q.cat)}" id="frage-${q.id}">
       <div class="q-upper"><div class="q-info"><span class="q-number">${String(q.id).padStart(2,"0")}</span><span class="q-tag">${escapeHTML(q.cat)}</span></div><span class="agreement ${different===1?"unanimous":""}">${badge}</span></div>
       <h3 class="question-title">${escapeHTML(q.title)}</h3>
       ${q.sub?`<div class="question-subtitle">${escapeHTML(q.sub)}</div>`:""}
-      <div class="answers">${q.p.map((p,i)=>renderAnswer(p,i,result)).join("")}</div>
+      <div class="question-topline"><strong>${sharedLive[q.id]? (sharedResults[q.id]? 'Bestätigtes Ergebnis' : 'Aktueller Favorit / Zwischenstand') : 'Pick-Fokus'}</strong><span>${escapeHTML(sharedLive[q.id]?.value || uniquePicks(q)[0])}</span></div>
+      <div class="compare-head">${PLAYERS.map((p,idx)=>`<div class="compare-col"><span>${p.initial}</span><strong>${p.name}</strong></div>`).join("")}</div>
+      <div class="answers">${q.p.map((p,i)=>renderAnswer(p,i,result,q)).join("")}</div>
+      ${sharedLive[q.id]?`<div class="live-result ${sharedResults[q.id]?"confirmed":""}">${visualMarkup(liveMeta,'live-media')}<div class="live-copy"><span class="live-kicker">${sharedResults[q.id]?"✓ Bestätigt":"◉ Aktueller Zwischenstand"}</span><span class="live-value">${escapeHTML(sharedLive[q.id].value)}</span>${sharedLive[q.id].detail?`<span class="live-detail">${escapeHTML(sharedLive[q.id].detail)}</span>`:""}</div>${!sharedResults[q.id]?'<span class="live-note">Noch keine Punkte vergeben</span>':""}</div>`:""}
       ${grading?editorMarkup(q,result):result?`<div class="result-editor"><span class="result-caption">Ergebnis</span><span class="saved-tag">✓ ${escapeHTML(result)}</span></div>`:""}
     </article>`;
   }
@@ -413,22 +509,28 @@
       const next={};
       for(const q of QUESTIONS){const value=data.results[q.id];if(typeof value==="string" && value.trim())next[q.id]=value.trim().slice(0,160)}
       sharedResults=next;
+      const latest={};
+      if(data.live && typeof data.live === "object" && !Array.isArray(data.live)){
+        for(const q of QUESTIONS){const rec=data.live[q.id];if(rec && typeof rec.value === "string" && rec.value.trim())latest[q.id]={value:rec.value.slice(0,160),detail:typeof rec.detail === "string"?rec.detail.slice(0,160):""};}
+      }
+      sharedLive=latest;
       sharedUpdatedAt=typeof data.updatedAt==="string"?data.updatedAt:null;
       sharedSourceUrl=typeof data.sourceUrl==="string" && /^https:\/\//i.test(data.sourceUrl)?data.sourceUrl:null;
       const n=Object.keys(next).length;
-      if(n){
-        status.textContent=`${n} zentrale Ergebnisse geladen`;
+      const observed=Object.keys(latest).length;
+      if(n || observed){
+        status.textContent=`${observed} Zwischenstände · ${n} finale Ergebnisse`;
         dot.classList.add("connected");
         detail.textContent=sharedUpdatedAt?"Zuletzt aktualisiert: "+new Date(sharedUpdatedAt).toLocaleString("de-DE",{dateStyle:"medium",timeStyle:"short"}):"Zentrale Ergebnisdatei geladen.";
       }else{
-        status.textContent="Synchronisierung bereit";
-        detail.textContent="Noch keine Ergebnisquelle verbunden. Manuelle Auswertung bleibt möglich.";
+        status.textContent="Synchronisierung eingerichtet";
+        detail.textContent="Noch keine Daten eingelesen. Der tägliche Abruf startet nach Veröffentlichung via GitHub Actions.";
         dot.classList.remove("connected");
       }
       link.hidden=!sharedSourceUrl;
       if(sharedSourceUrl)link.href=sharedSourceUrl;
       renderAll();
-      if(notify)showToast(n?`${n} Ergebnisse aktualisiert.`:"Noch keine zentralen Ergebnisse vorhanden.");
+      if(notify)showToast(observed?`${observed} Zwischenstände aktualisiert.`:"Noch keine zentralen Ergebnisse vorhanden.");
     }catch(error){
       status.textContent="Keine zentrale Ergebnisdatei erreichbar";
       detail.textContent=location.protocol==="file:"?"Lokale Vorschau: Auf dem Hosting kann die gemeinsame Datei geladen werden.":"Manuelle Auswertung bleibt verfügbar. Bitte später erneut versuchen.";
