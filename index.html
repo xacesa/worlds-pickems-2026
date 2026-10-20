@@ -144,7 +144,7 @@
     .management h3{margin:0 0 5px;font-family:Georgia,serif;font-size:24px;font-weight:500;color:#e7d7b6}
     .management p{font-size:12px;max-width:645px;color:#9aadba;margin:0;line-height:1.7}
     .manage-actions{display:flex;flex-wrap:wrap;gap:8px}
-    .small-btn{padding:10px 13px;font-size:11px;font-weight:800;border-radius:8px;color:#d2e0e5;background:#1c2f40;border:1px solid #436078}
+    .small-btn{padding:10px 13px;font-size:11px;font-weight:800;border-radius:2px;color:#d2e0e5;background:#1c2f40;border:1px solid #436078;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
     .small-btn:hover{border-color:#e0bb7a;color:#f4ddae}
     .small-btn.danger{color:#db9b9f;border-color:#785054;background:#291d2a}
     .sync-panel{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;padding:13px 14px;border:1px solid #355164;border-radius:10px;background:#0b1a27}
@@ -233,15 +233,15 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
     /* WORLDS 2026 EDITION / BROADCAST REDESIGN */
-    :root {--bg:#060910;--surface:#101824;--surface2:#142130;--border:#344351;--gold:#e7c17a;--gold-bright:#f4dcaa;--teal:#5fc8d3;--text:#f0f1ed;--muted:#91a3b3;--judith:#cb9cea;--tony:#5fc8d3;--alex:#f3ae68}
-    html{background:#070c14}
-    body{background:#070c14;color:#edf0ef;font-family:Inter,Arial,"Segoe UI",sans-serif}
-    .ambient{background:radial-gradient(ellipse 70% 45% at 50% 0%,#1648581f,transparent),linear-gradient(180deg,#070c14 0%,#090f1a 55%,#080b12 100%)}
+    :root {--bg:#08111d;--surface:#0d1726;--surface2:#122031;--border:#304558;--gold:#c6a15f;--gold-bright:#ead8ae;--teal:#68c8cf;--bronze:#86643a;--text:#eff2ef;--muted:#90a1b4;--judith:#8db7ff;--tony:#68c8cf;--alex:#d7ad6c}
+    html{background:#08111d}
+    body{background:#08111d;color:#edf0ef;font-family:Inter,Arial,"Segoe UI",sans-serif}
+    .ambient{background:radial-gradient(ellipse 70% 45% at 50% 0%,#11344733,transparent),linear-gradient(180deg,#08111d 0%,#0a1220 55%,#08101b 100%)}
     .ambient:after{opacity:.09;background-size:40px 40px}
     .container{width:min(1500px,calc(100% - 72px))}
     .topbar{height:75px;background:#060b14f5;border-bottom:1px solid #ab89543e}
     .topbar:after{content:"";position:absolute;bottom:-2px;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#d6ae64 50%,transparent);opacity:.45}
-    .brand-mark{border:none;clip-path:none;width:44px;height:44px;color:#ebce94;background:conic-gradient(from 45deg,#0a1724,#1c3442,#0a1724);border-radius:50%;font-family:Georgia,serif;font-size:29px;box-shadow:0 0 0 1px #ac8653 inset}
+    .brand-mark{border:none;clip-path:none;width:52px;height:52px;color:#ebce94;background:linear-gradient(145deg,#0b1522,#122538 60%,#0b1522);border-radius:0;display:grid;place-items:center;box-shadow:0 0 0 1px #ac8653 inset}.brand-mark svg{width:38px;height:38px;display:block}.brand-mark .wm-gold{fill:#e9d7ad}.brand-mark .wm-line{fill:#6ac8ce}
     .brand-text strong{font-size:16px;letter-spacing:2.7px}
     .brand-text span{letter-spacing:2px}
     .navlink{border-radius:0;letter-spacing:.7px;text-transform:uppercase;font-size:11px;padding:13px 18px}
@@ -325,7 +325,7 @@
     .answer:hover{border-color:#7d969b}
     .answer-person{display:none}
     .answer-media{width:49px;height:49px;flex:none;border-radius:2px;border:1px solid #7a8e81;background:#192a37;box-shadow:none}
-    .answer-media img{object-fit:cover}
+    .answer-media img{object-fit:cover;background:#0f1823}.answer-media .team-mark,.answer-media .player-mark,.answer-media .stat-mark,.live-media .team-mark,.live-media .player-mark,.live-media .stat-mark,.feature-visual .team-mark,.feature-visual .player-mark,.feature-visual .stat-mark{display:grid}
     .answer-main{flex:1;display:flex;flex-direction:column;gap:3px;width:auto;min-width:0}
     .answer-label{display:none}
     .answer-value{font-size:13px;font-weight:850;color:#f2f1ec;line-height:1.35;overflow-wrap:anywhere;white-space:normal;max-width:100%}
@@ -400,13 +400,13 @@
 <header class="topbar">
   <div class="container topbar-inner">
     <a href="#start" class="brand" aria-label="Zur Startseite">
-      <span class="brand-mark" aria-hidden="true">W</span>
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path class="wm-gold" d="M32 4 56 18 56 46 32 60 8 46 8 18Z" opacity=".18"/><path class="wm-gold" d="M16 18h8l8 18 8-18h8L34 48h-4z"/><path class="wm-line" d="M12 50h40v4H12z"/></svg></span>
       <span class="brand-text"><strong>WORLDS 2026</strong><span>Private Pick'ems</span></span>
     </a>
     <nav class="topnav" aria-label="Hauptnavigation">
       <button type="button" class="navlink active" data-scroll="start">Übersicht</button>
-      <button type="button" class="navlink" data-scroll="leaderboard">Leaderboard</button>
       <button type="button" class="navlink" data-scroll="board">Alle Tipps</button>
+      <button type="button" class="navlink" data-scroll="management">Live-Tracker</button>
     </nav>
     <span class="head-label">JUDITH &nbsp;VS&nbsp; TONY &nbsp;VS&nbsp; ALEX</span>
   </div>
@@ -418,8 +418,8 @@
       <div class="hero-large-year" aria-hidden="true">2026</div>
       <h1 id="hero-title"><span class="worlds-word">WORLDS</span><span class="headline-accent">PICK<span class="light-accent">’EM</span></span></h1>
       <div class="hero-rule"><span>◆</span><span>JUDITH</span><i></i><span>TONY</span><i></i><span>ALEX</span><span>◆</span></div>
-      <p class="hero-copy">18 Prognosen. Drei Konkurrenten. <strong>Ein Champion.</strong><br />Eure Worlds-Tipps und das Leaderboard in der Turnierübersicht.</p>
-      <div class="hero-actions"><button type="button" class="primary-btn" data-scroll="board"><span class="btn-icon">↗</span> TIPPS VERGLEICHEN</button><button type="button" class="secondary-btn" id="heroGrading"><span class="btn-icon">◇</span> ERGEBNISSE EINTRAGEN</button></div>
+      <p class="hero-copy">18 Prognosen. Drei Picks pro Frage. <strong>Ein kompakter Worlds-Vergleich.</strong><br />Im Stil der offiziellen Pick'Em-Seite – ohne Punkte, ohne spätere Auswertung, nur eure Tipps und der aktuelle Turnier-Track.</p>
+      <div class="hero-actions"><button type="button" class="primary-btn" data-scroll="board"><span class="btn-icon">↗</span> TIPPS VERGLEICHEN</button><button type="button" class="secondary-btn" data-scroll="management"><span class="btn-icon">◇</span> LIVE-TRACKER</button></div>
     </div>
     <div class="hero-art champ-stage" aria-hidden="true">
       <span class="stage-halo halo-one"></span><span class="stage-halo halo-two"></span>
@@ -432,16 +432,8 @@
   </section>
   <section class="quickstats" aria-label="Pick'em Statistiken">
     <div class="stat"><div class="stat-number" id="statQuestions">18</div><div class="stat-text">Fragen<br />insgesamt</div></div>
-    <div class="stat"><div class="stat-number" id="statAgreement">6</div><div class="stat-text">Mal sind<br />alle einer Meinung</div></div>
-    <div class="stat"><div class="stat-number" id="statGraded">0/18</div><div class="stat-text">Fragen<br />ausgewertet</div></div>
-  </section>
-
-  <section id="leaderboard" aria-labelledby="leaderboard-title">
-    <div class="section-top">
-      <div><p class="section-kicker">The contenders</p><h2 id="leaderboard-title">Das Leaderboard</h2></div>
-      <div class="section-note">Je richtigem Tipp gibt es einen Punkt. Aktuelle Zwischenstände werden angezeigt. Punkte gibt es erst für bestätigte Ergebnisse.</div>
-    </div>
-    <div class="leaderboard" id="leaderboardCards" aria-live="polite"></div>
+    <div class="stat"><div class="stat-number" id="statAgreement">6</div><div class="stat-text">Fragen mit<br />gleichen Tipps</div></div>
+    <div class="stat"><div class="stat-number" id="statGraded">0</div><div class="stat-text">Live-Fragen<br />mit Daten</div></div>
   </section>
 
   <section id="board" class="board" aria-labelledby="board-title">
@@ -464,19 +456,15 @@
     <div class="questions" id="questionList" aria-live="polite"></div>
   </section>
 
-  <section id="management" class="management" aria-label="Auswertung verwalten">
+  <section id="management" class="management" aria-label="Live-Tracker">
     <div class="management-top">
       <div>
-        <h3>Pick'em-Auswertung</h3>
-        <p>Die aktuellen Zwischenstände stammen von PEM.LOL und werden auf dem veröffentlichten Projekt täglich abgeglichen. Solange ein Ergebnis noch nicht endgültig feststeht, gibt es dafür keine Punkte. Bestätigte Resultate gelten für alle Besucher. Eigene manuelle Einträge bleiben nur in diesem Browser gespeichert.</p>
+        <h3>Live-Tracker</h3>
+        <p>Die Seite konzentriert sich jetzt komplett auf <strong>eure Picks im offiziellen Worlds-Look</strong>. Ein klassisches Leaderboard und das manuelle Punkte-Eintragen wurden entfernt, weil die finale Auswertung erst nach den Worlds sinnvoll ist. Unten siehst du nur den Live-Status und die Quelle.</p>
       </div>
       <div class="manage-actions">
         <button type="button" class="small-btn" id="syncBtn">↻ Synchronisieren</button>
-        <button type="button" class="small-btn" id="toggleGrading">Ergebnisse eintragen</button>
-        <button type="button" class="small-btn" id="exportBtn">↓ Export</button>
-        <button type="button" class="small-btn" id="importBtn">↑ Import</button>
-        <button type="button" class="small-btn danger" id="resetBtn">Zurücksetzen</button>
-        <input type="file" id="importFile" accept="application/json,.json" class="sr-only" />
+        <a class="small-btn" href="https://pem.lol/worlds/2026/pickems" target="_blank" rel="noopener noreferrer">PEM.LOL öffnen ↗</a>
       </div>
     </div>
     <div class="sync-panel" aria-live="polite">
@@ -489,7 +477,7 @@
     </div>
   </section>
 </main>
-<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Punkte nur für bestätigte Resultate.</div></div></footer>
+<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Design angelehnt an die offizielle LoL Worlds Pick'Em-Präsentation. Spielerfotos: Riot/Liquipedia und RFT.GG. Bildrechte verbleiben bei den jeweiligen Rechteinhabern; falls ein Bild nicht erreichbar ist, erscheint ein Avatar.</div></div></footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
 "use strict";
@@ -518,8 +506,27 @@
   const PLAYERS=[{name:"Judith",initial:"J",color:"var(--judith)"},{name:"Tony",initial:"T",color:"var(--tony)"},{name:"Alex",initial:"A",color:"var(--alex)"}];
   const CATEGORIES=["Alle","Champions","Profis","Rekorde","Turnier","Teams"];
   const CHAMPION_IDS={Cassiopeia:"Cassiopeia",Qiyana:"Qiyana",Vi:"Vi",Camille:"Camille","Lee Sin":"LeeSin",Yone:"Yone",Rell:"Rell",Nautilus:"Nautilus",Teemo:"Teemo",Nocturne:"Nocturne","K'Sante":"KSante"};
-  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#ff7a33"},"T1":{abbr:"T1",color:"#ef4444"},"Gen.G":{abbr:"GEN",color:"#cfaa57"},"G2 Esports":{abbr:"G2",color:"#d5b25f"},"Team Liquid":{abbr:"TL",color:"#5fa8ff"}};
-  const PLAYER_META={Judith:{headline:"Meta read",feature:"Cassiopeia"},Tony:{headline:"Dark horse",feature:"Lee Sin"},Alex:{headline:"Bold calls",feature:"Peyz"},Knight:{team:"MID"},"Hans Sama":{team:"ADC"},Peyz:{team:"ADC"},Viper:{team:"ADC"},Duro:{team:"SUP"},Delight:{team:"SUP"},Tarzan:{team:"JGL"},Gumayusi:{team:"ADC"},Faker:{team:"MID"}};
+  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#f47c30",logo:"https://logo.clearbit.com/hanwha.com"},"T1":{abbr:"T1",color:"#ef4444",logo:"https://logo.clearbit.com/t1.gg"},"Gen.G":{abbr:"GEN",color:"#cfaa57",logo:"https://logo.clearbit.com/geng.gg"},"G2 Esports":{abbr:"G2",color:"#d5b25f",logo:"https://logo.clearbit.com/g2esports.com"},"Team Liquid":{abbr:"TL",color:"#5fa8ff",logo:"https://logo.clearbit.com/teamliquid.com"},"Cloud9":{abbr:"C9",color:"#5ba9ff",logo:"https://logo.clearbit.com/cloud9.gg"},"Karmine Corp":{abbr:"KC",color:"#5a8cff",logo:"https://logo.clearbit.com/karminecorp.fr"},"FURIA":{abbr:"FUR",color:"#d1d5db",logo:"https://logo.clearbit.com/furia.gg"}};
+  const avatarFor=(name,bg="0d1726",fg="ead8ae")=>`https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=${bg}&color=${fg}&size=128&rounded=true&bold=true`;
+  const liqPhoto=(file)=>`https://liquipedia.net/commons/Special:Redirect/file/${encodeURIComponent(file)}`;
+  const PLAYER_META={
+    Judith:{},Tony:{},Alex:{},
+    Knight:{team:"MID",teamName:"Bilibili Gaming",image:liqPhoto("BLG knight Worlds 2024.jpg")},
+    "Hans Sama":{team:"ADC",teamName:"G2 Esports",image:liqPhoto("G2 Hans Sama LEC Spring 2024.jpg")},
+    Peyz:{team:"ADC",teamName:"T1",image:liqPhoto("Gen.G Peyz Worlds 2024.jpg")},
+    Viper:{team:"ADC",teamName:"Bilibili Gaming",image:liqPhoto("HLE Viper Worlds 2024.jpg")},
+    Duro:{team:"SUP",teamName:"Gen.G",image:liqPhoto("GEN Duro LCK Cup 2025.jpg")},
+    Delight:{team:"SUP",teamName:"Hanwha Life Esports",image:liqPhoto("HLE First Stand 2025.jpg")},
+    Tarzan:{team:"JGL",teamName:"Anyone's Legend",image:liqPhoto("AL Tarzan at Worlds 2025.jpg")},
+    Gumayusi:{team:"ADC",teamName:"T1",image:liqPhoto("T1 Gumayusi Worlds 2024.jpg")},
+    Faker:{team:"MID",teamName:"T1",image:liqPhoto("T1 Faker Worlds 2024.jpg")},
+    // Static photos only; no automated crawling/scraping of RFT.GG.
+    // A player avatar is used when the external portrait is unavailable.
+    Caliste:{team:"ADC",teamName:"Karmine Corp",image:"https://uploads.rft.gg/images/esport/players/caliste.webp",fallback:avatarFor("Caliste"),source:"https://rft.gg/player/609-caliste"},
+    Tactical:{team:"ADC",teamName:"Cloud9",image:"https://uploads.rft.gg/images/esport/players/tactical.webp",fallback:avatarFor("Tactical"),source:"https://cloud9.gg/players/edward-ra/"},
+    JoJo:{team:"SUP",teamName:"FURIA",image:"https://uploads.rft.gg/images/esport/players/jojo-gabriel-dzelme.webp",fallback:avatarFor("JoJo"),source:"https://rft.gg/player/850-jojo-gabriel-dzelme/career"},
+    Ayu:{team:"ADC",teamName:"FURIA",image:"https://uploads.rft.gg/images/esport/players/ayu.webp",fallback:avatarFor("Ayu"),source:"https://rft.gg/player/849-ayu/matches"}
+  };
 
   const STORE_KEY="worlds2026-private-pickems-v1";
   const $ = (selector) => document.querySelector(selector);
@@ -532,15 +539,15 @@
     const raw=String(value||"").trim();
     const low=clean(raw);
     const champ=champUrl(raw);
-    if(champ) return {type:"champion",label:"Champion",image:champ,sub:q.cat};
-    if(TEAM_META[raw]) return {type:"team",label:"Team",abbr:TEAM_META[raw].abbr,color:TEAM_META[raw].color,sub:q.cat};
-    if(["ja","nein","vor","nach","gleichstand","noch offen"].includes(low) || /^\d/.test(raw)) return {type:"stat",label:"Stat",abbr:raw.replace(/\s+/g," "),sub:q.cat};
-    return {type:"player",label:"Pro",abbr:initialsOf(raw),sub:PLAYER_META[raw]?.team||q.cat};
+    if(champ) return {type:"champion",label:"Champion",image:champ,sub:q.cat,name:raw};
+    if(TEAM_META[raw]) return {type:"team",label:"Team",abbr:TEAM_META[raw].abbr,color:TEAM_META[raw].color,logo:TEAM_META[raw].logo,sub:q.cat,name:raw};
+    if(["ja","nein","vor","nach","gleichstand","noch offen"].includes(low) || /^\d/.test(raw)) return {type:"stat",label:"Stat",abbr:raw.replace(/\s+/g," "),sub:q.cat,name:raw};
+    return {type:"player",label:"Pro",abbr:initialsOf(raw),sub:PLAYER_META[raw]?.team||q.cat,image:PLAYER_META[raw]?.image||avatarFor(raw),fallback:PLAYER_META[raw]?.fallback||"",teamName:PLAYER_META[raw]?.teamName||"",name:raw};
   };
   const visualMarkup=(meta, cls="answer-media")=>{
-    if(meta.type==="champion") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.label)}" loading="lazy" /></span>`;
-    if(meta.type==="team") return `<span class="${cls}"><span class="team-mark" style="box-shadow:inset 0 0 0 1px #ffffff10;background:linear-gradient(145deg, ${meta.color}22, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
-    if(meta.type==="player") return `<span class="${cls}"><span class="player-mark" style="background:linear-gradient(145deg, ${hashColor(meta.abbr)}33, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
+    if(meta.type==="champion") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.name)}" loading="lazy" /></span>`;
+    if(meta.type==="team") return `<span class="${cls}">${meta.logo?`<img src="${meta.logo}" alt="${escapeHTML(meta.name)} Logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />`:""}<span class="team-mark" style="display:${meta.logo?"none":"grid"};box-shadow:inset 0 0 0 1px #ffffff10;background:linear-gradient(145deg, ${meta.color}22, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
+    if(meta.type==="player") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.name)} Portrait" loading="lazy" ${meta.fallback?`data-fallback="${meta.fallback}"`:""} onerror="if(this.dataset.fallback){const url=this.dataset.fallback;delete this.dataset.fallback;this.src=url;}else{this.style.display='none';this.nextElementSibling.style.display='grid'}" /><span class="player-mark" style="display:none;background:linear-gradient(145deg, ${hashColor(meta.abbr)}33, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
     return `<span class="${cls}"><span class="stat-mark">${escapeHTML(meta.abbr.length>6?meta.abbr.slice(0,6):meta.abbr)}</span></span>`;
   };
   const signaturePick=(playerIndex)=>{
@@ -566,22 +573,10 @@
   const persist=()=>{try{localStorage.setItem(STORE_KEY,JSON.stringify(state))}catch{showToast("Der Browser konnte die Daten nicht speichern.")}};
   function showToast(message){const el=$("#toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
   function renderScores(){
-    const count=gradedCount();
+    const liveCount=Object.keys(sharedLive).length;
     $("#statQuestions").textContent=QUESTIONS.length;
     $("#statAgreement").textContent=QUESTIONS.filter(unanimous).length;
-    $("#statGraded").textContent=`${count}/${QUESTIONS.length}`;
-    $("#leaderboardCards").innerHTML=PLAYERS.map((p,i)=>{
-      const sig=signaturePick(i);
-      const meta=classifyValue(sig.value,{cat:sig.cat});
-      return `
-      <article class="person" style="--accent:${p.color}" data-initial="${p.initial}">
-        <div class="person-head"><div class="avatar" aria-hidden="true">${p.initial}</div><div><div class="person-name">${p.name}</div><div class="person-id">PLAYER 0${i+1} · ${escapeHTML(PLAYER_META[p.name]?.headline || "Pick\'em Player")}</div></div></div>
-        <div class="score-row"><div class="score-line"><strong>${score(i)}</strong><small>${score(i)===1?"Punkt":"Punkte"}</small></div><div class="score-hint">${count?`von ${count} ausgewerteten`:"Noch keine Auswertung"}</div></div>
-        <div class="progress" role="progressbar" aria-label="${p.name}: richtige Tipps" aria-valuemin="0" aria-valuemax="${count}" aria-valuenow="${score(i)}"><span style="width:${count?score(i)/count*100:0}%"></span></div>
-        <div class="person-feature">${visualMarkup(meta,'feature-visual')}<div class="feature-meta"><span class="feature-label">Signature Pick</span><span class="feature-value">${escapeHTML(sig.value)}</span></div></div>
-      </article>`}).join("");
-    const showcase=$("#heroShowcase");
-    if(showcase) showcase.innerHTML=PLAYERS.map((p,i)=>{const sig=signaturePick(i);const meta=classifyValue(sig.value,{cat:sig.cat});return `<div class="showcase-card" style="--accent:${p.color}"><div class="showcase-avatar">${p.initial}</div><div class="showcase-copy"><strong>${p.name}</strong><span>${escapeHTML(PLAYER_META[p.name]?.headline || "Worlds Pick\'em")}</span></div><div class="showcase-chip">${meta.type==='champion' && meta.image?`<img src="${meta.image}" alt="" loading="lazy" />`:`<span class="team-mark">${escapeHTML(meta.abbr || initialsOf(sig.value))}</span>`}<span>${escapeHTML(sig.value)}</span></div></div>`}).join("");
+    $("#statGraded").textContent=liveCount;
   }
   function renderTabs(){
     $("#categoryTabs").innerHTML=CATEGORIES.map(cat=>{
@@ -618,7 +613,7 @@
     </div>`;
   }
   function cardMarkup(q){
-    const result=effectiveResult(q.id);
+    const result="";
     const different=uniquePicks(q).length;
     const badge=different===1?"ALLE EINIG":different===2?"2 GLEICHE TIPPS":"3 VERSCHIEDENE TIPPS";
     const live=sharedLive[q.id];
@@ -633,8 +628,8 @@
       <div class="q-comparison">
         <div class="compare-head">${PLAYERS.map((p,i)=>`<div class="compare-col" style="--accent:${p.color}"><span class="compare-dot"></span>${p.name}</div>`).join("")}</div>
         <div class="answers">${q.p.map((pick,i)=>renderAnswer(pick,i,result,q)).join("")}</div>
-        ${live?`<div class="live-result ${sharedResults[q.id]?"confirmed":""}">${visualMarkup(meta,"live-media")}<div class="live-copy"><span class="live-kicker">${sharedResults[q.id]?"✓ BESTÄTIGT":"● LIVE-ZWISCHENSTAND"}</span><span class="live-value">${escapeHTML(live.value)}</span>${live.detail?`<span class="live-detail">${escapeHTML(live.detail)}</span>`:""}</div>${!sharedResults[q.id]?'<span class="live-note">NOCH KEINE PUNKTE</span>':""}</div>`:""}
-        ${grading?editorMarkup(q,result):result?`<div class="result-editor"><span class="result-caption">ERGEBNIS</span><span class="saved-tag">✓ ${escapeHTML(result)}</span></div>`:""}
+        ${live?`<div class="live-result ${sharedResults[q.id]?"confirmed":""}">${visualMarkup(meta,"live-media")}<div class="live-copy"><span class="live-kicker">${sharedResults[q.id]?"✓ BESTÄTIGT":"● LIVE-ZWISCHENSTAND"}</span><span class="live-value">${escapeHTML(live.value)}</span>${live.detail?`<span class="live-detail">${escapeHTML(live.detail)}</span>`:""}</div>${!sharedResults[q.id]?'<span class="live-note">NOCH NICHT FINAL</span>':""}</div>`:""}
+        
       </div>
     </article>`;
   }
@@ -644,7 +639,7 @@
     $("#resultCount").textContent=`${matches.length} von ${QUESTIONS.length} Fragen`;
     $("#questionList").innerHTML=matches.length?matches.map(cardMarkup).join(""):'<div class="empty-state"><strong>Keine Treffer gefunden</strong>Versuch es mit einem anderen Suchbegriff oder Filter.</div>';
   }
-  function renderAll(){renderScores();renderTabs();renderQuestions();$("#toggleGrading").textContent=grading?"Auswertung schließen":"Ergebnisse eintragen";$("#heroGrading").innerHTML=grading?'<span class="btn-icon">✓</span> AUSWERTUNG SCHLIESSEN':'<span class="btn-icon">◇</span> ERGEBNISSE EINTRAGEN';}
+  function renderAll(){renderScores();renderTabs();renderQuestions();}
   function updateResult(id,val){
     const q=byId(id);if(!q)return;
     if(sharedResults[q.id]){showToast("Dieses Ergebnis kommt aus der gemeinsamen Auswertung.");return;}
@@ -684,7 +679,7 @@
       const n=Object.keys(next).length;
       const observed=Object.keys(latest).length;
       if(n || observed){
-        status.textContent=`${observed} Zwischenstände · ${n} finale Ergebnisse`;
+        status.textContent=`${observed} Zwischenstände · ${n} bestätigte Antworten`;
         dot.classList.add("connected");
         detail.textContent=sharedUpdatedAt?"Zuletzt aktualisiert: "+new Date(sharedUpdatedAt).toLocaleString("de-DE",{dateStyle:"medium",timeStyle:"short"}):"Zentrale Ergebnisdatei geladen.";
       }else{
@@ -697,7 +692,7 @@
       renderAll();
       if(notify)showToast(observed?`${observed} Zwischenstände aktualisiert.`:"Noch keine zentralen Ergebnisse vorhanden.");
     }catch(error){
-      status.textContent="Keine zentrale Ergebnisdatei erreichbar";
+      status.textContent="Live-Daten aktuell nicht erreichbar";
       detail.textContent=location.protocol==="file:"?"Lokale Vorschau: Auf dem Hosting kann die gemeinsame Datei geladen werden.":"Manuelle Auswertung bleibt verfügbar. Bitte später erneut versuchen.";
       dot.classList.remove("connected");link.hidden=true;
       if(notify)showToast("Synchronisierung derzeit nicht erreichbar.");
@@ -709,8 +704,8 @@
   });
   $("#searchInput").addEventListener("input",e=>{query=e.target.value;renderQuestions()});
   $("#differentOnly").addEventListener("change",e=>{onlyDifferent=e.target.checked;renderQuestions()});
-  $("#toggleGrading").addEventListener("click",toggleGrading);
-  $("#heroGrading").addEventListener("click",toggleGrading);
+  $("#toggleGrading")?.addEventListener("click",toggleGrading);
+  $("#heroGrading")?.addEventListener("click",toggleGrading);
   $("#questionList").addEventListener("change",e=>{
     const sel=e.target.closest("[data-result-select]");
     if(sel){
@@ -728,11 +723,11 @@
   $("#questionList").addEventListener("focusout",e=>{
     if(e.target.matches("[data-result-custom]"))updateResult(e.target.dataset.resultCustom,e.target.value);
   });
-  $("#exportBtn").addEventListener("click",exportData);
-  $("#importBtn").addEventListener("click",()=>$("#importFile").click());
-  $("#importFile").addEventListener("change",e=>{if(e.target.files[0])importData(e.target.files[0])});
-  $("#resetBtn").addEventListener("click",reset);
-  $("#syncBtn").addEventListener("click",()=>refreshRemote(true));
+  $("#exportBtn")?.addEventListener("click",exportData);
+  $("#importBtn")?.addEventListener("click",()=>$("#importFile")?.click());
+  $("#importFile")?.addEventListener("change",e=>{if(e.target.files[0])importData(e.target.files[0])});
+  $("#resetBtn")?.addEventListener("click",reset);
+  $("#syncBtn")?.addEventListener("click",()=>refreshRemote(true));
   renderAll();
   refreshRemote(false);
   // Prüft während eines offenen Tabs auf aktualisierte zentrale Dateien. Die
