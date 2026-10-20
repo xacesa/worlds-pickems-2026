@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090f17" />
+  <meta name="description" content="Die privaten League of Legends Worlds 2026 Pick'ems von Judith, Tony und Alex." />
+  <title>Worlds 2026 · Unsere Pick'ems</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230c1723'/%3E%3Cpath d='M12 17 19 47h9l4-17 4 17h9l7-30h-8l-4 19-4-19h-8l-4 19-4-19Z' fill='%23d4ac62'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg:#080e16; --surface:#101b29; --surface2:#142234; --border:#2b3d50;
+      --text:#e8edf1; --muted:#8c9aa8; --gold:#dbb875; --gold-bright:#f0d4a0;
+      --teal:#6fc6c7; --judith:#ca91ec; --tony:#77c5ed; --alex:#f5b27d;
+      --correct:#93dfb9; --wrong:#e78d91;
+      --radius:19px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit}
+    ::selection{background:#ab874b;color:#07131c}
+    .ambient{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 80% 45% at 83% -5%,#294d5c58,transparent 68%),radial-gradient(ellipse 55% 37% at 0% 25%,#77602d14,transparent 65%),linear-gradient(180deg,#0a131f 0%,#080e16 55%,#09101a 100%)}
+    .ambient:after{content:"";position:absolute;inset:0;opacity:.25;background-image:linear-gradient(#7891ac0c 1px,transparent 1px),linear-gradient(90deg,#7891ac0c 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(180deg,#000,transparent 75%)}
+    .container{width:min(1200px,calc(100% - 64px));margin:0 auto}
+    .topbar{height:84px;border-bottom:1px solid #49617b33;background:#0a121de8;backdrop-filter:blur(18px);position:relative;z-index:10}
+    .topbar-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+    .brand-mark{height:42px;width:42px;border:1px solid #bf9864;background:linear-gradient(145deg,#172a38,#0b121b);display:grid;place-items:center;clip-path:polygon(50% 0,94% 24%,94% 75%,50% 100%,6% 75%,6% 24%);color:var(--gold-bright);font-family:Georgia,serif;font-weight:bold;font-size:27px;line-height:1}
+    .brand-text{display:flex;flex-direction:column;line-height:1.15;gap:4px}
+    .brand-text strong{font-size:14px;letter-spacing:2.4px;color:#f3dcac}
+    .brand-text span{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#91a3b5}
+    .topnav{display:flex;gap:9px;align-items:center}
+    .navlink{background:none;border:none;color:#9cabb8;font-size:13px;font-weight:700;padding:11px 16px;border-radius:9px;transition:.2s}
+    .navlink:hover,.navlink.active{color:#f2d9a9;background:#1e2f3d}
+    .head-label{border:1px solid #6f6249;color:#d5b77b;background:#d6aa5811;padding:9px 15px;border-radius:30px;font-size:10px;font-weight:850;letter-spacing:1.6px;white-space:nowrap}
+    .hero{padding:78px 0 47px;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+    .eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:3px;font-weight:900;text-transform:uppercase;color:var(--gold)}
+    .eyebrow:before{content:"";height:1px;width:28px;background:var(--gold)}
+    h1{font-family:Georgia,"Times New Roman",serif;line-height:1.035;font-weight:500;letter-spacing:-3px;font-size:clamp(64px,7vw,100px);margin:23px 0 16px}
+    h1 .soft{display:block;color:#d9edf4}
+    h1 .bright{display:block;color:var(--gold);text-shadow:0 4px 45px #d5af6214}
+    .hero-copy{max-width:470px;font-size:16px;color:#a9b6c2;line-height:1.7;margin:0 0 28px}
+    .hero-copy strong{color:#e6f1f2;font-weight:700}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+    .primary-btn,.secondary-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:13px 19px;min-height:46px;font-size:12px;font-weight:850;letter-spacing:.45px;border:1px solid transparent;transition:transform .15s,background .15s,border-color .15s}
+    .primary-btn{background:linear-gradient(135deg,#e9cc91,#b89453);color:#111b24;border-color:#f1d8a0;box-shadow:0 7px 25px #e1b96b18}
+    .primary-btn:hover,.secondary-btn:hover{transform:translateY(-2px)}
+    .secondary-btn{color:#d6dfe7;background:#142231;border-color:#405268}
+    .secondary-btn:hover{border-color:#a08a66;background:#1a2b3a}
+    .btn-icon{font-size:18px;line-height:1}
+    .hero-art{height:325px;position:relative;display:grid;place-items:center;isolation:isolate}
+    .hero-art:before{content:"";width:290px;height:290px;position:absolute;border-radius:50%;background:radial-gradient(circle,#36788a26 10%,#b7983d0a 50%,transparent 75%);filter:blur(9px)}
+    .orbit{position:absolute;width:309px;height:309px;border:1px solid #bca4785a;border-radius:50%;transform:rotate(-21deg)}
+    .orbit:before,.orbit:after{content:"";position:absolute;background:#e8cd92;width:6px;height:6px;border-radius:50%;box-shadow:0 0 18px #e8cd92}
+    .orbit:before{top:46px;left:46px}.orbit:after{bottom:52px;right:43px}
+    .orbit-2{width:238px;height:238px;border-color:#648b9952;transform:rotate(31deg)}
+    .orbit-3{width:360px;height:360px;border-color:#57778923;border-style:dashed;transform:rotate(16deg)}
+    .diamond-core{position:relative;width:225px;height:225px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:linear-gradient(135deg,#a47b42,#eed6a3 23%,#314e5a 47%,#bda06c 80%,#9b763d);display:grid;place-items:center;filter:drop-shadow(0 0 25px #b69b6f)}
+    .diamond-inner{width:218px;height:218px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:radial-gradient(ellipse at 50% 25%,#234257,#0c1824 68%);display:grid;place-items:center}
+    .diamond-text{font-family:Georgia,serif;font-weight:700;font-size:118px;line-height:1;color:#e7cd9a;text-shadow:0 6px 0 #795d3e,0 0 35px #e6c9883d;transform:translateY(-4px)}
+    .art-label{position:absolute;bottom:-13px;left:50%;transform:translateX(-50%);font-size:10px;white-space:nowrap;letter-spacing:4px;font-weight:800;color:#bfa578}
+    .spark{position:absolute;color:#bdcfd1;opacity:.7;font-size:19px}.spark.a{left:6%;top:19%}.spark.b{right:6%;bottom:16%}.spark.c{right:21%;top:5%;font-size:11px}
+    .quickstats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#45536462;border:1px solid #3b4d60;border-radius:15px;overflow:hidden;margin:20px 0 65px}
+    .stat{padding:22px 29px;background:#0e1925;display:flex;align-items:center;gap:20px}
+    .stat-number{font-family:Georgia,serif;font-size:36px;color:#f0d59f;line-height:1}
+    .stat-text{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#92a4b3;font-weight:900;line-height:1.55}
+    .section-top{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:23px}
+    .section-kicker{font-size:10px;letter-spacing:2.7px;text-transform:uppercase;color:var(--teal);font-weight:850;margin:0 0 9px}
+    h2{margin:0;font-family:Georgia,serif;font-size:35px;letter-spacing:-.8px;font-weight:500;color:#f3eee5;line-height:1.15}
+    .section-note{color:var(--muted);font-size:13px;max-width:390px;text-align:right}
+    .leaderboard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:61px}
+    .person{position:relative;background:linear-gradient(153deg,#172b3b,#0e1927 70%);border:1px solid #354e60;border-radius:16px;padding:23px 24px 20px;overflow:hidden;min-height:178px}
+    .person:before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent)}
+    .person:after{content:attr(data-initial);position:absolute;right:19px;top:-35px;font-family:Georgia,serif;font-size:151px;font-weight:bold;opacity:.075;color:var(--accent);pointer-events:none}
+    .person-head{display:flex;align-items:center;gap:13px;position:relative;z-index:1}
+    .avatar{flex:none;width:50px;height:50px;border-radius:12px;display:grid;place-items:center;color:#09131e;font-family:Georgia,serif;font-size:25px;font-weight:700;background:var(--accent);box-shadow:0 4px 25px color-mix(in srgb,var(--accent),transparent 82%)}
+    .person-name{font-size:21px;font-weight:750;letter-spacing:-.35px;line-height:1.15}
+    .person-id{font-size:10px;color:#8299aa;text-transform:uppercase;letter-spacing:2px;font-weight:800;margin-top:6px}
+    .score-row{display:flex;align-items:end;justify-content:space-between;margin:19px 0 13px;position:relative;z-index:1}
+    .score-line strong{font-size:31px;line-height:1;font-family:Georgia,serif;font-weight:500;color:#f8eedb}
+    .score-line small{font-size:12px;color:#9aafbd;margin-left:7px}
+    .score-hint{font-size:11px;color:#8398a7}
+    .progress{height:5px;width:100%;border-radius:30px;background:#263a4c;overflow:hidden;position:relative;z-index:1}
+    .progress span{display:block;width:0;height:100%;background:var(--accent);border-radius:30px;transition:width .3s}
+    .board{scroll-margin-top:30px}
+    .board-controls{padding:20px;background:#101c2a;border:1px solid #334759;border-radius:15px;margin-bottom:19px}
+    .filter-line{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px}
+    .tab{border:1px solid transparent;background:transparent;color:#90a2b2;font-size:12px;font-weight:800;border-radius:9px;padding:10px 14px;transition:.2s;white-space:nowrap}
+    .tab:hover{color:#edf4f5;border-color:#405467}
+    .tab.active{background:#d8b774;color:#111d26;border-color:#d8b774}
+    .tab .count{font-weight:650;font-size:10px;opacity:.8;padding-left:4px}
+    .toolbar{display:flex;gap:10px;align-items:center;margin-top:17px;flex-wrap:wrap;border-top:1px solid #2a3e50;padding-top:16px}
+    .search{height:42px;min-width:180px;flex:1;max-width:390px;position:relative}
+    .search input{width:100%;height:100%;padding:9px 12px 9px 39px;border:1px solid #34495a;border-radius:9px;color:#e1e8ed;background:#0a1521;outline:none;font-size:13px}
+    .search input:focus{border-color:#cda96a;box-shadow:0 0 0 3px #cda96a18}
+    .search svg{position:absolute;top:13px;left:13px;color:#869bac}
+    .toggle{border:1px solid #3a5062;background:#0d1925;color:#a8b8c6;border-radius:9px;min-height:42px;padding:9px 13px;display:flex;align-items:center;gap:10px;font-size:12px;font-weight:750;user-select:none}
+    .toggle input{accent-color:#d7b777;width:16px;height:16px;margin:0;cursor:pointer}
+    .result-count{font-size:11px;font-weight:750;color:#879cab;margin-left:auto;white-space:nowrap}
+    .questions{display:flex;flex-direction:column;gap:13px}
+    .question-card{background:linear-gradient(110deg,#101c29,#111e2c);border:1px solid #314456;border-radius:15px;padding:22px 25px 19px;transition:border-color .2s,transform .2s;scroll-margin-top:30px}
+    .question-card:hover{border-color:#67717a}
+    .question-card.graded{border-color:#5e806e}
+    .q-upper{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:11px}
+    .q-info{display:flex;align-items:center;gap:10px;min-width:0}
+    .q-number{font-family:Georgia,serif;font-size:23px;color:#dcb777;line-height:1;min-width:40px;font-variant-numeric:tabular-nums}
+    .q-tag{font-size:9px;text-transform:uppercase;letter-spacing:1.65px;font-weight:900;padding:5px 9px;border:1px solid #4a6370;color:#94c6c7;border-radius:5px;white-space:nowrap}
+    .agreement{font-size:10px;color:#a5b5c0;background:#233140;padding:5px 9px;border-radius:5px;white-space:nowrap}
+    .agreement.unanimous{color:#e6cc9c;background:#4b3c2659}
+    .question-title{font-size:15px;font-weight:700;color:#e6edf0;line-height:1.48;margin:0 0 16px;max-width:960px}
+    .question-subtitle{font-size:12px;color:#7fa2ab;font-weight:600;margin-top:-9px;margin-bottom:15px}
+    .answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+    .answer{position:relative;min-height:65px;border:1px solid #2d4254;background:#091522;border-radius:10px;display:flex;align-items:center;padding:10px 12px;gap:11px;min-width:0;transition:.2s}
+    .answer.correct{border-color:#4d9476;background:#1b3933}
+    .answer.incorrect{border-color:#66383c;background:#261e28}
+    .answer-person{width:31px;height:31px;border-radius:8px;flex:none;display:grid;place-items:center;font-size:13px;font-weight:900;color:#0d1722;background:var(--accent)}
+    .answer-main{min-width:0;display:flex;flex-direction:column;gap:2px}
+    .answer-label{font-size:9px;font-weight:850;letter-spacing:1.25px;color:#7897a9;text-transform:uppercase;line-height:1}
+    .answer-value{font-size:14px;font-weight:750;color:#e5edf1;overflow-wrap:anywhere;line-height:1.3}
+    .answer-icon{margin-left:auto;font-weight:900;font-size:18px;color:var(--correct);padding-right:3px}
+    .answer.incorrect .answer-icon{color:var(--wrong)}
+    .result-editor{margin-top:16px;border-top:1px solid #304458;padding-top:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .result-caption{font-size:11px;text-transform:uppercase;color:#bfad87;font-weight:900;letter-spacing:1.1px;min-width:135px}
+    .result-editor select,.result-editor input{background:#0a1724;border:1px solid #425a6c;border-radius:8px;color:#e7edf1;padding:10px 12px;height:41px;font-size:13px;outline:none;min-width:225px;max-width:100%}
+    .result-editor select:focus,.result-editor input:focus{border-color:#dcb879}
+    .result-editor input{min-width:220px;flex:1}
+    .saved-tag{font-size:11px;color:#93d2b6;font-weight:650}
+    .grading-hint{font-size:11px;color:#8fa6ad;max-width:500px}
+    .empty-state{border:1px dashed #4b6478;border-radius:14px;text-align:center;padding:55px 24px;color:#a1b0bc;background:#121f2c}
+    .empty-state strong{display:block;font-size:18px;color:#ece8db;margin-bottom:8px}
+    .management{scroll-margin-top:25px;margin:57px 0 38px;padding:25px 27px;border:1px solid #344c60;border-radius:15px;background:linear-gradient(115deg,#162637,#0d1b29)}
+    .management-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .management h3{margin:0 0 5px;font-family:Georgia,serif;font-size:24px;font-weight:500;color:#e7d7b6}
+    .management p{font-size:12px;max-width:645px;color:#9aadba;margin:0;line-height:1.7}
+    .manage-actions{display:flex;flex-wrap:wrap;gap:8px}
+    .small-btn{padding:10px 13px;font-size:11px;font-weight:800;border-radius:8px;color:#d2e0e5;background:#1c2f40;border:1px solid #436078}
+    .small-btn:hover{border-color:#e0bb7a;color:#f4ddae}
+    .small-btn.danger{color:#db9b9f;border-color:#785054;background:#291d2a}
+    .sync-panel{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;padding:13px 14px;border:1px solid #355164;border-radius:10px;background:#0b1a27}
+    .sync-dot{width:9px;height:9px;flex:none;border-radius:50%;background:#899da9;box-shadow:0 0 0 4px #899da91c}
+    .sync-dot.connected{background:#93dfb9;box-shadow:0 0 0 4px #93dfb925}
+    .sync-copy{display:flex;flex-direction:column;gap:3px;min-width:210px;flex:1}
+    .sync-title{font-size:12px;font-weight:750;color:#d8e8ec}
+    .sync-caption{font-size:11px;color:#91a6b5;line-height:1.5}
+    .sync-source{font-size:11px;color:#d4bc89;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+    .synced-note{display:inline-flex;gap:7px;align-items:center;color:#a8d8c7;font-size:11px;font-weight:750}
+    footer{border-top:1px solid #263d4d;color:#758998;padding:26px 0 40px;font-size:11px;text-align:center;letter-spacing:.2px}
+    .footer-mark{font-family:Georgia,serif;color:#b89c67;font-size:17px;margin-right:7px}
+    .notice{margin-top:8px;font-size:11px;color:#bea574}
+    .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .toast{position:fixed;bottom:23px;left:50%;transform:translate(-50%,30px);background:#e5c68c;color:#14202b;border-radius:9px;padding:11px 19px;font-size:13px;font-weight:800;z-index:50;box-shadow:0 14px 45px #0008;opacity:0;pointer-events:none;transition:.25s;max-width:calc(100% - 30px);text-align:center}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:950px){
+      .hero{grid-template-columns:1fr .7fr;gap:0;padding-top:62px}.hero-art{transform:scale(.83);transform-origin:center}
+      h1{font-size:clamp(61px,8vw,84px)}.container{width:min(1200px,calc(100% - 42px))}
+      .person{padding:20px 17px}.answer{gap:8px;padding:10px 8px}.answer-value{font-size:13px}
+    }
+    @media(max-width:700px){
+      .topbar{height:72px}.topnav,.head-label{display:none}
+      .hero{padding:47px 0 42px;display:block}.hero-art{display:none}
+      h1{font-size:clamp(61px,14vw,86px);letter-spacing:-2px}
+      .hero-copy{font-size:14px}
+      .quickstats{margin:4px 0 49px}.stat{padding:18px 14px;display:block}.stat-number{font-size:28px;margin-bottom:7px}.stat-text{font-size:9px;letter-spacing:1px}
+      .leaderboard{grid-template-columns:1fr;gap:11px;margin-bottom:50px}.person{min-height:155px}
+      .section-top{align-items:start;display:block}.section-note{text-align:left;margin-top:9px}
+      .board-controls{padding:13px}.tabs{gap:4px}.tab{padding:9px 10px;font-size:11px}.toolbar{gap:9px}
+      .search{max-width:none;min-width:100%;width:100%;flex:auto}.result-count{margin-left:0}
+      .question-card{padding:17px 15px}.q-number{min-width:32px;font-size:20px}.question-title{font-size:14px}
+      .answers{grid-template-columns:1fr;gap:8px}.answer{min-height:54px;padding:8px 11px;gap:12px}.answer-value{font-size:14px}
+      .answer-main{flex-direction:row;align-items:baseline;gap:12px}.answer-label{width:58px;flex:none}.agreement{font-size:9px}
+      .management{padding:20px}.result-editor select,.result-editor input{width:100%;min-width:0}
+      .container{width:calc(100% - 28px)}.eyebrow{font-size:9px;letter-spacing:2px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#start" class="brand" aria-label="Zur Startseite">
+      <span class="brand-mark" aria-hidden="true">W</span>
+      <span class="brand-text"><strong>WORLDS 2026</strong><span>Private Pick'ems</span></span>
+    </a>
+    <nav class="topnav" aria-label="Hauptnavigation">
+      <button type="button" class="navlink active" data-scroll="start">Übersicht</button>
+      <button type="button" class="navlink" data-scroll="leaderboard">Leaderboard</button>
+      <button type="button" class="navlink" data-scroll="board">Alle Tipps</button>
+    </nav>
+    <span class="head-label">JUDITH &nbsp;VS&nbsp; TONY &nbsp;VS&nbsp; ALEX</span>
+  </div>
+</header>
+<main class="container" id="start">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <div class="eyebrow">League of Legends · World Championship</div>
+      <h1 id="hero-title"><span class="soft">WORLDS</span><span class="bright">PICK'EMS.</span></h1>
+      <p class="hero-copy"><strong>Drei Leute. 18 Fragen. Ein Sieger.</strong><br />Die Worlds-Tipps von Judith, Tony und Alex im direkten Vergleich. Wer kennt die Meta, wer vertraut auf den richtigen Spieler und wer hat einfach nur Glück?</p>
+      <div class="hero-actions">
+        <button type="button" class="primary-btn" data-scroll="board"><span class="btn-icon">↗</span> ALLE TIPPS ANSEHEN</button>
+        <button type="button" class="secondary-btn" id="heroGrading"><span class="btn-icon">◇</span> ERGEBNISSE EINTRAGEN</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit orbit-3"></div><div class="orbit"></div><div class="orbit orbit-2"></div>
+      <div class="diamond-core"><div class="diamond-inner"><span class="diamond-text">W</span></div></div>
+      <span class="spark a">✧</span><span class="spark b">✦</span><span class="spark c">✧</span>
+      <div class="art-label">2026 WORLD CHAMPIONSHIP</div>
+    </div>
+  </section>
+
+  <section class="quickstats" aria-label="Pick'em Statistiken">
+    <div class="stat"><div class="stat-number" id="statQuestions">18</div><div class="stat-text">Fragen<br />insgesamt</div></div>
+    <div class="stat"><div class="stat-number" id="statAgreement">6</div><div class="stat-text">Mal sind<br />alle einer Meinung</div></div>
+    <div class="stat"><div class="stat-number" id="statGraded">0/18</div><div class="stat-text">Fragen<br />ausgewertet</div></div>
+  </section>
+
+  <section id="leaderboard" aria-labelledby="leaderboard-title">
+    <div class="section-top">
+      <div><p class="section-kicker">The contenders</p><h2 id="leaderboard-title">Das Leaderboard</h2></div>
+      <div class="section-note">Je richtigem Tipp gibt es einen Punkt. Die Auswertung startet, sobald ihr Ergebnisse eintragt.</div>
+    </div>
+    <div class="leaderboard" id="leaderboardCards" aria-live="polite"></div>
+  </section>
+
+  <section id="board" class="board" aria-labelledby="board-title">
+    <div class="section-top">
+      <div><p class="section-kicker">The predictions</p><h2 id="board-title">Unsere Tipps im Vergleich</h2></div>
+      <div class="section-note">Alle 18 Pick'em-Fragen aus eurer Liste, jeweils mit den drei Antworten.</div>
+    </div>
+    <div class="board-controls">
+      <div class="filter-line"><div class="tabs" id="categoryTabs" role="group" aria-label="Fragen nach Kategorie filtern"></div></div>
+      <div class="toolbar">
+        <label class="search">
+          <span class="sr-only">Fragen und Tipps durchsuchen</span>
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="searchInput" type="search" placeholder="Fragen, Spieler oder Champions suchen ..." autocomplete="off" />
+        </label>
+        <label class="toggle" title="Nur Fragen mit unterschiedlichen Tipps anzeigen"><input type="checkbox" id="differentOnly" /> Nur unterschiedliche Tipps</label>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+    </div>
+    <div class="questions" id="questionList" aria-live="polite"></div>
+  </section>
+
+  <section id="management" class="management" aria-label="Auswertung verwalten">
+    <div class="management-top">
+      <div>
+        <h3>Pick'em-Auswertung</h3>
+        <p>Trage nach den Spielen die richtigen Antworten ein und die Punkte werden automatisch berechnet. Deine Ergebnisse bleiben in diesem Browser gespeichert. Die zentrale Ergebnisdatei wird beim Öffnen geladen. Solange keine automatische Quelle eingerichtet ist, kannst du Ergebnisse weiterhin selbst eintragen und als JSON exportieren oder importieren. Manuelle Einträge werden nur in deinem Browser gespeichert.</p>
+      </div>
+      <div class="manage-actions">
+        <button type="button" class="small-btn" id="syncBtn">↻ Synchronisieren</button>
+        <button type="button" class="small-btn" id="toggleGrading">Ergebnisse eintragen</button>
+        <button type="button" class="small-btn" id="exportBtn">↓ Export</button>
+        <button type="button" class="small-btn" id="importBtn">↑ Import</button>
+        <button type="button" class="small-btn danger" id="resetBtn">Zurücksetzen</button>
+        <input type="file" id="importFile" accept="application/json,.json" class="sr-only" />
+      </div>
+    </div>
+    <div class="sync-panel" aria-live="polite">
+      <span id="syncDot" class="sync-dot" aria-hidden="true"></span>
+      <div class="sync-copy">
+        <span id="syncStatus" class="sync-title">Ergebnisse werden geprüft …</span>
+        <span id="syncDescription" class="sync-caption">Die automatische Datenquelle wird vorbereitet.</span>
+      </div>
+      <a class="sync-source" id="syncSource" href="#" target="_blank" rel="noopener noreferrer" hidden>Ergebnisquelle ansehen ↗</a>
+    </div>
+  </section>
+</main>
+<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Ergebnisse werden nur übernommen, wenn eine Datenquelle eingerichtet wurde.</div></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+(() => {
+  // Die 18 Tipps aus der hochgeladenen PDF. Offensichtliche Schreibweisen sind vereinheitlicht.
+  const QUESTIONS = [
+    {id:1,cat:"Champions",title:"Welcher Champion wird über alle Auswahlphasen hinweg die höchste Präsenz haben?",sub:"Anteil aller Spiele, in denen der Champion ausgewählt oder gebannt wird.",p:["Cassiopeia","Qiyana","Vi"]},
+    {id:2,cat:"Champions",title:"Welcher Champion hat die höchste Siegesrate?",sub:"Mindestens 5 gespielte Spiele.",p:["Camille","Lee Sin","Yone"]},
+    {id:3,cat:"Champions",title:"Welcher Champion hat durchschnittlich die meisten Tode?",sub:"Mindestens 5 gespielte Spiele.",p:["Rell","Nautilus","Vi"]},
+    {id:4,cat:"Profis",title:"Welcher Profi hat am Ende die höchste durchschnittliche KDA pro Spiel?",p:["Knight","Hans Sama","Peyz"]},
+    {id:5,cat:"Profis",title:"Welcher Profi verursacht durchschnittlich den meisten Schaden pro Spiel?",p:["Peyz","Viper","Peyz"]},
+    {id:6,cat:"Profis",title:"Welcher Profi erreicht die höchste durchschnittliche Kill-Beteiligung?",sub:"(Kills + Assists) / Team-Kills.",p:["Duro","Delight","Tarzan"]},
+    {id:7,cat:"Profis",title:"Peyz vs. Gumayusi: Wer hat am Ende insgesamt mehr Kills?",p:["Peyz","Gumayusi","Peyz"]},
+    {id:8,cat:"Rekorde",title:"Erreicht Faker bei diesen Worlds 700 Karriere-Kills?",sub:"Vor Turnierbeginn: 616 Kills bei 10 WM-Teilnahmen.",p:["Nein","Nein","Nein"]},
+    {id:9,cat:"Champions",title:"Wird Teemo mindestens einmal ausgewählt?",p:["Nein","Nein","Nein"]},
+    {id:10,cat:"Champions",title:"Wie viele verschiedene Champions werden ausgewählt?",p:["100–104","100–104","105–109"]},
+    {id:11,cat:"Turnier",title:"Enden mehr Spiele vor oder nach 32 Minuten?",p:["Vor","Nach","Nach"]},
+    {id:12,cat:"Rekorde",title:"Erzielt ein Profi in einem Spiel mindestens 15 Kills?",p:["Ja","Ja","Ja"]},
+    {id:13,cat:"Rekorde",title:"Erzielt ein Profi in einem Spiel mindestens 450 CS?",sub:"CS = Vasallen-Kills.",p:["Ja","Ja","Ja"]},
+    {id:14,cat:"Turnier",title:"Welche Rolle spielt der MVP des Finales?",p:["Mid Lane","ADC","Mid Lane"]},
+    {id:15,cat:"Turnier",title:"Wie viele Regionen sind in der K.-o.-Phase vertreten?",sub:"Acht Teams qualifizieren sich für die K.-o.-Phase.",p:["4","4","4"]},
+    {id:16,cat:"Turnier",title:"Erreicht ein Team aus der LCS die K.-o.-Phase?",p:["Ja","Ja","Ja"]},
+    {id:17,cat:"Teams",title:"Welches Team platziert sich besser: Hanwha Life Esports oder T1?",p:["Hanwha Life Esports","Hanwha Life Esports","T1"]},
+    {id:18,cat:"Teams",title:"Welches Team gewinnt ein Spiel in der kürzesten Zeit?",p:["Hanwha Life Esports","Hanwha Life Esports","Gen.G"]}
+  ];
+  const PLAYERS=[{name:"Judith",initial:"J",color:"var(--judith)"},{name:"Tony",initial:"T",color:"var(--tony)"},{name:"Alex",initial:"A",color:"var(--alex)"}];
+  const CATEGORIES=["Alle","Champions","Profis","Rekorde","Turnier","Teams"];
+  const STORE_KEY="worlds2026-private-pickems-v1";
+  const $ = (selector) => document.querySelector(selector);
+  const escapeHTML = (value) => String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+  const clean = (value) => String(value??"").trim().toLocaleLowerCase("de").replace(/\s+/g," ").replace(/[.]/g,"").replace(/[–—−]/g,"-").replace(/^ad[ -]?carry$/,"adc").replace(/^mid[ -]?lane$/,"mid lane");
+  function baseState(){return {results:{}}}
+  function loadState(){try {const data=JSON.parse(localStorage.getItem(STORE_KEY) || "null");return sanitizeState(data)}catch{return baseState()}}
+  function sanitizeState(data){
+    const results={}; if(data && typeof data==="object" && data.results && typeof data.results==="object"){
+      for(const q of QUESTIONS){const val=data.results[q.id];if(typeof val==="string" && val.trim())results[q.id]=val.trim().slice(0,160)}
+    }
+    return {results};
+  }
+  let state=loadState(); let sharedResults={}; let sharedUpdatedAt=null; let sharedSourceUrl=null; let category="Alle";let onlyDifferent=false;let query="";let grading=false;let toastTimer;const customOpen=new Set();
+  const byId=(id)=>QUESTIONS.find(q=>q.id===Number(id));
+  const uniquePicks=(q)=>[...new Map(q.p.map(p=>[clean(p),p])).values()];
+  const unanimous=(q)=>uniquePicks(q).length===1;
+  const effectiveResult=(id)=>sharedResults[id] || state.results[id] || "";
+  const score=(index)=>QUESTIONS.reduce((count,q)=> count+(effectiveResult(q.id) && clean(effectiveResult(q.id))===clean(q.p[index])?1:0),0);
+  const gradedCount=()=>QUESTIONS.filter(q=>!!effectiveResult(q.id)).length;
+  const persist=()=>{try{localStorage.setItem(STORE_KEY,JSON.stringify(state))}catch{showToast("Der Browser konnte die Daten nicht speichern.")}};
+  function showToast(message){const el=$("#toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
+  function renderScores(){
+    const count=gradedCount();
+    $("#statQuestions").textContent=QUESTIONS.length;
+    $("#statAgreement").textContent=QUESTIONS.filter(unanimous).length;
+    $("#statGraded").textContent=`${count}/${QUESTIONS.length}`;
+    $("#leaderboardCards").innerHTML=PLAYERS.map((p,i)=>`
+      <article class="person" style="--accent:${p.color}" data-initial="${p.initial}">
+        <div class="person-head"><div class="avatar" aria-hidden="true">${p.initial}</div><div><div class="person-name">${p.name}</div><div class="person-id">PLAYER 0${i+1}</div></div></div>
+        <div class="score-row"><div class="score-line"><strong>${score(i)}</strong><small>${score(i)===1?"Punkt":"Punkte"}</small></div><div class="score-hint">${count?`von ${count} ausgewerteten`:"Noch keine Auswertung"}</div></div>
+        <div class="progress" role="progressbar" aria-label="${p.name}: richtige Tipps" aria-valuemin="0" aria-valuemax="${count}" aria-valuenow="${score(i)}"><span style="width:${count?score(i)/count*100:0}%"></span></div>
+      </article>`).join("");
+  }
+  function renderTabs(){
+    $("#categoryTabs").innerHTML=CATEGORIES.map(cat=>{
+      const n=cat==="Alle"?QUESTIONS.length:QUESTIONS.filter(q=>q.cat===cat).length;
+      return `<button type="button" class="tab ${category===cat?"active":""}" data-category="${cat}" aria-pressed="${category===cat}">${cat}<span class="count">${n}</span></button>`;
+    }).join("");
+  }
+  function renderAnswer(p,index,result){
+    const same = result && clean(p)===clean(result);
+    const wrong = result && !same;
+    const person=PLAYERS[index];
+    return `<div class="answer ${same?"correct":wrong?"incorrect":""}" style="--accent:${person.color}" aria-label="${person.name}: ${escapeHTML(p)}${result?same?", richtig":", falsch":""}">
+      <div class="answer-person" aria-hidden="true">${person.initial}</div>
+      <div class="answer-main"><span class="answer-label">${person.name}</span><span class="answer-value">${escapeHTML(p)}</span></div>
+      ${result?`<div class="answer-icon" aria-hidden="true">${same?"✓":"×"}</div>`:""}
+    </div>`;
+  }
+  function editorMarkup(q,result){
+    if(sharedResults[q.id])return `<div class="result-editor"><span class="result-caption">Zentrales Ergebnis</span><span class="saved-tag">✓ ${escapeHTML(result)}</span><span class="synced-note">Wird automatisch übernommen</span></div>`;
+    const choices=uniquePicks(q);
+    const known=choices.some(p=>clean(p)===clean(result));
+    const selectValue=customOpen.has(q.id)?"__other__":result?(known?choices.find(p=>clean(p)===clean(result)):"__other__"):"";
+    return `<div class="result-editor">
+      <label class="result-caption" for="result-${q.id}">Richtige Antwort</label>
+      <select id="result-${q.id}" data-result-select="${q.id}" aria-label="Richtiges Ergebnis für Frage ${q.id}">
+        <option value="" ${!selectValue?"selected":""}>Noch offen</option>
+        ${choices.map(p=>`<option value="${escapeHTML(p)}" ${selectValue===p?"selected":""}>${escapeHTML(p)}</option>`).join("")}
+        <option value="__other__" ${selectValue==="__other__"?"selected":""}>Andere Antwort …</option>
+      </select>
+      ${selectValue==="__other__"?`<input type="text" data-result-custom="${q.id}" value="${escapeHTML(result)}" placeholder="Richtige Antwort eingeben" maxlength="160" aria-label="Andere richtige Antwort für Frage ${q.id}" />`:""}
+      <span class="grading-hint">${result?"Gespeichert. Die Punkte sind aktualisiert.":"Nur ein eingetragenes Ergebnis wird gewertet."}</span>
+    </div>`;
+  }
+  function cardMarkup(q){
+    const result=effectiveResult(q.id);
+    const different=uniquePicks(q).length;
+    const badge=different===1?"Alle einig":different===2?"2 gleiche Tipps":"3 verschiedene Tipps";
+    return `<article class="question-card ${result?"graded":""}" id="frage-${q.id}">
+      <div class="q-upper"><div class="q-info"><span class="q-number">${String(q.id).padStart(2,"0")}</span><span class="q-tag">${escapeHTML(q.cat)}</span></div><span class="agreement ${different===1?"unanimous":""}">${badge}</span></div>
+      <h3 class="question-title">${escapeHTML(q.title)}</h3>
+      ${q.sub?`<div class="question-subtitle">${escapeHTML(q.sub)}</div>`:""}
+      <div class="answers">${q.p.map((p,i)=>renderAnswer(p,i,result)).join("")}</div>
+      ${grading?editorMarkup(q,result):result?`<div class="result-editor"><span class="result-caption">Ergebnis</span><span class="saved-tag">✓ ${escapeHTML(result)}</span></div>`:""}
+    </article>`;
+  }
+  function renderQuestions(){
+    const tokens=clean(query);
+    const matches=QUESTIONS.filter(q=>(category==="Alle"||q.cat===category)&&(!onlyDifferent||!unanimous(q))&&(!tokens||clean([q.id,q.cat,q.title,q.sub||"",...q.p].join(" ")).includes(tokens)));
+    $("#resultCount").textContent=`${matches.length} von ${QUESTIONS.length} Fragen`;
+    $("#questionList").innerHTML=matches.length?matches.map(cardMarkup).join(""):'<div class="empty-state"><strong>Keine Treffer gefunden</strong>Versuch es mit einem anderen Suchbegriff oder Filter.</div>';
+  }
+  function renderAll(){renderScores();renderTabs();renderQuestions();$("#toggleGrading").textContent=grading?"Auswertung schließen":"Ergebnisse eintragen";$("#heroGrading").innerHTML=grading?'<span class="btn-icon">✓</span> AUSWERTUNG SCHLIESSEN':'<span class="btn-icon">◇</span> ERGEBNISSE EINTRAGEN';}
+  function updateResult(id,val){
+    const q=byId(id);if(!q)return;
+    if(sharedResults[q.id]){showToast("Dieses Ergebnis kommt aus der gemeinsamen Auswertung.");return;}
+    if(typeof val!=="string" || !val.trim())delete state.results[q.id];else state.results[q.id]=val.trim().slice(0,160);
+    persist();renderScores();renderQuestions();
+  }
+  function toggleGrading(){grading=!grading;renderAll();if(grading){$("#board").scrollIntoView({behavior:"smooth",block:"start"});showToast("Wähle pro Frage das richtige Ergebnis aus.")}else showToast("Auswertungsmodus geschlossen.")}
+  function exportData(){
+    const data={format:"worlds-2026-pickems",version:1,exportedAt:new Date().toISOString(),players:PLAYERS.map(p=>p.name),questions:QUESTIONS.map(q=>({id:q.id,category:q.cat,question:q.title,picks:{Judith:q.p[0],Tony:q.p[1],Alex:q.p[2]},result:effectiveResult(q.id)||null})),results:Object.fromEntries(QUESTIONS.filter(q=>effectiveResult(q.id)).map(q=>[q.id,effectiveResult(q.id)])),sharedUpdatedAt,sourceUrl:sharedSourceUrl};
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json;charset=utf-8"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download="worlds-2026-pickems-auswertung.json";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);showToast("Auswertung als JSON exportiert.")
+  }
+  async function importData(file){
+    try {if(file.size>1000000)throw Error("Datei zu groß.");const imported=JSON.parse(await file.text());if(imported.format!=="worlds-2026-pickems"||imported.version!==1)throw Error("Unbekanntes Dateiformat.");state=sanitizeState(imported);customOpen.clear();persist();renderAll();showToast(`${gradedCount()} Ergebnisse importiert.`)}
+    catch(e){showToast(`Import fehlgeschlagen: ${e.message||"Ungültige Datei"}`)}
+    finally{$("#importFile").value=""}
+  }
+  function reset(){if(!window.confirm("Alle eingetragenen Ergebnisse in diesem Browser löschen? Die ursprünglichen Tipps bleiben erhalten."))return;state=baseState();customOpen.clear();persist();renderAll();showToast("Auswertung zurückgesetzt.")}
+  // Ruft die gemeinsame Ergebnisdatei ab. Eine tägliche Aktualisierung DIESER
+  // Datei benötigt später einen separaten Serverjob mit Quelle und Parser.
+  async function refreshRemote(notify=false){
+    const status=$("#syncStatus"), detail=$("#syncDescription"), dot=$("#syncDot"), link=$("#syncSource");
+    try{
+      const response=await fetch("./results.json?stamp="+Date.now(),{cache:"no-store"});
+      if(!response.ok)throw Error("HTTP "+response.status);
+      const data=await response.json();
+      if(data.format!=="worlds-2026-results" || data.version!==1 || !data.results || typeof data.results!=="object" || Array.isArray(data.results))throw Error("Ungültiges Ergebnisformat");
+      const next={};
+      for(const q of QUESTIONS){const value=data.results[q.id];if(typeof value==="string" && value.trim())next[q.id]=value.trim().slice(0,160)}
+      sharedResults=next;
+      sharedUpdatedAt=typeof data.updatedAt==="string"?data.updatedAt:null;
+      sharedSourceUrl=typeof data.sourceUrl==="string" && /^https:\/\//i.test(data.sourceUrl)?data.sourceUrl:null;
+      const n=Object.keys(next).length;
+      if(n){
+        status.textContent=`${n} zentrale Ergebnisse geladen`;
+        dot.classList.add("connected");
+        detail.textContent=sharedUpdatedAt?"Zuletzt aktualisiert: "+new Date(sharedUpdatedAt).toLocaleString("de-DE",{dateStyle:"medium",timeStyle:"short"}):"Zentrale Ergebnisdatei geladen.";
+      }else{
+        status.textContent="Synchronisierung bereit";
+        detail.textContent="Noch keine Ergebnisquelle verbunden. Manuelle Auswertung bleibt möglich.";
+        dot.classList.remove("connected");
+      }
+      link.hidden=!sharedSourceUrl;
+      if(sharedSourceUrl)link.href=sharedSourceUrl;
+      renderAll();
+      if(notify)showToast(n?`${n} Ergebnisse aktualisiert.`:"Noch keine zentralen Ergebnisse vorhanden.");
+    }catch(error){
+      status.textContent="Keine zentrale Ergebnisdatei erreichbar";
+      detail.textContent=location.protocol==="file:"?"Lokale Vorschau: Auf dem Hosting kann die gemeinsame Datei geladen werden.":"Manuelle Auswertung bleibt verfügbar. Bitte später erneut versuchen.";
+      dot.classList.remove("connected");link.hidden=true;
+      if(notify)showToast("Synchronisierung derzeit nicht erreichbar.");
+    }
+  }
+  document.addEventListener("click",(event)=>{
+    const scroll=event.target.closest("[data-scroll]");if(scroll){const id=scroll.dataset.scroll;document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});document.querySelectorAll(".navlink").forEach(btn=>btn.classList.toggle("active",btn===scroll));}
+    const tab=event.target.closest("[data-category]");if(tab){category=tab.dataset.category;renderTabs();renderQuestions()}
+  });
+  $("#searchInput").addEventListener("input",e=>{query=e.target.value;renderQuestions()});
+  $("#differentOnly").addEventListener("change",e=>{onlyDifferent=e.target.checked;renderQuestions()});
+  $("#toggleGrading").addEventListener("click",toggleGrading);
+  $("#heroGrading").addEventListener("click",toggleGrading);
+  $("#questionList").addEventListener("change",e=>{
+    const sel=e.target.closest("[data-result-select]");
+    if(sel){
+      if(sel.value==="__other__"){
+        const id=sel.dataset.resultSelect;customOpen.add(Number(id));const q=byId(id);const old=state.results[id]||"";
+        if(uniquePicks(q).some(p=>clean(p)===clean(old)))delete state.results[id];
+        persist();renderScores();renderQuestions();const input=document.querySelector(`[data-result-custom="${id}"]`);input?.focus();
+      }else {customOpen.delete(Number(sel.dataset.resultSelect));updateResult(sel.dataset.resultSelect,sel.value);}
+    }
+    const custom=e.target.closest("[data-result-custom]");if(custom){updateResult(custom.dataset.resultCustom,custom.value)}
+  });
+  $("#questionList").addEventListener("keydown",e=>{
+    if(e.key==="Enter" && e.target.matches("[data-result-custom]")){e.preventDefault();e.target.blur();}
+  });
+  $("#questionList").addEventListener("focusout",e=>{
+    if(e.target.matches("[data-result-custom]"))updateResult(e.target.dataset.resultCustom,e.target.value);
+  });
+  $("#exportBtn").addEventListener("click",exportData);
+  $("#importBtn").addEventListener("click",()=>$("#importFile").click());
+  $("#importFile").addEventListener("change",e=>{if(e.target.files[0])importData(e.target.files[0])});
+  $("#resetBtn").addEventListener("click",reset);
+  $("#syncBtn").addEventListener("click",()=>refreshRemote(true));
+  renderAll();
+  refreshRemote(false);
+  // Prüft während eines offenen Tabs auf aktualisierte zentrale Dateien. Die
+  // Erzeugung der Datei durch einen täglichen Job wird separat konfiguriert.
+  setInterval(()=>refreshRemote(false),30*60*1000);
+})();
+</script>
+</body>
+</html>
