@@ -232,7 +232,7 @@
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-    /* WORLDS 2026 EDITION / BROADCAST REDESIGN */
+    /* WORLDS 2026 EDITION / BLUE BROADCAST 2026 REDESIGN */
     :root {--bg:#08111d;--surface:#0d1726;--surface2:#122031;--border:#304558;--gold:#c6a15f;--gold-bright:#ead8ae;--teal:#68c8cf;--bronze:#86643a;--text:#eff2ef;--muted:#90a1b4;--judith:#8db7ff;--tony:#68c8cf;--alex:#d7ad6c}
     html{background:#08111d}
     body{background:#08111d;color:#edf0ef;font-family:Inter,Arial,"Segoe UI",sans-serif}
@@ -325,7 +325,7 @@
     .answer:hover{border-color:#7d969b}
     .answer-person{display:none}
     .answer-media{width:49px;height:49px;flex:none;border-radius:2px;border:1px solid #7a8e81;background:#192a37;box-shadow:none}
-    .answer-media img{object-fit:cover;background:#0f1823}.answer-media .team-mark,.answer-media .player-mark,.answer-media .stat-mark,.live-media .team-mark,.live-media .player-mark,.live-media .stat-mark,.feature-visual .team-mark,.feature-visual .player-mark,.feature-visual .stat-mark{display:grid}
+    .answer-media img{object-fit:cover;background:#0f1823}
     .answer-main{flex:1;display:flex;flex-direction:column;gap:3px;width:auto;min-width:0}
     .answer-label{display:none}
     .answer-value{font-size:13px;font-weight:850;color:#f2f1ec;line-height:1.35;overflow-wrap:anywhere;white-space:normal;max-width:100%}
@@ -393,14 +393,55 @@
       .result-editor{gap:8px}.result-editor select,.result-editor input{width:100%;min-width:0}
     }
     @media(max-width:380px){.event-hero h1{font-size:50px}.hero-rule i{width:10px}.hero-rule{gap:6px}.answer-media{width:34px;height:34px}.answer-value{font-size:10px}.question-card{margin:0}}
-  </style>
+  
+/* WORLDS 2026 - cobalt / ice / deep navy colors sampled from supplied logo reference */
+:root{--bg:#020b2b;--surface:#091943;--surface2:#11285d;--border:#234a82;--gold:#64b7ff;--gold-bright:#f7fbff;--teal:#37d4ff;--bronze:#187bdb;--text:#f7fbff;--muted:#a9c3e4;--judith:#87b5ff;--tony:#54dbef;--alex:#6b9dff}
+html,body{background:#030b2a;color:#f7fbff}
+.ambient{background:radial-gradient(ellipse 65% 44% at 53% -9%,#0577ff66,transparent 75%),linear-gradient(180deg,#020a2a,#061841 51%,#030b2a 100%)}
+.ambient:after{background-image:linear-gradient(#1a74cf1a 1px,transparent 1px),linear-gradient(90deg,#1a74cf1a 1px,transparent 1px)}
+.topbar{background:linear-gradient(90deg,#010c34 0%,#062873 58%,#031039 100%);border-bottom:1px solid #127aff73}
+.topbar:after{background:linear-gradient(90deg,transparent,#3cbbff 50%,transparent)}
+.brand-mark.worlds-crest{width:53px;height:53px;background:linear-gradient(145deg,#0575ff,#031044 80%);border:1px solid #57baff8a;border-radius:6px;box-shadow:inset 0 0 14px #128bff72,0 0 24px #0074ff32}
+.brand-mark.worlds-crest svg{width:47px;height:47px;display:block}
+.brand-text strong{color:#f7fbff}
+.brand-text span{color:#9fd7ff}
+.navlink:hover,.navlink.active{background:#027cff33;color:#ecfbff;border-bottom:2px solid #49beff}
+.head-label{background:#062152;color:#e7f5ff;border-color:#2d8ddb88}
+.hero.event-hero{background:linear-gradient(101deg,#03123c 0%,#092b7a 52%,#006ffe 112%);border-color:#197bee88;box-shadow:0 35px 90px #00093f99,inset 0 0 90px #003dc51e}
+.event-hero:before{background:radial-gradient(ellipse at 84% 18%,#28b5ff55,transparent 60%),repeating-linear-gradient(100deg,transparent,transparent 103px,#4ca9ff15 104px,transparent 105px)}
+.event-hero:after{background:linear-gradient(90deg,#37c6ff,#005aff 75%,transparent)}
+.event-eyebrow,.eyebrow-diamond,.headline-accent,.event-hero .hero-copy strong,.hero-rule,.hero-rule span:first-child,.hero-rule span:last-child{color:#e6f5ff}
+.eyebrow-line,.hero-rule i{background:#4fbfff}
+.event-hero h1,.worlds-word{color:#f9fcff;text-shadow:0 8px 28px #001053}
+.headline-accent .light-accent{color:#52d5ff}
+.event-hero .hero-copy{color:#bad7ff}
+.event-hero .primary-btn{color:#001745;background:linear-gradient(105deg,#ebfaff,#6abfff);border-color:#e1f7ff;box-shadow:0 5px 26px #059aff58}
+.event-hero .secondary-btn{background:#061747b8;border-color:#69beff;color:#f4fbff}
+.stage-halo{border-color:#50b4ff80}.champ-panel{border-color:#75b8ff7a}.champ-vi{border-color:#d4f2ffb9}
+.stage-edition{background:#031540;color:#e1f4ff;border-color:#2499ff87}.stage-edition b{color:#5ccaff}
+.hero-foot{background:#010b2e88;color:#a9d0ff;border-color:#2b8cdb75}
+.quickstats{background:#06194a;border-color:#1c62aa}.stat{background:#071844;border-color:#244e8e}.stat-number{color:#f0f8ff}.stat-text{color:#b0d2f0}
+.section-kicker{color:#59cfff}h2{color:#f2fbff}.section-note{color:#acc9e5}
+.board-controls{background:#071942;border-color:#255394}.tab{color:#bddeff}.tab.active{background:#57baff;color:#04163f;border-color:#b6f3ff}.search{background:#041339;border-color:#3874ba;color:#fff}.search input{color:#fff}.result-count,.toggle{color:#abcbe8}
+.question-card{background:#06152d;border-color:#214c82}.question-card:hover{background:#0a2050;border-color:#50b8ff}
+.q-panel{background:linear-gradient(110deg,#0b245a,#07183a);border-color:#22518e}.q-number{color:#a7dfff}.q-tag{background:#0865af2c;color:#a9eeff;border-color:#367eb5}
+.agreement,.agreement.unanimous{color:#d0eaff;background:#18448480;border-color:#2b68ac}
+.q-comparison{background:#061333}.compare-col{color:#c4e2ff;border-color:#235187}.compare-dot{box-shadow:0 0 12px var(--accent)}
+.answer{background:linear-gradient(110deg,#0c2750,#061b42);border-color:#27518b}.answer:hover{border-color:#69c3ff}.answer-value{color:#f7faff}.answer-sub{color:#9cbfe0}
+.answer-media,.live-media{background:#041234;border-color:#438bcc;overflow:hidden}.answer-media.photo-frame img,.live-media.photo-frame img{object-fit:contain;padding:2px;background:transparent}.answer-media.photo-frame img[src*="player-portraits"],.live-media.photo-frame img[src*="player-portraits"]{object-fit:cover;object-position:center 19%;padding:0}
+.answer-media .team-mark,.answer-media .player-mark,.answer-media .stat-mark,.live-media .team-mark,.live-media .player-mark,.live-media .stat-mark{width:100%;height:100%;align-items:center;justify-items:center;font-weight:900;color:#d1eaff;background:linear-gradient(145deg,#144c98,#051c4e)}
+.live-result{background:#052653;border-color:#1d87c6}.live-kicker{color:#75defa}.live-value{color:#f2fbff}.live-note,.live-detail{color:#a4c7e7}
+.management{background:#071b48;border-color:#2663a7}.sync-panel{background:#07183b;border-color:#23528e}.small-btn{background:#0d356d;border-color:#3476af;color:#ebf6ff}
+footer{border-color:#285da2;color:#9ac3ea}
+
+</style>
 </head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
 <header class="topbar">
   <div class="container topbar-inner">
     <a href="#start" class="brand" aria-label="Zur Startseite">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path class="wm-gold" d="M32 4 56 18 56 46 32 60 8 46 8 18Z" opacity=".18"/><path class="wm-gold" d="M16 18h8l8 18 8-18h8L34 48h-4z"/><path class="wm-line" d="M12 50h40v4H12z"/></svg></span>
+      <span class="brand-mark worlds-crest" aria-label="Worlds-Trophäe"><svg viewBox="78 78 355 356" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="#f7fbff" fill-rule="evenodd" d="M298,222 L282,230 L264,248 L281,235 L300,227Z M236,184 L237,197 L248,221 L254,224 L263,222 L275,197 L276,184Z M91,117 L94,172 L102,212 L116,250 L140,290 L126,305 L144,308 L126,324 L119,338 L121,357 L131,370 L150,377 L165,374 L198,337 L229,372 L255,420 L255,375 L305,346 L306,325 L345,373 L369,376 L386,365 L392,354 L393,339 L389,328 L311,262 L301,258 L255,258 L231,231 L210,219 L225,180 L239,168 L255,171 L255,141 L266,141 L281,155 L312,223 L297,243 L341,249 L336,260 L382,300 L372,288 L396,247 L409,211 L418,163 L419,116 L378,116 L363,90 L339,116 L317,116 L300,91 L284,104 L267,93 L257,91 L244,93 L227,104 L211,91 L194,116 L172,116 L148,90 L133,116Z M256,271 L297,295 L297,340 L257,364 L215,340 L215,295Z M232,299 L255,314 L255,287Z M268,268 L305,268 L378,328 L384,338 L384,351 L379,360 L365,368 L347,364 L306,310 L305,289Z M243,268 L207,289 L206,310 L165,364 L146,368 L133,360 L127,343 L135,327 L209,267Z M107,132 L137,131 L149,112 L159,160 L175,188 L167,133 L204,131 L207,114 L213,106 L231,120 L240,108 L250,103 L268,106 L279,120 L298,106 L304,114 L307,131 L342,131 L343,155 L336,187 L353,157 L362,112 L373,131 L403,131 L404,146 L390,219 L374,257 L361,276 L345,259 L353,244 L311,238 L320,224 L287,152 L273,137 L253,133 L239,140 L229,153 L197,223 L209,242 L165,248 L172,261 L152,279 L137,257 L120,216 L109,167Z"/></svg></span>
       <span class="brand-text"><strong>WORLDS 2026</strong><span>Private Pick'ems</span></span>
     </a>
     <nav class="topnav" aria-label="Hauptnavigation">
@@ -477,7 +518,7 @@
     </div>
   </section>
 </main>
-<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Design angelehnt an die offizielle LoL Worlds Pick'Em-Präsentation. Spielerfotos: Riot/Liquipedia und RFT.GG. Bildrechte verbleiben bei den jeweiligen Rechteinhabern; falls ein Bild nicht erreichbar ist, erscheint ein Avatar.</div></div></footer>
+<footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Design angelehnt an die offizielle LoL Worlds Pick'Em-Präsentation. Spielerporträts und Teamlogos: 2026er Esports-Assetbibliothek (Quellen: Leaguepedia und Teams). Bildrechte verbleiben bei den Rechteinhabern. Dies ist ein inoffizielles Fan-Projekt.</div></div></footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
 "use strict";
@@ -506,26 +547,23 @@
   const PLAYERS=[{name:"Judith",initial:"J",color:"var(--judith)"},{name:"Tony",initial:"T",color:"var(--tony)"},{name:"Alex",initial:"A",color:"var(--alex)"}];
   const CATEGORIES=["Alle","Champions","Profis","Rekorde","Turnier","Teams"];
   const CHAMPION_IDS={Cassiopeia:"Cassiopeia",Qiyana:"Qiyana",Vi:"Vi",Camille:"Camille","Lee Sin":"LeeSin",Yone:"Yone",Rell:"Rell",Nautilus:"Nautilus",Teemo:"Teemo",Nocturne:"Nocturne","K'Sante":"KSante"};
-  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#f47c30",logo:"https://logo.clearbit.com/hanwha.com"},"T1":{abbr:"T1",color:"#ef4444",logo:"https://logo.clearbit.com/t1.gg"},"Gen.G":{abbr:"GEN",color:"#cfaa57",logo:"https://logo.clearbit.com/geng.gg"},"G2 Esports":{abbr:"G2",color:"#d5b25f",logo:"https://logo.clearbit.com/g2esports.com"},"Team Liquid":{abbr:"TL",color:"#5fa8ff",logo:"https://logo.clearbit.com/teamliquid.com"},"Cloud9":{abbr:"C9",color:"#5ba9ff",logo:"https://logo.clearbit.com/cloud9.gg"},"Karmine Corp":{abbr:"KC",color:"#5a8cff",logo:"https://logo.clearbit.com/karminecorp.fr"},"FURIA":{abbr:"FUR",color:"#d1d5db",logo:"https://logo.clearbit.com/furia.gg"}};
+  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#e98139",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/hle.png"},"T1":{abbr:"T1",color:"#fa515b",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lck-t1-crest-2026.png"},"Gen.G":{abbr:"GEN",color:"#d7b573",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/gen.png"},"G2 Esports":{abbr:"G2",color:"#d6dbe6",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lec-g2-esports-crest-2026.png"},"Team Liquid":{abbr:"TL",color:"#67b8f4",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-team-liquid-crest-2026.png"},"Cloud9":{abbr:"C9",color:"#60adff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-cloud9-crest-2026.png"},"Karmine Corp":{abbr:"KC",color:"#66a7ff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lec-karmine-corp-crest-2026.png"},"FURIA":{abbr:"FUR",color:"#cddae9",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/cblol-furia-crest-2026.png"}};
   const avatarFor=(name,bg="0d1726",fg="ead8ae")=>`https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=${bg}&color=${fg}&size=128&rounded=true&bold=true`;
   const liqPhoto=(file)=>`https://liquipedia.net/commons/Special:Redirect/file/${encodeURIComponent(file)}`;
-  const PLAYER_META={
-    Judith:{},Tony:{},Alex:{},
-    Knight:{team:"MID",teamName:"Bilibili Gaming",image:liqPhoto("BLG knight Worlds 2024.jpg")},
-    "Hans Sama":{team:"ADC",teamName:"G2 Esports",image:liqPhoto("G2 Hans Sama LEC Spring 2024.jpg")},
-    Peyz:{team:"ADC",teamName:"T1",image:liqPhoto("Gen.G Peyz Worlds 2024.jpg")},
-    Viper:{team:"ADC",teamName:"Bilibili Gaming",image:liqPhoto("HLE Viper Worlds 2024.jpg")},
-    Duro:{team:"SUP",teamName:"Gen.G",image:liqPhoto("GEN Duro LCK Cup 2025.jpg")},
-    Delight:{team:"SUP",teamName:"Hanwha Life Esports",image:liqPhoto("HLE First Stand 2025.jpg")},
-    Tarzan:{team:"JGL",teamName:"Anyone's Legend",image:liqPhoto("AL Tarzan at Worlds 2025.jpg")},
-    Gumayusi:{team:"ADC",teamName:"T1",image:liqPhoto("T1 Gumayusi Worlds 2024.jpg")},
-    Faker:{team:"MID",teamName:"T1",image:liqPhoto("T1 Faker Worlds 2024.jpg")},
-    // Static photos only; no automated crawling/scraping of RFT.GG.
-    // A player avatar is used when the external portrait is unavailable.
-    Caliste:{team:"ADC",teamName:"Karmine Corp",image:"https://uploads.rft.gg/images/esport/players/caliste.webp",fallback:avatarFor("Caliste"),source:"https://rft.gg/player/609-caliste"},
-    Tactical:{team:"ADC",teamName:"Cloud9",image:"https://uploads.rft.gg/images/esport/players/tactical.webp",fallback:avatarFor("Tactical"),source:"https://cloud9.gg/players/edward-ra/"},
-    JoJo:{team:"SUP",teamName:"FURIA",image:"https://uploads.rft.gg/images/esport/players/jojo-gabriel-dzelme.webp",fallback:avatarFor("JoJo"),source:"https://rft.gg/player/850-jojo-gabriel-dzelme/career"},
-    Ayu:{team:"ADC",teamName:"FURIA",image:"https://uploads.rft.gg/images/esport/players/ayu.webp",fallback:avatarFor("Ayu"),source:"https://rft.gg/player/849-ayu/matches"}
+  const PLAYER_META={Judith:{},Tony:{},Alex:{},
+    Knight:{team:"MID",teamName:"Bilibili Gaming",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lpl-bilibili-gaming-knight-portrait-2026.webp"},
+    "Hans Sama":{team:"ADC",teamName:"G2 Esports",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lec-g2-esports-hans-sama-portrait-2026.webp"},
+    Peyz:{team:"ADC",teamName:"T1",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lck-t1-peyz-portrait-2026.webp"},
+    Viper:{team:"ADC",teamName:"Bilibili Gaming",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lpl-bilibili-gaming-viper-portrait-2026.webp"},
+    Duro:{team:"SUP",teamName:"Gen.G",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lck-gen-g-duro-portrait-2026.webp"},
+    Delight:{team:"SUP",teamName:"Hanwha Life Esports",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lck-hanwha-life-esports-delight-portrait-2026.webp"},
+    Tarzan:{team:"JGL",teamName:"Anyone's Legend",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lpl-anyone-s-legend-tarzan-portrait-2026.webp"},
+    Gumayusi:{team:"ADC",teamName:"Hanwha Life Esports",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lck-hanwha-life-esports-gumayusi-portrait-2026.webp"},
+    Faker:{team:"MID",teamName:"T1",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lck-t1-faker-portrait-2026.webp"},
+    Caliste:{team:"ADC",teamName:"Karmine Corp",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lec-karmine-corp-caliste-portrait-2026.webp"},
+    JoJo:{team:"SUP",teamName:"FURIA",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/cblol-furia-jojo-portrait-2026.webp"},
+    Ayu:{team:"ADC",teamName:"FURIA",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/cblol-furia-ayu-portrait-2026.webp"},
+    Tactical:{team:"ADC",teamName:"Cloud9"}
   };
 
   const STORE_KEY="worlds2026-private-pickems-v1";
@@ -542,12 +580,12 @@
     if(champ) return {type:"champion",label:"Champion",image:champ,sub:q.cat,name:raw};
     if(TEAM_META[raw]) return {type:"team",label:"Team",abbr:TEAM_META[raw].abbr,color:TEAM_META[raw].color,logo:TEAM_META[raw].logo,sub:q.cat,name:raw};
     if(["ja","nein","vor","nach","gleichstand","noch offen"].includes(low) || /^\d/.test(raw)) return {type:"stat",label:"Stat",abbr:raw.replace(/\s+/g," "),sub:q.cat,name:raw};
-    return {type:"player",label:"Pro",abbr:initialsOf(raw),sub:PLAYER_META[raw]?.team||q.cat,image:PLAYER_META[raw]?.image||avatarFor(raw),fallback:PLAYER_META[raw]?.fallback||"",teamName:PLAYER_META[raw]?.teamName||"",name:raw};
+    return {type:"player",label:"Pro",abbr:initialsOf(raw),sub:PLAYER_META[raw]?.team||q.cat,image:PLAYER_META[raw]?.image||"",fallback:"",teamName:PLAYER_META[raw]?.teamName||"",name:raw};
   };
   const visualMarkup=(meta, cls="answer-media")=>{
-    if(meta.type==="champion") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.name)}" loading="lazy" /></span>`;
-    if(meta.type==="team") return `<span class="${cls}">${meta.logo?`<img src="${meta.logo}" alt="${escapeHTML(meta.name)} Logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />`:""}<span class="team-mark" style="display:${meta.logo?"none":"grid"};box-shadow:inset 0 0 0 1px #ffffff10;background:linear-gradient(145deg, ${meta.color}22, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
-    if(meta.type==="player") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.name)} Portrait" loading="lazy" ${meta.fallback?`data-fallback="${meta.fallback}"`:""} onerror="if(this.dataset.fallback){const url=this.dataset.fallback;delete this.dataset.fallback;this.src=url;}else{this.style.display='none';this.nextElementSibling.style.display='grid'}" /><span class="player-mark" style="display:none;background:linear-gradient(145deg, ${hashColor(meta.abbr)}33, #101923)">${escapeHTML(meta.abbr)}</span></span>`;
+    if(meta.type==="champion") return `<span class="${cls}"><img src="${meta.image}" alt="${escapeHTML(meta.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"/><span class="stat-mark" style="display:none">${escapeHTML(initialsOf(meta.name))}</span></span>`;
+    if(meta.type==="team") return `<span class="${cls} photo-frame"><img src="${meta.logo}" alt="Logo ${escapeHTML(meta.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"/><span class="team-mark" style="display:none">${escapeHTML(meta.abbr)}</span></span>`;
+    if(meta.type==="player") return `<span class="${cls} photo-frame">${meta.image?`<img src="${meta.image}" alt="Foto von ${escapeHTML(meta.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"/>`:""}<span class="player-mark" style="display:${meta.image?'none':'grid'}">${escapeHTML(meta.abbr)}</span></span>`;
     return `<span class="${cls}"><span class="stat-mark">${escapeHTML(meta.abbr.length>6?meta.abbr.slice(0,6):meta.abbr)}</span></span>`;
   };
   const signaturePick=(playerIndex)=>{
