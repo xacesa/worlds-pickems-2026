@@ -346,10 +346,16 @@
       "additional": []
     },
     "Tony": {
-      "threeZero": null,
-      "threeOne": null,
-      "threeTwo": null,
-      "additional": []
+      "threeZero": "GEN",
+      "threeOne": "G2",
+      "threeTwo": "BLG",
+      "additional": [
+        "T1",
+        "HLE",
+        "TLAW",
+        "DK",
+        "AL"
+      ]
     },
     "Alex": {
       "threeZero": null,
