@@ -705,7 +705,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     <section class="swiss-section" aria-label="Spielplan">
       <div class="swiss-section-head">
         <div><div class="swiss-kicker">MATCH SCHEDULE</div><h2>Swiss-Stage-Spielplan</h2></div>
-        <p>Uhrzeiten für Deutschland (MESZ/MEZ). Spätere Matches können sich durch längere Serien verschieben. Paarungen der Runden 2 bis 5 folgen nach den Auslosungen.</p>
+        <p>Die Anstoßzeiten werden automatisch in der Zeitzone deines Geräts angezeigt, einschließlich Sommer- und Winterzeit. Spätere Matches können sich durch längere Serien verschieben. Paarungen der Runden 2 bis 5 folgen nach den Auslosungen.</p>
       </div>
       <div class="swiss-round-tabs" id="swissRoundTabs" role="group" aria-label="Swiss-Runde auswählen">
         <button type="button" class="swiss-round-tab active" data-swiss-round="0">Alle Runden</button>
@@ -827,9 +827,9 @@ footer{border-color:#285da2;color:#9ac3ea}
     const entry=SWISS_TEAM_META[code];
     return entry&&entry[1]?"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/"+entry[1]:"";
   };
-  const swissDate=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date(iso));
-  const swissTime=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
-  const swissZone=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",timeZoneName:"short"}).formatToParts(new Date(iso)).find(x=>x.type==="timeZoneName")?.value||"deutsche Zeit";
+  const swissDate=iso=>new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date(iso));
+  const swissTime=iso=>new Intl.DateTimeFormat("de-DE",{hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
+  const swissZone=iso=>new Intl.DateTimeFormat("de-DE",{timeZoneName:"short"}).formatToParts(new Date(iso)).find(x=>x.type==="timeZoneName")?.value||Intl.DateTimeFormat().resolvedOptions().timeZone||"Ortszeit";
   const swissTeam=(code,other=false)=>{
     const meta=code&&SWISS_TEAM_META[code];
     const img=code?swissLogo(code):"";
