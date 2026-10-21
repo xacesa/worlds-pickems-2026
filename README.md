@@ -73,4 +73,4 @@ Die Tipps liegen in `swiss.json` unter `qualifierPredictions` und werden nicht d
 
 Als `team`-Codes müssen die bekannten Bezeichner verwendet werden. Acht Teams pro Person dürfen sich nicht wiederholen.
 
-Der separat dargestellte Spielplan verwendet `matches[]` derselben Datei, mit UTC-Anstoßzeiten (`startUtc`), der angesetzten Runde und `teamA` / `teamB` aus den offiziellen Begegnungen. Die Oberfläche wandelt Uhrzeiten automatisch nach `Europe/Berlin` um. Gegner späterer Runden werden nach der Auslosung nachgetragen. Match-Ergebnisse und individuelle Matchtipps gehören nicht zur Swiss-Vorhersage.
+Der separat dargestellte Spielplan verwendet `matches[]` derselben Datei, mit UTC-Anstoßzeiten (`startUtc`), der angesetzten Runde und `teamA` / `teamB` aus den offiziellen Begegnungen. Die Oberfläche wandelt UTC-Anstoßzeiten automatisch in die Zeitzone des jeweiligen Geräts um. Gegner späterer Runden werden nach der Auslosung nachgetragen. Match-Ergebnisse und individuelle Matchtipps gehören nicht zur Swiss-Vorhersage.
