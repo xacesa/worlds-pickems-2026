@@ -1,0 +1,506 @@
+{
+  "format": "worlds-2026-swiss",
+  "version": 1,
+  "timezone": "Europe/Berlin",
+  "updatedAt": "2026-10-21",
+  "sourceUrl": "https://www.sheepesports.com/en/cs/events/2026-world-championship-main-event/matches",
+  "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
+  "notes": "Swiss Matchzeiten sind geplante Startslots; Verschiebungen je nach Matchdauer möglich. Runde 2-5 Gegner werden nach weiteren Auslosungen bekannt gegeben. Tipps zunächst leer.",
+  "matches": [
+    {
+      "id": "swiss-r1-m1",
+      "round": 1,
+      "slot": 1,
+      "startUtc": "2026-10-23T17:00:00Z",
+      "format": "Bo1",
+      "teamA": "GEN",
+      "teamB": "IG",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m2",
+      "round": 1,
+      "slot": 2,
+      "startUtc": "2026-10-23T18:00:00Z",
+      "format": "Bo1",
+      "teamA": "TLAW",
+      "teamB": "CFO",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m3",
+      "round": 1,
+      "slot": 3,
+      "startUtc": "2026-10-23T19:00:00Z",
+      "format": "Bo1",
+      "teamA": "AL",
+      "teamB": "KC",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m4",
+      "round": 1,
+      "slot": 4,
+      "startUtc": "2026-10-23T20:00:00Z",
+      "format": "Bo1",
+      "teamA": "G2",
+      "teamB": "DK",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m5",
+      "round": 1,
+      "slot": 5,
+      "startUtc": "2026-10-23T21:00:00Z",
+      "format": "Bo1",
+      "teamA": "HLE",
+      "teamB": "TES",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m6",
+      "round": 1,
+      "slot": 6,
+      "startUtc": "2026-10-23T22:00:00Z",
+      "format": "Bo1",
+      "teamA": "LOS",
+      "teamB": "T1",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m7",
+      "round": 1,
+      "slot": 7,
+      "startUtc": "2026-10-23T23:00:00Z",
+      "format": "Bo1",
+      "teamA": "TSW",
+      "teamB": "LYON",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r1-m8",
+      "round": 1,
+      "slot": 8,
+      "startUtc": "2026-10-24T00:00:00Z",
+      "format": "Bo1",
+      "teamA": "BLG",
+      "teamB": "MKOI",
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m1",
+      "round": 2,
+      "slot": 1,
+      "startUtc": "2026-10-24T17:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m2",
+      "round": 2,
+      "slot": 2,
+      "startUtc": "2026-10-24T18:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m3",
+      "round": 2,
+      "slot": 3,
+      "startUtc": "2026-10-24T19:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m4",
+      "round": 2,
+      "slot": 4,
+      "startUtc": "2026-10-24T20:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m5",
+      "round": 2,
+      "slot": 5,
+      "startUtc": "2026-10-24T21:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m6",
+      "round": 2,
+      "slot": 6,
+      "startUtc": "2026-10-24T22:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m7",
+      "round": 2,
+      "slot": 7,
+      "startUtc": "2026-10-24T23:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r2-m8",
+      "round": 2,
+      "slot": 8,
+      "startUtc": "2026-10-25T00:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m1",
+      "round": 3,
+      "slot": 1,
+      "startUtc": "2026-10-25T17:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m2",
+      "round": 3,
+      "slot": 2,
+      "startUtc": "2026-10-25T18:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m3",
+      "round": 3,
+      "slot": 3,
+      "startUtc": "2026-10-25T19:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m4",
+      "round": 3,
+      "slot": 4,
+      "startUtc": "2026-10-25T22:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m5",
+      "round": 3,
+      "slot": 5,
+      "startUtc": "2026-10-26T17:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m6",
+      "round": 3,
+      "slot": 6,
+      "startUtc": "2026-10-26T18:00:00Z",
+      "format": "Bo1",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m7",
+      "round": 3,
+      "slot": 7,
+      "startUtc": "2026-10-26T19:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r3-m8",
+      "round": 3,
+      "slot": 8,
+      "startUtc": "2026-10-26T22:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m1",
+      "round": 4,
+      "slot": 1,
+      "startUtc": "2026-10-28T20:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m2",
+      "round": 4,
+      "slot": 2,
+      "startUtc": "2026-10-28T23:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m3",
+      "round": 4,
+      "slot": 3,
+      "startUtc": "2026-10-29T20:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m4",
+      "round": 4,
+      "slot": 4,
+      "startUtc": "2026-10-29T23:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m5",
+      "round": 4,
+      "slot": 5,
+      "startUtc": "2026-10-30T20:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r4-m6",
+      "round": 4,
+      "slot": 6,
+      "startUtc": "2026-10-30T23:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r5-m1",
+      "round": 5,
+      "slot": 1,
+      "startUtc": "2026-10-31T17:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r5-m2",
+      "round": 5,
+      "slot": 2,
+      "startUtc": "2026-10-31T20:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    },
+    {
+      "id": "swiss-r5-m3",
+      "round": 5,
+      "slot": 3,
+      "startUtc": "2026-10-31T23:00:00Z",
+      "format": "Bo3",
+      "teamA": null,
+      "teamB": null,
+      "picks": {
+        "Judith": null,
+        "Tony": null,
+        "Alex": null
+      },
+      "result": null
+    }
+  ]
+}
