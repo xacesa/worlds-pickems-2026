@@ -447,6 +447,96 @@ footer{border-color:#285da2;color:#9ac3ea}
     .live-match-caption{display:inline-flex;color:#8bd7ff;font-size:10px;font-weight:850;letter-spacing:.2px;margin-top:3px}
     .snapshot-date{display:block;color:#99bad7;font-size:10px;letter-spacing:.5px;margin-top:3px}
     @media(max-width:680px){.live-result .live-note{margin-left:0;width:100%}.live-result .live-value{font-size:15px}}
+
+    /* SWISS STAGE • Worlds 2026 */
+    .app-page[hidden]{display:none!important}
+    .topnav .navlink.active,.page-switcher-mobile button.active{color:#f5fbff}
+    .page-switcher-mobile{display:none}
+    .swiss-hero{position:relative;overflow:hidden;padding:42px 40px 34px;margin:28px 0 24px;min-height:260px;border:1px solid #34577f;background:radial-gradient(circle at 84% 6%,#1748b5aa 0%,transparent 37%),radial-gradient(ellipse at 50% 110%,#053ca080,transparent 50%),linear-gradient(120deg,#0c1931,#0b1531 58%,#081225);box-shadow:0 20px 70px #0005}
+    .swiss-hero:before{content:"";position:absolute;inset:0;opacity:.3;pointer-events:none;background:repeating-linear-gradient(115deg,transparent 0 34px,#5c98ff19 35px 36px,transparent 37px 70px)}
+    .swiss-hero:after{content:"";position:absolute;width:380px;height:380px;right:-80px;top:-170px;border-radius:50%;border:1px solid #87bfff44;box-shadow:0 0 0 50px #4593ff09,0 0 0 100px #4593ff09;pointer-events:none}
+    .swiss-hero>*{position:relative;z-index:1}
+    .swiss-kicker{display:flex;align-items:center;gap:10px;color:#8ccfff;text-transform:uppercase;letter-spacing:2.2px;font-size:11px;font-weight:900}
+    .swiss-kicker:before{content:"◆";font-size:10px;color:#e9f3ff}
+    .swiss-hero h1{margin:18px 0 10px;font-weight:950;letter-spacing:-2px;line-height:.98;font-size:clamp(45px,5.7vw,84px);color:#f7faff;text-shadow:0 0 30px #256cf440}
+    .swiss-hero h1 span{color:#8bd6ff}
+    .swiss-hero p{max-width:720px;font-size:14px;line-height:1.7;color:#b8cde9;margin:0}
+    .swiss-stage-stats{display:flex;gap:30px;margin-top:25px;flex-wrap:wrap}
+    .swiss-stage-stat{display:flex;align-items:baseline;gap:8px}
+    .swiss-stage-stat strong{color:white;font-size:22px;font-weight:900}
+    .swiss-stage-stat span{font-size:11px;color:#9fbbd8;text-transform:uppercase;letter-spacing:.8px;font-weight:750}
+    .swiss-section{padding:2px 0 60px}
+    .swiss-section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:0 0 20px}
+    .swiss-section-head h2{color:#edf7ff;font-size:clamp(23px,2.8vw,34px);margin:4px 0 0;font-weight:900;letter-spacing:-.7px}
+    .swiss-section-head p{font-size:12px;max-width:440px;color:#a5bbd4;line-height:1.55;margin:0}
+    .swiss-round-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 13px}
+    .swiss-round-tab{cursor:pointer;background:#0d1b2c;color:#aec6df;border:1px solid #2b4970;padding:11px 16px;font-size:12px;font-weight:850;letter-spacing:.4px;transition:background .2s,color .2s}
+    .swiss-round-tab:hover{background:#163456;color:#fff}
+    .swiss-round-tab.active{background:#e3f1ff;color:#092349;border-color:#e3f1ff;box-shadow:0 0 14px #86c8ff35}
+    .swiss-help{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:10px 14px;margin:0 0 18px;border-left:3px solid #58baff;background:#0e2037;color:#9fbddd;font-size:11px;line-height:1.5}
+    .swiss-help span:first-child{font-weight:850;color:#dcefff}
+    .swiss-day-title{display:flex;align-items:center;gap:11px;color:#b3d4fa;letter-spacing:1.35px;text-transform:uppercase;font-size:12px;font-weight:900;margin:24px 0 12px}
+    .swiss-day-title:after{content:"";height:1px;background:#2e5278;flex:1}
+    .swiss-match-list{display:flex;flex-direction:column;gap:9px}
+    .swiss-match{display:grid;grid-template-columns:135px minmax(310px,1.17fr) minmax(315px,1.04fr);align-items:stretch;gap:0;background:linear-gradient(120deg,#102238,#0e1b30);border:1px solid #284666;min-height:100px;position:relative;transition:background .2s,border-color .2s}
+    .swiss-match:hover{border-color:#568bbd;background:linear-gradient(120deg,#132c4b,#101d36)}
+    .swiss-match-meta{display:flex;flex-direction:column;justify-content:center;gap:5px;padding:13px 17px;border-right:1px solid #2c4666;background:#0b192b}
+    .swiss-match-time{color:#f4fbff;font-size:24px;letter-spacing:-.5px;font-weight:950;font-variant-numeric:tabular-nums}
+    .swiss-match-date{font-size:10px;color:#a9c5e0}
+    .swiss-match-format{font-size:10px;color:#89cfff;font-weight:900;letter-spacing:1px}
+    .swiss-versus{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);align-items:center;gap:5px;padding:13px 18px}
+    .swiss-team{display:flex;align-items:center;gap:10px;min-width:0}
+    .swiss-team.second{flex-direction:row-reverse;text-align:right}
+    .swiss-logo{width:47px;height:47px;flex:none;display:grid;place-items:center;background:#162b45;border:1px solid #355576;overflow:hidden;color:#d9edff;font-size:11px;font-weight:900}
+    .swiss-logo img{width:82%;height:82%;object-fit:contain}
+    .swiss-team-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+    .swiss-team-text strong{font-weight:900;font-size:18px;color:white;white-space:nowrap}
+    .swiss-team-text small{font-size:10px;line-height:1.4;color:#94adc8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:155px}
+    .swiss-vs{font-size:11px;font-weight:900;color:#618daf;text-align:center}
+    .swiss-picks{border-left:1px solid #2c4666;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+    .swiss-pick{min-width:0;padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;border-left:1px solid #213b58}
+    .swiss-pick:first-child{border-left:0}
+    .swiss-pick-name{font-size:10px;font-weight:950;letter-spacing:1.3px;text-transform:uppercase;color:var(--player-color)}
+    .swiss-pick-value{font-size:12px;font-weight:900;color:#e9f5ff;white-space:nowrap;display:flex;align-items:center;gap:6px;max-width:100%}
+    .swiss-pick-value.pending{font-size:10px;color:#718ca7;font-weight:750}
+    .swiss-pick.picked{background:#0a2d5480}
+    .swiss-pick .mini-logo{width:22px;height:22px;object-fit:contain;flex:none}
+    .swiss-placeholder .swiss-team-text strong{font-size:13px;color:#92b0ca}
+    .swiss-placeholder .swiss-logo{opacity:.45}
+    .swiss-empty{padding:42px 20px;text-align:center;color:#9cb9d5;border:1px dashed #395a7c}
+    @media(max-width:1120px){
+      .swiss-match{grid-template-columns:105px minmax(250px,1fr);gap:0}
+      .swiss-match-meta{grid-row:1}
+      .swiss-versus{grid-row:1}
+      .swiss-picks{grid-column:1/-1;border-left:0;border-top:1px solid #254769}
+      .swiss-pick{padding:12px}
+    }
+    @media(max-width:700px){
+      .page-switcher-mobile{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid #375a84;background:#091c36;position:sticky;top:72px;z-index:18}
+      .page-switcher-mobile button{appearance:none;padding:13px 8px;border:0;border-bottom:2px solid transparent;background:transparent;color:#99b7d5;font-size:12px;letter-spacing:.7px;font-weight:900}
+      .page-switcher-mobile button.active{border-bottom-color:#7dc9ff;background:#102b50}
+      .swiss-hero{margin:17px 0 22px;min-height:0;padding:30px 20px 28px}
+      .swiss-hero h1{font-size:45px;letter-spacing:-1px}
+      .swiss-stage-stats{gap:17px;margin-top:22px}
+      .swiss-stage-stat strong{font-size:18px}
+      .swiss-section-head{align-items:flex-start;flex-direction:column;gap:8px}
+      .swiss-match{grid-template-columns:82px minmax(0,1fr)}
+      .swiss-match-meta{padding:10px 8px}
+      .swiss-match-time{font-size:19px}
+      .swiss-versus{padding:13px 8px;gap:4px;grid-template-columns:minmax(0,1fr) 19px minmax(0,1fr)}
+      .swiss-logo{width:33px;height:33px}
+      .swiss-team{flex-direction:column;gap:5px}
+      .swiss-team.second{flex-direction:column;text-align:center}
+      .swiss-team-text{text-align:center}
+      .swiss-team-text strong{font-size:13px}
+      .swiss-team-text small{font-size:9px;max-width:95px}
+      .swiss-match-date{font-size:9px}
+      .swiss-pick{padding:12px 4px}
+      .swiss-pick-value{font-size:11px}
+      .swiss-help{display:block}
+      .swiss-help span:last-child{display:block;margin-top:5px}
+    }
+
 </style>
 </head>
 <body>
@@ -459,13 +549,16 @@ footer{border-color:#285da2;color:#9ac3ea}
     </a>
     <nav class="topnav" aria-label="Hauptnavigation">
       <button type="button" class="navlink active" data-scroll="start">Übersicht</button>
-      <button type="button" class="navlink" data-scroll="board">Alle Tipps</button>
+      <button type="button" class="navlink active" data-page="crystal">Crystal Ball</button>
+      <button type="button" class="navlink" data-page="swiss">Swiss Stage</button>
       <button type="button" class="navlink" data-scroll="management">Live-Tracker</button>
     </nav>
     <span class="head-label">JUDITH &nbsp;VS&nbsp; TONY &nbsp;VS&nbsp; ALEX</span>
   </div>
 </header>
+<div class="page-switcher-mobile" aria-label="Worlds Pick'em Bereiche"><button type="button" data-page="crystal" class="active">CRYSTAL BALL</button><button type="button" data-page="swiss">SWISS STAGE</button></div>
 <main class="container" id="start">
+ <div id="crystalPage" class="app-page">
   <section class="hero event-hero" aria-labelledby="hero-title">
     <div class="hero-content">
       <div class="event-eyebrow"><span class="eyebrow-diamond">◆</span> 2026 WORLD CHAMPIONSHIP <span class="eyebrow-line"></span> FAN PICK'EM</div>
@@ -530,6 +623,35 @@ footer{border-color:#285da2;color:#9ac3ea}
       <a class="sync-source" id="syncSource" href="#" target="_blank" rel="noopener noreferrer" hidden>Ergebnisquelle ansehen ↗</a>
     </div>
   </section>
+</div>
+
+  <div id="swissPage" class="app-page" hidden>
+    <section class="swiss-hero" aria-labelledby="swiss-title">
+      <div class="swiss-kicker">2026 WORLD CHAMPIONSHIP · SWISS STAGE</div>
+      <h1 id="swiss-title">SWISS <span>STAGE</span></h1>
+      <p>Alle Begegnungen und angesetzten Startzeiten auf einen Blick. Vergleiche die Tipps von Judith, Tony und Alex direkt bei jedem Match. Die Tipps werden erst nach eurer Abgabe übernommen.</p>
+      <div class="swiss-stage-stats">
+        <div class="swiss-stage-stat"><strong>33</strong><span>Begegnungen</span></div>
+        <div class="swiss-stage-stat"><strong>5</strong><span>Runden</span></div>
+        <div class="swiss-stage-stat"><strong id="swissPicksCount">0/99</strong><span>Tipps eingetragen</span></div>
+      </div>
+    </section>
+    <section class="swiss-section" aria-label="Spielplan und Tipps">
+      <div class="swiss-section-head">
+        <div><div class="swiss-kicker">MATCH SCHEDULE</div><h2>Spielplan &amp; eure Picks</h2></div>
+        <p>Uhrzeiten für Deutschland (MESZ/MEZ). Spätere Matches können sich durch längere Serien verschieben. Paarungen der Runden 2 bis 5 folgen nach den Auslosungen.</p>
+      </div>
+      <div class="swiss-round-tabs" id="swissRoundTabs" role="group" aria-label="Swiss-Runde auswählen">
+        <button type="button" class="swiss-round-tab active" data-swiss-round="0">Alle Runden</button>
+      </div>
+      <div class="swiss-help">
+        <span id="swissStatus">Spielplan wird geladen …</span>
+        <span>Quelle: <a href="https://lolesports.com" target="_blank" rel="noopener noreferrer">LoL Esports</a> · <a href="https://www.sheepesports.com/en/cs/events/2026-world-championship-main-event/matches" target="_blank" rel="noopener noreferrer">Matchübersicht</a></span>
+      </div>
+      <div class="swiss-match-list" id="swissMatchList" aria-live="polite"></div>
+    </section>
+  </div>
+
 </main>
 <footer><div class="container"><span class="footer-mark">✦</span> WORLDS 2026 · JUDITH / TONY / ALEX · FAN-PROJEKT<div class="notice">Zwischenstände stammen von PEM.LOL. Design angelehnt an die offizielle LoL Worlds Pick'Em-Präsentation. Spielerporträts und Teamlogos: 2026er Esports-Assetbibliothek (Quellen: Leaguepedia und Teams). Bildrechte verbleiben bei den Rechteinhabern. Dies ist ein inoffizielles Fan-Projekt.</div></div></footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -622,6 +744,87 @@ footer{border-color:#285da2;color:#9ac3ea}
   const gradedCount=()=>QUESTIONS.filter(q=>!!effectiveResult(q.id)).length;
   const persist=()=>{try{localStorage.setItem(STORE_KEY,JSON.stringify(state))}catch{showToast("Der Browser konnte die Daten nicht speichern.")}};
   function showToast(message){const el=$("#toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
+
+  // Matchtipps werden zentral in swiss.json gepflegt. Besucher können sie nur ansehen.
+  const SWISS_TEAM_META = {
+    GEN:["Gen.G","gen.png"],IG:["Invictus Gaming","lpl-invictus-gaming-crest-2026.png"],
+    TLAW:["Team Liquid Alienware","lcs-team-liquid-crest-2026.png"],CFO:["CTBC Flying Oyster","lcp-ctbc-flying-oyster-crest-2026.png"],
+    AL:["Anyone's Legend","lpl-anyone-s-legend-crest-2026.png"],KC:["Karmine Corp","lec-karmine-corp-crest-2026.png"],
+    G2:["G2 Esports","lec-g2-esports-crest-2026.png"],DK:["Dplus KIA","lck-dplus-kia-crest-2026.png"],
+    HLE:["Hanwha Life Esports","hle.png"],TES:["TOP Esports","lpl-top-esports-crest-2026.png"],
+    LOS:["LOS",""],T1:["T1","lck-t1-crest-2026.png"],
+    TSW:["Team Secret Whales","lcp-team-secret-whales-crest-2026.png"],LYON:["LYON","lcs-lyon-2024-american-team-crest-2026.png"],
+    BLG:["Bilibili Gaming","lpl-bilibili-gaming-crest-2026.png"],MKOI:["Movistar KOI","lec-movistar-koi-crest-2026.png"]
+  };
+  let swissMatches=[], swissFilter=0, swissUpdatedAt=null;
+  const swissLogo=code=>{
+    const entry=SWISS_TEAM_META[code];
+    return entry&&entry[1]?"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/"+entry[1]:"";
+  };
+  const swissDate=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date(iso));
+  const swissTime=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
+  const swissZone=iso=>new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",timeZoneName:"short"}).formatToParts(new Date(iso)).find(x=>x.type==="timeZoneName")?.value||"deutsche Zeit";
+  const swissTeam=(code,other=false)=>{
+    const meta=code&&SWISS_TEAM_META[code];
+    const img=code?swissLogo(code):"";
+    return '<div class="swiss-team'+(other?' second':'')+(code?'':' swiss-placeholder')+'">'+
+     '<div class="swiss-logo">'+(img?'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.textContent=\''+escapeHTML(code||'?')+'\'">':escapeHTML(code||"?"))+'</div>'+
+     '<div class="swiss-team-text"><strong>'+escapeHTML(code||"TBD")+'</strong><small>'+escapeHTML(meta?meta[0]:"Auslosung ausstehend")+'</small></div></div>';
+  };
+  function renderSwiss(){
+    const root=document.getElementById("swissMatchList");
+    const tabs=document.getElementById("swissRoundTabs");
+    const status=document.getElementById("swissStatus");
+    const names=["Judith","Tony","Alex"];
+    const known=swissMatches.filter(m=>m.teamA&&m.teamB).length;
+    const tipCount=swissMatches.reduce((total,m)=>total+names.filter(n=>m.picks?.[n]).length,0);
+    document.getElementById("swissPicksCount").textContent=tipCount+"/"+(swissMatches.length*3||99);
+    tabs.innerHTML=[0,1,2,3,4,5].map(r=>'<button type="button" class="swiss-round-tab'+(r===swissFilter?' active':'')+'" data-swiss-round="'+r+'" aria-pressed="'+(r===swissFilter)+'">'+(r?'Runde '+r:'Alle Runden')+'</button>').join("");
+    status.textContent=swissMatches.length?swissMatches.length+" Spiele geplant · "+known+" Paarungen bekannt · "+tipCount+" Tipps eingetragen":"Spielplan wird geladen …";
+    const list=swissFilter?swissMatches.filter(m=>m.round===swissFilter):swissMatches;
+    let prevDate="";
+    root.innerHTML=list.map(m=>{
+      const day=swissDate(m.startUtc);
+      let prefix="";
+      if(day!==prevDate){prefix='<div class="swiss-day-title">'+escapeHTML(day)+'</div>';prevDate=day;}
+      const picks=names.map((name,i)=>{
+        const val=m.picks?.[name];
+        const safe=m.teamA&&m.teamB&&(val===m.teamA||val===m.teamB)?val:null;
+        const logo=safe?swissLogo(safe):"";
+        const player=PLAYERS[i];
+        return '<div class="swiss-pick'+(safe?' picked':'')+'" style="--player-color:'+player.color+'"><div class="swiss-pick-name">'+name+'</div><div class="swiss-pick-value'+(safe?'':' pending')+'">'+(logo?'<img class="mini-logo" src="'+logo+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+(safe?escapeHTML(safe):'NOCH OFFEN')+'</div></div>';
+      }).join("");
+      return prefix+'<article class="swiss-match" id="'+escapeHTML(m.id)+'">'+
+       '<div class="swiss-match-meta"><span class="swiss-match-format">RUNDE '+m.round+' · '+escapeHTML(m.format.toUpperCase())+'</span><span class="swiss-match-time">'+swissTime(m.startUtc)+'</span><span class="swiss-match-date">'+escapeHTML(swissZone(m.startUtc))+' · Slot '+m.slot+'</span></div>'+
+       '<div class="swiss-versus">'+swissTeam(m.teamA)+'<span class="swiss-vs">VS</span>'+swissTeam(m.teamB,true)+'</div>'+
+       '<div class="swiss-picks">'+picks+'</div></article>';
+    }).join("")||'<div class="swiss-empty">Für diese Runde sind noch keine Match-Slots eingetragen.</div>';
+  }
+  async function refreshSwiss(){
+    try{
+      const res=await fetch("./swiss.json?stamp="+Date.now(),{cache:"no-store"});
+      if(!res.ok)throw Error("HTTP "+res.status);
+      const d=await res.json();
+      if(d.format!=="worlds-2026-swiss"||d.version!==1||!Array.isArray(d.matches))throw Error("Ungültige Swiss-Datei");
+      swissMatches=d.matches.filter(m=>Number.isInteger(m.round)&&m.round>=1&&m.round<=5&&typeof m.startUtc==="string"&&!Number.isNaN(Date.parse(m.startUtc))&&typeof m.id==="string");
+      swissUpdatedAt=d.updatedAt||null;
+      renderSwiss();
+    }catch(e){
+      if(!swissMatches.length){
+        document.getElementById("swissMatchList").innerHTML='<div class="swiss-empty">Spielplan aktuell nicht verfügbar. Bitte später erneut laden.</div>';
+        document.getElementById("swissStatus").textContent="Spielplan nicht erreichbar";
+      }
+    }
+  }
+  function switchPage(page,scroll=true){
+    const target=page==="swiss"?"swiss":"crystal";
+    document.getElementById("crystalPage").hidden=target!=="crystal";
+    document.getElementById("swissPage").hidden=target!=="swiss";
+    document.querySelectorAll("[data-page]").forEach(btn=>{const active=btn.dataset.page===target;btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",String(active));});
+    if(location.hash!==(target==="swiss"?"#swiss":"#crystal"))history.replaceState(null,"",target==="swiss"?"#swiss":"#crystal");
+    if(scroll)window.scrollTo({top:0,behavior:"smooth"});
+  }
+
   function renderScores(){
     const liveCount=Object.keys(sharedLive).length;
     $("#statQuestions").textContent=QUESTIONS.length;
@@ -753,8 +956,14 @@ footer{border-color:#285da2;color:#9ac3ea}
     }
   }
   document.addEventListener("click",(event)=>{
-    const scroll=event.target.closest("[data-scroll]");if(scroll){const id=scroll.dataset.scroll;document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});document.querySelectorAll(".navlink").forEach(btn=>btn.classList.toggle("active",btn===scroll));}
-    const tab=event.target.closest("[data-category]");if(tab){category=tab.dataset.category;renderTabs();renderQuestions()}
+    const page=event.target.closest("[data-page]");
+    if(page){switchPage(page.dataset.page);return;}
+    const round=event.target.closest("[data-swiss-round]");
+    if(round){swissFilter=Number(round.dataset.swissRound);renderSwiss();return;}
+    const scroll=event.target.closest("[data-scroll]");
+    if(scroll){switchPage("crystal",false);const id=scroll.dataset.scroll;document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});}
+    const tab=event.target.closest("[data-category]");
+    if(tab){category=tab.dataset.category;renderTabs();renderQuestions();}
   });
   $("#searchInput").addEventListener("input",e=>{query=e.target.value;renderQuestions()});
   $("#differentOnly").addEventListener("change",e=>{onlyDifferent=e.target.checked;renderQuestions()});
@@ -783,10 +992,14 @@ footer{border-color:#285da2;color:#9ac3ea}
   $("#resetBtn")?.addEventListener("click",reset);
   $("#syncBtn")?.addEventListener("click",()=>refreshRemote(true));
   renderAll();
+  renderSwiss();
   refreshRemote(false);
+  refreshSwiss();
+  switchPage(location.hash.toLowerCase()==="#swiss"?"swiss":"crystal",false);
+  window.addEventListener("hashchange",()=>switchPage(location.hash.toLowerCase()==="#swiss"?"swiss":"crystal",false));
   // Prüft während eines offenen Tabs auf aktualisierte zentrale Dateien. Die
   // Erzeugung der Datei durch einen täglichen Job wird separat konfiguriert.
-  setInterval(()=>refreshRemote(false),30*60*1000);
+  setInterval(()=>{refreshRemote(false);refreshSwiss();},30*60*1000);
 })();
 </script>
 </body>
