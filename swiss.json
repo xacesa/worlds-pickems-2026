@@ -5,7 +5,7 @@
   "updatedAt": "2026-10-21",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Ansetzungen und Match-Reihenfolge Runde 1 nach LoL Esports offizieller Matchseite (Stand 21.10.2026). Zeiten in UTC; Web-App wandelt automatisch nach Europe/Berlin um. Runden 2-5: nur Zeit-Slots, Gegner bis zur Auslosung offen. Startzeiten können sich durch vorangehende Serien verschieben.",
+  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -15,11 +15,6 @@
       "format": "Bo1",
       "teamA": "GEN",
       "teamB": "IG",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -30,11 +25,6 @@
       "format": "Bo1",
       "teamA": "HLE",
       "teamB": "TES",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -45,11 +35,6 @@
       "format": "Bo1",
       "teamA": "BLG",
       "teamB": "MKOI",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -60,11 +45,6 @@
       "format": "Bo1",
       "teamA": "AL",
       "teamB": "KC",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -75,11 +55,6 @@
       "format": "Bo1",
       "teamA": "G2",
       "teamB": "DK",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -90,11 +65,6 @@
       "format": "Bo1",
       "teamA": "TLAW",
       "teamB": "CFO",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -105,11 +75,6 @@
       "format": "Bo1",
       "teamA": "LOS",
       "teamB": "T1",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -120,11 +85,6 @@
       "format": "Bo1",
       "teamA": "TSW",
       "teamB": "LYON",
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -135,11 +95,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -150,11 +105,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -165,11 +115,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -180,11 +125,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -195,11 +135,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -210,11 +145,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -225,11 +155,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -240,11 +165,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -255,11 +175,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -270,11 +185,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -285,11 +195,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -300,11 +205,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -315,11 +215,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -330,11 +225,6 @@
       "format": "Bo1",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -345,11 +235,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -360,11 +245,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -375,11 +255,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -390,11 +265,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -405,11 +275,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -420,11 +285,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -435,11 +295,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -450,11 +305,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -465,11 +315,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -480,11 +325,6 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     },
     {
@@ -495,12 +335,28 @@
       "format": "Bo3",
       "teamA": null,
       "teamB": null,
-      "picks": {
-        "Judith": null,
-        "Tony": null,
-        "Alex": null
-      },
       "result": null
     }
-  ]
+  ],
+  "qualifierPredictions": {
+    "Judith": {
+      "threeZero": null,
+      "threeOne": null,
+      "threeTwo": null,
+      "additional": []
+    },
+    "Tony": {
+      "threeZero": null,
+      "threeOne": null,
+      "threeTwo": null,
+      "additional": []
+    },
+    "Alex": {
+      "threeZero": null,
+      "threeOne": null,
+      "threeTwo": null,
+      "additional": []
+    }
+  },
+  "predictionsSource": "user submitted after all participants lock picks; currently blank"
 }
