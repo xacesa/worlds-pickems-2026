@@ -1,8 +1,85 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-10-20",
-  "sourceUrl": "https://pem.lol/worlds/2026/pickems",
+  "updatedAt": "2026-10-21",
+  "asOf": "2026-10-18",
+  "dataStatus": "manual_snapshot",
+  "sourceUrl": "https://statchecked.com/lol/worlds",
+  "referenceUrl": "https://pem.lol/worlds/2026/pickems",
+  "sourceNote": "Verglichen mit PEM.LOL-Auswertung nach den Play-ins vom 18.10.2026 und StatChecked; kein direkter Live-PEM-Abruf. Die Werte sind vorläufig.",
   "results": {},
-  "live": {}
+  "live": {
+    "1": {
+      "value": "Nocturne",
+      "detail": "95 % Präsenz (Pick oder Ban)"
+    },
+    "2": {
+      "value": "Vi",
+      "detail": "100 % Siegesrate, mindestens 5 Spiele"
+    },
+    "3": {
+      "value": "K'Sante",
+      "detail": "3,4 Tode pro Spiel"
+    },
+    "4": {
+      "value": "Caliste",
+      "detail": "5,4 KDA"
+    },
+    "5": {
+      "value": "Tactical",
+      "detail": "27.549 Schaden pro Spiel"
+    },
+    "6": {
+      "value": "JoJo",
+      "detail": "83 % Killbeteiligung"
+    },
+    "7": {
+      "value": "Gleichstand",
+      "detail": "Peyz 0 Kills · Gumayusi 0 Kills"
+    },
+    "8": {
+      "value": "616",
+      "detail": "Fakers bisherige Worlds-Kills, Ziel 700"
+    },
+    "9": {
+      "value": "Nein",
+      "detail": "Teemo bisher 0-mal gepickt (noch nicht endgültig)"
+    },
+    "10": {
+      "value": "84",
+      "detail": "bisher 84 unterschiedliche Champions"
+    },
+    "11": {
+      "value": "Nach",
+      "detail": "12 von 22 Spielen nach 32:00 Minuten"
+    },
+    "12": {
+      "value": "12",
+      "detail": "Höchste Kills in einem Spiel; Ziel mindestens 15"
+    },
+    "13": {
+      "value": "436",
+      "detail": "Höchster CS-Wert in einem Spiel; Ziel 450"
+    },
+    "14": {
+      "value": "Noch offen",
+      "detail": "Final-MVP erst nach dem Finale"
+    },
+    "15": {
+      "value": "0",
+      "detail": "noch keine qualifizierten Regionen für Knockouts"
+    },
+    "16": {
+      "value": "Noch offen",
+      "detail": "LCS-Qualifikation entscheidet sich in der Swiss Stage"
+    },
+    "17": {
+      "value": "Noch offen",
+      "detail": "HLE und T1 noch im Turnier"
+    },
+    "18": {
+      "value": "Karmine Corp",
+      "detail": "kürzester Sieg bisher: rund 26,9 Minuten"
+    }
+  }
 }
