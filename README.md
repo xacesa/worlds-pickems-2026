@@ -50,3 +50,29 @@ Für finale, geprüfte Ergebnisse kann `results.json` direkt bearbeitet werden. 
 ```
 
 Die automatisierte Aktualisierung erhält vorhandene finale Ergebnisse und verweigert widersprüchliche automatische Überschreibungen. Eigene Eingaben im Bearbeitungsmodus der Webseite liegen nur lokal im Browser und ändern **nicht** die gemeinsame Datei. Die IDs 1–18 entsprechen den Fragen der PDF.
+
+## Swiss Stage: Spielplan und eure Matchtipps
+
+Die öffentliche Webseite hat jetzt zwei Tabs: **Crystal Ball** und **Swiss Stage**.
+
+- Die Swiss Stage nutzt die Datei `swiss.json`. Es sind 33 Match-Slots in fünf Runden hinterlegt.
+- Die acht Paarungen aus Runde 1 sowie die Uhrzeiten basieren auf dem veröffentlichten LoL-Esports-Spielplan vom 21. Oktober 2026.
+- Die Spiele sind in UTC gespeichert und werden in der Webseite automatisch in deutsche Zeit (Europe/Berlin, inklusive Zeitumstellung) umgerechnet.
+- Bei den Runden 2–5 sind die Gegner bis zur Auslosung `null`. Bitte erst nach der offiziellen Auslosung `teamA` und `teamB` einsetzen.
+- Die drei Tipps bleiben bis zur Mitteilung auf `null`; damit zeigt die Webseite **NOCH OFFEN** an. Kein öffentliches Eingabeformular, keine Punkteberechnung.
+
+Beispiel für einen späteren Tipp zu `swiss-r1-m1`:
+
+```json
+{
+  "picks": {
+    "Judith": "GEN",
+    "Tony": "IG",
+    "Alex": null
+  }
+}
+```
+
+Die Werte müssen exakt zu `teamA` oder `teamB` passen (z. B. `GEN` oder `IG`). Bei einer Änderung einfach das jeweilige `picks`-Objekt in `swiss.json` anpassen, danach lädt die Webseite die gemeinsamen Tipps ohne HTML-Änderung.
+
+**Quellen:** [Offizieller Spielplan](https://lolesports.com/en-US/leagues/lcs) und [Worlds-Format mit Runden-Terminen](https://lolesports.com/en-GB/news/worlds-2026-primer). Die späteren Ansetzungen sind geplante Slots und können sich nach Spielverlauf verschieben.
