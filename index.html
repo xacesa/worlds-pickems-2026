@@ -829,7 +829,7 @@ footer{border-color:#285da2;color:#9ac3ea}
   };
   const swissDate=iso=>new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date(iso));
   const swissTime=iso=>new Intl.DateTimeFormat("de-DE",{hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
-  const swissZone=iso=>new Intl.DateTimeFormat("de-DE",{timeZoneName:"short"}).formatToParts(new Date(iso)).find(x=>x.type==="timeZoneName")?.value||Intl.DateTimeFormat().resolvedOptions().timeZone||"Ortszeit";
+  const swissZone=iso=>{const offset=-new Date(iso).getTimezoneOffset(),sign=offset<0?"-":"+",abs=Math.abs(offset);return "Deine Ortszeit · UTC"+sign+String(Math.floor(abs/60)).padStart(2,"0")+":"+String(abs%60).padStart(2,"0");};
   const swissTeam=(code,other=false)=>{
     const meta=code&&SWISS_TEAM_META[code];
     const img=code?swissLogo(code):"";
