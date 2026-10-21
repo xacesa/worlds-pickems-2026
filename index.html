@@ -748,7 +748,7 @@ footer{border-color:#285da2;color:#9ac3ea}
   const PLAYERS=[{name:"Judith",initial:"J",color:"var(--judith)"},{name:"Tony",initial:"T",color:"var(--tony)"},{name:"Alex",initial:"A",color:"var(--alex)"}];
   const CATEGORIES=["Alle","Champions","Profis","Rekorde","Turnier","Teams"];
   const CHAMPION_IDS={Cassiopeia:"Cassiopeia",Qiyana:"Qiyana",Vi:"Vi",Camille:"Camille","Lee Sin":"LeeSin",Yone:"Yone",Rell:"Rell",Nautilus:"Nautilus",Teemo:"Teemo",Nocturne:"Nocturne","K'Sante":"KSante"};
-  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#e98139",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/hle.png"},"T1":{abbr:"T1",color:"#fa515b",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lck-t1-crest-2026.png"},"Gen.G":{abbr:"GEN",color:"#d7b573",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/gen.png"},"G2 Esports":{abbr:"G2",color:"#d6dbe6",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lec-g2-esports-crest-2026.png"},"Team Liquid":{abbr:"TL",color:"#67b8f4",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-team-liquid-crest-2026.png"},"Cloud9":{abbr:"C9",color:"#60adff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-cloud9-crest-2026.png"},"Karmine Corp":{abbr:"KC",color:"#66a7ff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lec-karmine-corp-crest-2026.png"},"FURIA":{abbr:"FUR",color:"#cddae9",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/cblol-furia-crest-2026.png"}};
+  const TEAM_META={"Hanwha Life Esports":{abbr:"HLE",color:"#e98139",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/hle.png"},"T1":{abbr:"T1",color:"#fa515b",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lck-t1-crest-2026.png"},"Gen.G":{abbr:"GEN",color:"#d7b573",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/gen.png"},"G2 Esports":{abbr:"G2",color:"#d6dbe6",logo:"https://g2esports.com/cdn/shop/files/G2-Esports-2020-Logo_87bf0678-e67f-4834-8b09-e56137ffaa80.png?v=1641913940"},"Team Liquid":{abbr:"TL",color:"#67b8f4",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-team-liquid-crest-2026.png"},"Cloud9":{abbr:"C9",color:"#60adff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lcs-cloud9-crest-2026.png"},"Karmine Corp":{abbr:"KC",color:"#66a7ff",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/lec-karmine-corp-crest-2026.png"},"FURIA":{abbr:"FUR",color:"#cddae9",logo:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/cblol-furia-crest-2026.png"}};
   const avatarFor=(name,bg="0d1726",fg="ead8ae")=>`https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=${bg}&color=${fg}&size=128&rounded=true&bold=true`;
   const PLAYER_META={Judith:{},Tony:{},Alex:{},
     Knight:{team:"MID",teamName:"Bilibili Gaming",image:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/player-portraits/lpl-bilibili-gaming-knight-portrait-2026.webp"},
@@ -816,7 +816,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     GEN:["Gen.G","gen.png"],IG:["Invictus Gaming","lpl-invictus-gaming-crest-2026.png"],
     TLAW:["Team Liquid Alienware","lcs-team-liquid-crest-2026.png"],CFO:["CTBC Flying Oyster","lcp-ctbc-flying-oyster-crest-2026.png"],
     AL:["Anyone's Legend","lpl-anyone-s-legend-crest-2026.png"],KC:["Karmine Corp","lec-karmine-corp-crest-2026.png"],
-    G2:["G2 Esports","lec-g2-esports-crest-2026.png"],DK:["Dplus KIA","lck-dplus-kia-crest-2026.png"],
+    G2:["G2 Esports","https://g2esports.com/cdn/shop/files/G2-Esports-2020-Logo_87bf0678-e67f-4834-8b09-e56137ffaa80.png?v=1641913940"],DK:["Dplus KIA","lck-dplus-kia-crest-2026.png"],
     HLE:["Hanwha Life Esports","hle.png"],TES:["TOP Esports","lpl-top-esports-crest-2026.png"],
     LOS:["LOS",""],T1:["T1","lck-t1-crest-2026.png"],
     TSW:["Team Secret Whales","lcp-team-secret-whales-crest-2026.png"],LYON:["LYON","lcs-lyon-2024-american-team-crest-2026.png"],
@@ -825,7 +825,7 @@ footer{border-color:#285da2;color:#9ac3ea}
   let swissMatches=[], swissFilter=0, swissUpdatedAt=null, swissPredictions={};
   const swissLogo=code=>{
     const entry=SWISS_TEAM_META[code];
-    return entry&&entry[1]?"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/"+entry[1]:"";
+    return entry&&entry[1]?(entry[1].startsWith("https://")?entry[1]:"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/"+entry[1]):"";
   };
   const swissDate=iso=>new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"}).format(new Date(iso));
   const swissTime=iso=>new Intl.DateTimeFormat("de-DE",{hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
