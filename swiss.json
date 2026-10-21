@@ -1,7 +1,7 @@
 {
   "format": "worlds-2026-swiss",
   "version": 1,
-  "timezone": "Europe/Berlin",
+  "timezone": "UTC",
   "updatedAt": "2026-10-21",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
