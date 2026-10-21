@@ -537,6 +537,63 @@ footer{border-color:#285da2;color:#9ac3ea}
       .swiss-help span:last-child{display:block;margin-top:5px}
     }
 
+
+  /* 2026 Swiss Pick'em qualifying-team picks (separate from individual matches). */
+  .swiss-predict-section{padding:7px 0 36px}
+  .swiss-pred-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:0 0 16px}
+  .swiss-pred-intro h2{font-size:clamp(22px,2.7vw,32px);font-weight:900;letter-spacing:-.7px;margin:6px 0 0;color:#f0f8ff}
+  .swiss-pred-intro p{font-size:12px;color:#abc4dc;line-height:1.55;max-width:420px;margin:0}
+  .swiss-pred-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+  .swiss-person-picks{min-width:0;border:1px solid #365c89;background:linear-gradient(140deg,#122741,#09192f 85%);box-shadow:inset 0 1px #89c7ff16;position:relative}
+  .swiss-person-picks:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--pcolor);box-shadow:0 0 14px var(--pcolor)}
+  .swiss-person-head{padding:15px 16px 13px;display:flex;align-items:center;gap:9px;border-bottom:1px solid #2e4a6a}
+  .swiss-person-initial{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:950;color:#06182f;background:var(--pcolor)}
+  .swiss-person-head strong{font-size:16px;font-weight:900;letter-spacing:1px;color:#f4f9ff;text-transform:uppercase}
+  .swiss-person-head small{margin-left:auto;font-size:10px;font-weight:850;color:#9ebcda;text-align:right;letter-spacing:.3px}
+  .swiss-result-slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:14px 12px 13px}
+  .swiss-result-slot{min-width:0;background:#12233a;border:1px solid #37516f;padding:11px 8px 10px;text-align:center}
+  .swiss-result-label{display:flex;justify-content:center;align-items:center;gap:6px;margin-bottom:11px;color:#8fd5ff;font-size:11px;font-weight:950;letter-spacing:.6px}
+  .swiss-result-label b{color:#89b4e1}
+  .swiss-result-team{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;min-height:67px;justify-content:center}
+  .swiss-pick-logo{height:44px;width:44px;display:grid;place-items:center;border:1px solid #385779;background:#10223a;flex:none;color:#8fb1d1;font-size:13px;font-weight:850}
+  .swiss-pick-logo img{width:85%;height:85%;object-fit:contain}
+  .swiss-result-team strong{color:#f3f9ff;font-size:12px;min-width:0;max-width:100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+  .swiss-result-team .empty-pick{font-size:10px;font-weight:800;color:#7692b0;letter-spacing:.3px}
+  .swiss-extra-title{margin:0 12px;padding:12px 2px 10px;border-top:1px solid #2c4865;display:flex;justify-content:space-between;align-items:center;color:#cee2f8;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.5px}
+  .swiss-extra-title small{color:#83a3c3;font-size:10px;font-weight:750;text-transform:none}
+  .swiss-extra-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:0 12px 12px}
+  .swiss-extra-team{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:85px;border:1px solid #2e4968;background:#0d2035}
+  .swiss-extra-team .swiss-pick-logo{height:35px;width:35px}
+  .swiss-extra-team strong{font-size:10px;font-weight:900;color:#f4f8ff}
+  .swiss-extra-team.is-pending strong{color:#6d8cac}
+  .swiss-person-foot{padding:0 14px 13px;color:#86a7c5;font-size:10px;letter-spacing:.2px}
+  .swiss-person-foot strong{color:#dcefff}
+  .swiss-pred-note{margin-top:12px;color:#8dabca;font-size:11px;line-height:1.6}
+  .swiss-match{grid-template-columns:125px minmax(0,1fr)}
+  .swiss-versus{max-width:850px;width:100%;margin:0 auto}
+  @media(max-width:1080px){
+    .swiss-pred-grid{grid-template-columns:1fr;gap:12px}
+    .swiss-person-picks{display:grid;grid-template-columns:minmax(250px,1fr) minmax(300px,1.2fr)}
+    .swiss-person-head{grid-column:1/-1}
+    .swiss-result-slots{padding-bottom:12px}
+    .swiss-extra-title{grid-column:2;margin-top:0;border-top:0}
+    .swiss-extra-grid{grid-column:2;padding-bottom:12px}
+    .swiss-person-foot{grid-column:1/-1}
+    .swiss-person-picks{display:block}
+    .swiss-match{grid-template-columns:125px minmax(0,1fr)}
+  }
+  @media(max-width:700px){
+    .swiss-pred-intro{flex-direction:column;align-items:flex-start;gap:6px}
+    .swiss-person-head{padding:12px 12px 10px}
+    .swiss-result-slots{padding:12px 9px}
+    .swiss-result-slot{padding:8px 4px}
+    .swiss-extra-title{margin:0 9px}
+    .swiss-extra-grid{padding:0 9px 12px;gap:4px}
+    .swiss-extra-team{min-height:76px}
+    .swiss-extra-team .swiss-pick-logo{width:30px;height:30px}
+    .swiss-match{grid-template-columns:82px minmax(0,1fr)}
+  }
+
 </style>
 </head>
 <body>
@@ -629,16 +686,25 @@ footer{border-color:#285da2;color:#9ac3ea}
     <section class="swiss-hero" aria-labelledby="swiss-title">
       <div class="swiss-kicker">2026 WORLD CHAMPIONSHIP · SWISS STAGE</div>
       <h1 id="swiss-title">SWISS <span>STAGE</span></h1>
-      <p>Alle Begegnungen und angesetzten Startzeiten auf einen Blick. Vergleiche die Tipps von Judith, Tony und Alex direkt bei jedem Match. Die Tipps werden erst nach eurer Abgabe übernommen.</p>
+      <p>Unsere Tipps beziehen sich auf die <strong>acht Teams, die die Swiss Stage überstehen</strong>. Pro Person wird je ein Team für 3:0, 3:1 und 3:2 festgelegt. Fünf weitere Weiterkommen-Tipps ergänzen die Auswahl. Darunter findet ihr den Spielplan.</p>
       <div class="swiss-stage-stats">
         <div class="swiss-stage-stat"><strong>33</strong><span>Begegnungen</span></div>
         <div class="swiss-stage-stat"><strong>5</strong><span>Runden</span></div>
-        <div class="swiss-stage-stat"><strong id="swissPicksCount">0/99</strong><span>Tipps eingetragen</span></div>
+        <div class="swiss-stage-stat"><strong id="swissPicksCount">0/24</strong><span>Weiterkommen-Tipps</span></div>
       </div>
     </section>
-    <section class="swiss-section" aria-label="Spielplan und Tipps">
+
+    <section class="swiss-predict-section" aria-labelledby="swiss-pred-title">
+      <div class="swiss-pred-intro">
+        <div><div class="swiss-kicker">OUR SWISS PICKS</div><h2 id="swiss-pred-title">Wer kommt weiter?</h2></div>
+        <p>Für Judith, Tony und Alex jeweils ein Team mit 3:0, 3:1 und 3:2 sowie fünf weitere qualifizierte Teams. Alle Tipps werden erst übernommen, wenn ihr sie eingelockt habt.</p>
+      </div>
+      <div id="swissPredictionCards" class="swiss-pred-grid" aria-live="polite"></div>
+      <p class="swiss-pred-note">Die Tipps werden oberhalb des Spielplans angezeigt. Das Spielplan-Ergebnis eines einzelnen Matches ist <strong>kein</strong> eigener Pick.</p>
+    </section>
+    <section class="swiss-section" aria-label="Spielplan">
       <div class="swiss-section-head">
-        <div><div class="swiss-kicker">MATCH SCHEDULE</div><h2>Spielplan &amp; eure Picks</h2></div>
+        <div><div class="swiss-kicker">MATCH SCHEDULE</div><h2>Swiss-Stage-Spielplan</h2></div>
         <p>Uhrzeiten für Deutschland (MESZ/MEZ). Spätere Matches können sich durch längere Serien verschieben. Paarungen der Runden 2 bis 5 folgen nach den Auslosungen.</p>
       </div>
       <div class="swiss-round-tabs" id="swissRoundTabs" role="group" aria-label="Swiss-Runde auswählen">
@@ -756,7 +822,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     TSW:["Team Secret Whales","lcp-team-secret-whales-crest-2026.png"],LYON:["LYON","lcs-lyon-2024-american-team-crest-2026.png"],
     BLG:["Bilibili Gaming","lpl-bilibili-gaming-crest-2026.png"],MKOI:["Movistar KOI","lec-movistar-koi-crest-2026.png"]
   };
-  let swissMatches=[], swissFilter=0, swissUpdatedAt=null;
+  let swissMatches=[], swissFilter=0, swissUpdatedAt=null, swissPredictions={};
   const swissLogo=code=>{
     const entry=SWISS_TEAM_META[code];
     return entry&&entry[1]?"https://raw.githubusercontent.com/Hunter20041004/lol-video-generator/main/public/team-crests/"+entry[1]:"";
@@ -771,33 +837,60 @@ footer{border-color:#285da2;color:#9ac3ea}
      '<div class="swiss-logo">'+(img?'<img src="'+img+'" alt="" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.textContent=\''+escapeHTML(code||'?')+'\'">':escapeHTML(code||"?"))+'</div>'+
      '<div class="swiss-team-text"><strong>'+escapeHTML(code||"TBD")+'</strong><small>'+escapeHTML(meta?meta[0]:"Auslosung ausstehend")+'</small></div></div>';
   };
+
+  const swissSafeCode=(code)=>typeof code==="string" && Object.prototype.hasOwnProperty.call(SWISS_TEAM_META,code)?code:null;
+  function swissPickLogo(code){
+    const logo=code?swissLogo(code):"";
+    return '<span class="swiss-pick-logo">'+(logo?'<img alt="" loading="lazy" src="'+logo+'" onerror="this.style.display=\'none\';this.parentElement.textContent=\''+escapeHTML(code)+'\'">':escapeHTML(code||"＋"))+'</span>';
+  }
+  function renderSwissPredictions(){
+    const root=document.getElementById("swissPredictionCards");
+    let total=0;
+    root.innerHTML=PLAYERS.map(p=>{
+      const source=swissPredictions[p.name]||{};
+      const specials=[["3:0","threeZero"],["3:1","threeOne"],["3:2","threeTwo"]];
+      const validExtras=Array.isArray(source.additional)?source.additional.map(swissSafeCode).filter(Boolean).slice(0,5):[];
+      const used=new Set();
+      const cleanPick=code=>{const val=swissSafeCode(code);if(!val||used.has(val))return null;used.add(val);total++;return val;};
+      const specialHtml=specials.map(([label,key])=>{
+        const code=cleanPick(source[key]);
+        return '<div class="swiss-result-slot"><div class="swiss-result-label">⚔ '+label+'</div>'+
+          '<div class="swiss-result-team">'+swissPickLogo(code)+
+          (code?'<strong>'+escapeHTML(code)+'</strong>':'<strong class="empty-pick">NOCH OFFEN</strong>')+'</div></div>';
+      }).join("");
+      const extras=Array.from({length:5},(_,i)=>{
+        const code=cleanPick(validExtras[i]);
+        return '<div class="swiss-extra-team'+(code?'':' is-pending')+'">'+swissPickLogo(code)+'<strong>'+escapeHTML(code||"OFFEN")+'</strong></div>';
+      }).join("");
+      const filled=used.size;
+      return '<article class="swiss-person-picks" style="--pcolor:'+p.color+'">'+
+        '<div class="swiss-person-head"><span class="swiss-person-initial">'+escapeHTML(p.initial)+'</span><strong>'+escapeHTML(p.name)+'</strong><small>'+filled+'/8 Teams</small></div>'+
+        '<div class="swiss-result-slots">'+specialHtml+'</div>'+
+        '<div class="swiss-extra-title">Weitere Weiterkommen-Tipps <small>5 freie Plätze</small></div>'+
+        '<div class="swiss-extra-grid">'+extras+'</div>'+
+        '<div class="swiss-person-foot">'+(filled===8?'<strong>Alle acht Teams ausgewählt</strong>':'<strong>Auswahl noch offen</strong> · Tipps folgen')+'</div></article>';
+    }).join("");
+    document.getElementById("swissPicksCount").textContent=total+"/24";
+  }
+
   function renderSwiss(){
     const root=document.getElementById("swissMatchList");
     const tabs=document.getElementById("swissRoundTabs");
     const status=document.getElementById("swissStatus");
     const names=["Judith","Tony","Alex"];
     const known=swissMatches.filter(m=>m.teamA&&m.teamB).length;
-    const tipCount=swissMatches.reduce((total,m)=>total+names.filter(n=>m.picks?.[n]).length,0);
-    document.getElementById("swissPicksCount").textContent=tipCount+"/"+(swissMatches.length*3||99);
+    renderSwissPredictions();
     tabs.innerHTML=[0,1,2,3,4,5].map(r=>'<button type="button" class="swiss-round-tab'+(r===swissFilter?' active':'')+'" data-swiss-round="'+r+'" aria-pressed="'+(r===swissFilter)+'">'+(r?'Runde '+r:'Alle Runden')+'</button>').join("");
-    status.textContent=swissMatches.length?swissMatches.length+" Spiele geplant · "+known+" Paarungen bekannt · "+tipCount+" Tipps eingetragen":"Spielplan wird geladen …";
+    status.textContent=swissMatches.length?swissMatches.length+" Spiel-Slots geplant · "+known+" Paarungen bekannt":"Spielplan wird geladen …";
     const list=swissFilter?swissMatches.filter(m=>m.round===swissFilter):swissMatches;
     let prevDate="";
     root.innerHTML=list.map(m=>{
       const day=swissDate(m.startUtc);
       let prefix="";
       if(day!==prevDate){prefix='<div class="swiss-day-title">'+escapeHTML(day)+'</div>';prevDate=day;}
-      const picks=names.map((name,i)=>{
-        const val=m.picks?.[name];
-        const safe=m.teamA&&m.teamB&&(val===m.teamA||val===m.teamB)?val:null;
-        const logo=safe?swissLogo(safe):"";
-        const player=PLAYERS[i];
-        return '<div class="swiss-pick'+(safe?' picked':'')+'" style="--player-color:'+player.color+'"><div class="swiss-pick-name">'+name+'</div><div class="swiss-pick-value'+(safe?'':' pending')+'">'+(logo?'<img class="mini-logo" src="'+logo+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+(safe?escapeHTML(safe):'NOCH OFFEN')+'</div></div>';
-      }).join("");
       return prefix+'<article class="swiss-match" id="'+escapeHTML(m.id)+'">'+
        '<div class="swiss-match-meta"><span class="swiss-match-format">RUNDE '+m.round+' · '+escapeHTML(m.format.toUpperCase())+'</span><span class="swiss-match-time">'+swissTime(m.startUtc)+'</span><span class="swiss-match-date">'+escapeHTML(swissZone(m.startUtc))+' · Slot '+m.slot+'</span></div>'+
-       '<div class="swiss-versus">'+swissTeam(m.teamA)+'<span class="swiss-vs">VS</span>'+swissTeam(m.teamB,true)+'</div>'+
-       '<div class="swiss-picks">'+picks+'</div></article>';
+       '<div class="swiss-versus">'+swissTeam(m.teamA)+'<span class="swiss-vs">VS</span>'+swissTeam(m.teamB,true)+'</div></article>';
     }).join("")||'<div class="swiss-empty">Für diese Runde sind noch keine Match-Slots eingetragen.</div>';
   }
   async function refreshSwiss(){
@@ -808,6 +901,7 @@ footer{border-color:#285da2;color:#9ac3ea}
       if(d.format!=="worlds-2026-swiss"||d.version!==1||!Array.isArray(d.matches))throw Error("Ungültige Swiss-Datei");
       swissMatches=d.matches.filter(m=>Number.isInteger(m.round)&&m.round>=1&&m.round<=5&&typeof m.startUtc==="string"&&!Number.isNaN(Date.parse(m.startUtc))&&typeof m.id==="string");
       swissUpdatedAt=d.updatedAt||null;
+      swissPredictions=d.qualifierPredictions && typeof d.qualifierPredictions==="object" && !Array.isArray(d.qualifierPredictions)?d.qualifierPredictions:{};
       renderSwiss();
     }catch(e){
       if(!swissMatches.length){
