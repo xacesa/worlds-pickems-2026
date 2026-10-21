@@ -434,6 +434,19 @@ html,body{background:#030b2a;color:#f7fbff}
 .management{background:#071b48;border-color:#2663a7}.sync-panel{background:#07183b;border-color:#23528e}.small-btn{background:#0d356d;border-color:#3476af;color:#ebf6ff}
 footer{border-color:#285da2;color:#9ac3ea}
 
+
+    /* Crystal Ball snapshot display: no points are awarded during Worlds. */
+    .live-result {margin-top:14px;padding:12px 16px;border:1px solid #387cb0;border-left:3px solid #70c9ff;background:linear-gradient(110deg,#0b2040,#0c1a32 80%);border-radius:5px;align-items:center;gap:10px 14px}
+    .live-result .live-kicker{color:#8ad6ff;font-size:10px;letter-spacing:1.3px;font-weight:900}
+    .live-result .live-value{color:#f4f8ff;font-size:17px;font-weight:850}
+    .live-result .live-detail{color:#b4cce3;font-size:12px}
+    .live-result .live-note{color:#89aac9;font-size:10px;letter-spacing:.7px;white-space:nowrap}
+    .live-result .live-media{flex-shrink:0}
+    .live-result .live-copy{min-width:0;flex:1}
+    .answer.live-match{border-color:#5ebeff;background:linear-gradient(130deg,#15345a,#0d233d);box-shadow:inset 0 0 0 1px #5ebeff35}
+    .live-match-caption{display:inline-flex;color:#8bd7ff;font-size:10px;font-weight:850;letter-spacing:.2px;margin-top:3px}
+    .snapshot-date{display:block;color:#99bad7;font-size:10px;letter-spacing:.5px;margin-top:3px}
+    @media(max-width:680px){.live-result .live-note{margin-left:0;width:100%}.live-result .live-value{font-size:15px}}
 </style>
 </head>
 <body>
@@ -501,7 +514,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     <div class="management-top">
       <div>
         <h3>Live-Tracker</h3>
-        <p>Die Seite konzentriert sich jetzt komplett auf <strong>eure Picks im offiziellen Worlds-Look</strong>. Ein klassisches Leaderboard und das manuelle Punkte-Eintragen wurden entfernt, weil die finale Auswertung erst nach den Worlds sinnvoll ist. Unten siehst du nur den Live-Status und die Quelle.</p>
+        <p>Die aktuellen Spitzenreiter und Rekord-Zwischenstände stehen direkt bei euren Tipps. Die Werte sind <strong>vorläufig</strong> und werden derzeit aus öffentlich verfügbaren Worlds-Auswertungen geprüft und übernommen. Punkte gibt es erst nach den Worlds.</p>
       </div>
       <div class="manage-actions">
         <button type="button" class="small-btn" id="syncBtn">↻ Synchronisieren</button>
@@ -600,7 +613,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     }
     return {results};
   }
-  let state=loadState(); let sharedResults={}; let sharedLive={}; let sharedUpdatedAt=null; let sharedSourceUrl=null; let category="Alle";let onlyDifferent=false;let query="";let grading=false;let toastTimer;const customOpen=new Set();
+  let state=loadState(); let sharedResults={}; let sharedLive={}; let sharedUpdatedAt=null; let sharedAsOf=null; let sharedSourceUrl=null; let category="Alle";let onlyDifferent=false;let query="";let grading=false;let toastTimer;const customOpen=new Set();
   const byId=(id)=>QUESTIONS.find(q=>q.id===Number(id));
   const uniquePicks=(q)=>[...new Map(q.p.map(p=>[clean(p),p])).values()];
   const unanimous=(q)=>uniquePicks(q).length===1;
@@ -626,10 +639,11 @@ footer{border-color:#285da2;color:#9ac3ea}
     const wrong = result && !same;
     const person=PLAYERS[index];
     const meta=classifyValue(p,q);
-    return `<div class="answer ${same?"correct":wrong?"incorrect":""}" style="--accent:${person.color};position:relative" aria-label="${person.name}: ${escapeHTML(p)}${result?same?", richtig":", falsch":""}">
+    const isCurrentLeader=[1,2,3,4,5,6,7,11,17,18].includes(q.id) && !!sharedLive[q.id] && clean(sharedLive[q.id].value)===clean(p);
+    return `<div class="answer ${same?"correct":wrong?"incorrect":""} ${isCurrentLeader?"live-match":""}" style="--accent:${person.color};position:relative" aria-label="${person.name}: ${escapeHTML(p)}${result?same?", richtig":", falsch":""}">
       <div class="answer-person" aria-hidden="true">${person.initial}</div>
       ${visualMarkup(meta)}
-      <div class="answer-main"><span class="answer-label">${person.name}</span><span class="answer-value">${escapeHTML(p)}</span><span class="answer-sub">${escapeHTML(meta.sub || q.cat)}</span></div>
+      <div class="answer-main"><span class="answer-label">${person.name}</span><span class="answer-value">${escapeHTML(p)}</span><span class="answer-sub">${escapeHTML(meta.sub || q.cat)}</span>${isCurrentLeader?'<span class="live-match-caption">Aktuell vorne · vorläufig</span>':""}</div>
       ${result?`<div class="answer-icon" aria-hidden="true">${same?"✓":"×"}</div>`:""}
     </div>`;
   }
@@ -655,6 +669,8 @@ footer{border-color:#285da2;color:#9ac3ea}
     const badge=different===1?"ALLE EINIG":different===2?"2 GLEICHE TIPPS":"3 VERSCHIEDENE TIPPS";
     const live=sharedLive[q.id];
     const meta=live?classifyValue(live.value,q):null;
+    const liveLabel=live?.value==="Noch offen"?"NOCH OFFEN":[1,2,3,4,5,6,18].includes(q.id)?"AKTUELLER SPITZENREITER":"TURNIER-ZWISCHENSTAND";
+    const liveDate=sharedAsOf?"Datenstand: "+new Date(sharedAsOf+"T12:00:00").toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit",year:"numeric"}):"";
     return `<article class="question-card ${result?"graded":""}" data-cat="${escapeHTML(q.cat)}" id="frage-${q.id}">
       <div class="q-panel">
         <div class="q-upper"><div class="q-info"><span class="q-number">${String(q.id).padStart(2,"0")}</span><span class="q-tag">${escapeHTML(q.cat)}</span></div></div>
@@ -665,7 +681,7 @@ footer{border-color:#285da2;color:#9ac3ea}
       <div class="q-comparison">
         <div class="compare-head">${PLAYERS.map((p,i)=>`<div class="compare-col" style="--accent:${p.color}"><span class="compare-dot"></span>${p.name}</div>`).join("")}</div>
         <div class="answers">${q.p.map((pick,i)=>renderAnswer(pick,i,result,q)).join("")}</div>
-        ${live?`<div class="live-result ${sharedResults[q.id]?"confirmed":""}">${visualMarkup(meta,"live-media")}<div class="live-copy"><span class="live-kicker">${sharedResults[q.id]?"✓ BESTÄTIGT":"● LIVE-ZWISCHENSTAND"}</span><span class="live-value">${escapeHTML(live.value)}</span>${live.detail?`<span class="live-detail">${escapeHTML(live.detail)}</span>`:""}</div>${!sharedResults[q.id]?'<span class="live-note">NOCH NICHT FINAL</span>':""}</div>`:""}
+        ${live?`<div class="live-result ${sharedResults[q.id]?"confirmed":""}">${visualMarkup(meta,"live-media")}<div class="live-copy"><span class="live-kicker">${sharedResults[q.id]?"✓ BESTÄTIGT":"● "+liveLabel}</span><span class="live-value">${escapeHTML(live.value)}</span>${live.detail?`<span class="live-detail">${escapeHTML(live.detail)}</span>`:""}${liveDate?`<span class="snapshot-date">${escapeHTML(liveDate)}</span>`:""}</div>${!sharedResults[q.id]?'<span class="live-note">VORLÄUFIG · KEINE PUNKTE</span>':""}</div>`:""}
         
       </div>
     </article>`;
@@ -712,16 +728,17 @@ footer{border-color:#285da2;color:#9ac3ea}
       }
       sharedLive=latest;
       sharedUpdatedAt=typeof data.updatedAt==="string"?data.updatedAt:null;
+      sharedAsOf=typeof data.asOf==="string" && /^\d{4}-\d{2}-\d{2}$/.test(data.asOf)?data.asOf:null;
       sharedSourceUrl=typeof data.sourceUrl==="string" && /^https:\/\//i.test(data.sourceUrl)?data.sourceUrl:null;
       const n=Object.keys(next).length;
       const observed=Object.keys(latest).length;
       if(n || observed){
-        status.textContent=`${observed} Zwischenstände · ${n} bestätigte Antworten`;
+        status.textContent=`${observed}/18 Zwischenstände · keine Punkte`;
         dot.classList.add("connected");
-        detail.textContent=sharedUpdatedAt?"Zuletzt aktualisiert: "+new Date(sharedUpdatedAt).toLocaleString("de-DE",{dateStyle:"medium",timeStyle:"short"}):"Zentrale Ergebnisdatei geladen.";
+        detail.textContent=sharedAsOf?"Datenstand: "+new Date(sharedAsOf+"T12:00:00").toLocaleDateString("de-DE",{dateStyle:"medium"})+" · Zwischenstände werden derzeit geprüft und manuell übernommen.":"Zentrale Ergebnisdatei geladen.";
       }else{
-        status.textContent="Synchronisierung eingerichtet";
-        detail.textContent="Noch keine Daten eingelesen. Der tägliche Abruf startet nach Veröffentlichung via GitHub Actions.";
+        status.textContent="Noch keine Zwischenstände eingetragen";
+        detail.textContent="Sobald eine verlässliche Quelle erreichbar ist, erscheinen hier neue Zwischenstände.";
         dot.classList.remove("connected");
       }
       link.hidden=!sharedSourceUrl;
@@ -730,7 +747,7 @@ footer{border-color:#285da2;color:#9ac3ea}
       if(notify)showToast(observed?`${observed} Zwischenstände aktualisiert.`:"Noch keine zentralen Ergebnisse vorhanden.");
     }catch(error){
       status.textContent="Live-Daten aktuell nicht erreichbar";
-      detail.textContent=location.protocol==="file:"?"Lokale Vorschau: Auf dem Hosting kann die gemeinsame Datei geladen werden.":"Manuelle Auswertung bleibt verfügbar. Bitte später erneut versuchen.";
+      detail.textContent=location.protocol==="file:"?"Lokale Vorschau: Auf dem Hosting kann die gemeinsame Datei geladen werden.":"Die gemeinsame Datei ist vorübergehend nicht erreichbar. Eure Tipps bleiben sichtbar.";
       dot.classList.remove("connected");link.hidden=true;
       if(notify)showToast("Synchronisierung derzeit nicht erreichbar.");
     }
