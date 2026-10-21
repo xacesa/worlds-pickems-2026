@@ -3,9 +3,9 @@
   "version": 1,
   "timezone": "Europe/Berlin",
   "updatedAt": "2026-10-21",
-  "sourceUrl": "https://www.sheepesports.com/en/cs/events/2026-world-championship-main-event/matches",
+  "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Matchzeiten sind geplante Startslots; Verschiebungen je nach Matchdauer möglich. Runde 2-5 Gegner werden nach weiteren Auslosungen bekannt gegeben. Tipps zunächst leer.",
+  "notes": "Ansetzungen und Match-Reihenfolge Runde 1 nach LoL Esports offizieller Matchseite (Stand 21.10.2026). Zeiten in UTC; Web-App wandelt automatisch nach Europe/Berlin um. Runden 2-5: nur Zeit-Slots, Gegner bis zur Auslosung offen. Startzeiten können sich durch vorangehende Serien verschieben.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -28,8 +28,8 @@
       "slot": 2,
       "startUtc": "2026-10-23T18:00:00Z",
       "format": "Bo1",
-      "teamA": "TLAW",
-      "teamB": "CFO",
+      "teamA": "HLE",
+      "teamB": "TES",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -43,8 +43,8 @@
       "slot": 3,
       "startUtc": "2026-10-23T19:00:00Z",
       "format": "Bo1",
-      "teamA": "AL",
-      "teamB": "KC",
+      "teamA": "BLG",
+      "teamB": "MKOI",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -58,8 +58,8 @@
       "slot": 4,
       "startUtc": "2026-10-23T20:00:00Z",
       "format": "Bo1",
-      "teamA": "G2",
-      "teamB": "DK",
+      "teamA": "AL",
+      "teamB": "KC",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -73,8 +73,8 @@
       "slot": 5,
       "startUtc": "2026-10-23T21:00:00Z",
       "format": "Bo1",
-      "teamA": "HLE",
-      "teamB": "TES",
+      "teamA": "G2",
+      "teamB": "DK",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -88,8 +88,8 @@
       "slot": 6,
       "startUtc": "2026-10-23T22:00:00Z",
       "format": "Bo1",
-      "teamA": "LOS",
-      "teamB": "T1",
+      "teamA": "TLAW",
+      "teamB": "CFO",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -103,8 +103,8 @@
       "slot": 7,
       "startUtc": "2026-10-23T23:00:00Z",
       "format": "Bo1",
-      "teamA": "TSW",
-      "teamB": "LYON",
+      "teamA": "LOS",
+      "teamB": "T1",
       "picks": {
         "Judith": null,
         "Tony": null,
@@ -118,8 +118,8 @@
       "slot": 8,
       "startUtc": "2026-10-24T00:00:00Z",
       "format": "Bo1",
-      "teamA": "BLG",
-      "teamB": "MKOI",
+      "teamA": "TSW",
+      "teamB": "LYON",
       "picks": {
         "Judith": null,
         "Tony": null,
