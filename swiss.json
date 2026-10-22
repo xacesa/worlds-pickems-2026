@@ -2,7 +2,7 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-23",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
   "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig.",
@@ -348,9 +348,9 @@
     "Tony": {
       "threeZero": "GEN",
       "threeOne": "G2",
-      "threeTwo": "BLG",
+      "threeTwo": "T1",
       "additional": [
-        "T1",
+        "BLG",
         "HLE",
         "TLAW",
         "DK",
@@ -358,11 +358,17 @@
       ]
     },
     "Alex": {
-      "threeZero": null,
-      "threeOne": null,
-      "threeTwo": null,
-      "additional": []
+      "threeZero": "GEN",
+      "threeOne": "HLE",
+      "threeTwo": "G2",
+      "additional": [
+        "T1",
+        "AL",
+        "BLG",
+        "DK",
+        "TLAW"
+      ]
     }
   },
-  "predictionsSource": "user submitted after all participants lock picks; currently blank"
+  "predictionsSource": "Tony und Alex: Screenshots vom 22.10.2026; Judith noch offen."
 }
