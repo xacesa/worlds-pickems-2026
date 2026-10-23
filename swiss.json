@@ -352,8 +352,8 @@
       ]
     },
     "Tony": {
-      "threeZero": "GEN",
-      "threeOne": "G2",
+      "threeZero": "G2",
+      "threeOne": "GEN",
       "threeTwo": "T1",
       "additional": [
         "BLG",
@@ -376,5 +376,5 @@
       ]
     }
   },
-  "predictionsSource": "Judith: Screenshot vom 23.10.2026; Tony: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026."
+  "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026."
 }
