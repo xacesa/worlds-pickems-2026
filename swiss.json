@@ -340,10 +340,16 @@
   ],
   "qualifierPredictions": {
     "Judith": {
-      "threeZero": null,
-      "threeOne": null,
-      "threeTwo": null,
-      "additional": []
+      "threeZero": "GEN",
+      "threeOne": "HLE",
+      "threeTwo": "KC",
+      "additional": [
+        "BLG",
+        "AL",
+        "T1",
+        "DK",
+        "G2"
+      ]
     },
     "Tony": {
       "threeZero": "GEN",
@@ -370,5 +376,5 @@
       ]
     }
   },
-  "predictionsSource": "Tony: aktualisierter Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026; Judith noch offen."
+  "predictionsSource": "Judith: Screenshot vom 23.10.2026; Tony: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026."
 }
