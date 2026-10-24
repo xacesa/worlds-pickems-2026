@@ -477,6 +477,12 @@ footer{border-color:#285da2;color:#9ac3ea}
     .swiss-help span:first-child{font-weight:850;color:#dcefff}
     .swiss-day-title{display:flex;align-items:center;gap:11px;color:#b3d4fa;letter-spacing:1.35px;text-transform:uppercase;font-size:12px;font-weight:900;margin:24px 0 12px}
     .swiss-day-title:after{content:"";height:1px;background:#2e5278;flex:1}
+    .swiss-archive{border:1px solid #345574;background:#0d1b2b;margin:15px 0;border-radius:10px;overflow:hidden}
+    .swiss-archive>summary{cursor:pointer;padding:17px 19px;color:#e3cf9d;font-size:13px;font-weight:850;list-style:none;display:flex;justify-content:space-between;gap:12px}
+    .swiss-archive>summary::-webkit-details-marker{display:none}
+    .swiss-archive>summary span{color:#9eb5c9;font-size:11px}
+    .swiss-archive-games{padding:0 12px 12px;display:flex;flex-direction:column;gap:9px}
+    .swiss-vs{min-width:45px;text-align:center}
     .swiss-match-list{display:flex;flex-direction:column;gap:9px}
     .swiss-match{display:grid;grid-template-columns:135px minmax(310px,1.17fr) minmax(315px,1.04fr);align-items:stretch;gap:0;background:linear-gradient(120deg,#102238,#0e1b30);border:1px solid #284666;min-height:100px;position:relative;transition:background .2s,border-color .2s}
     .swiss-match:hover{border-color:#568bbd;background:linear-gradient(120deg,#132c4b,#101d36)}
@@ -877,20 +883,26 @@ footer{border-color:#285da2;color:#9ac3ea}
     const root=document.getElementById("swissMatchList");
     const tabs=document.getElementById("swissRoundTabs");
     const status=document.getElementById("swissStatus");
-    const names=["Judith","Tony","Alex"];
     const known=swissMatches.filter(m=>m.teamA&&m.teamB).length;
     renderSwissPredictions();
     tabs.innerHTML=[0,1,2,3,4,5].map(r=>'<button type="button" class="swiss-round-tab'+(r===swissFilter?' active':'')+'" data-swiss-round="'+r+'" aria-pressed="'+(r===swissFilter)+'">'+(r?'Runde '+r:'Alle Runden')+'</button>').join("");
-    status.textContent=swissMatches.length?swissMatches.length+" Spiel-Slots geplant · "+known+" Paarungen bekannt":"Spielplan wird geladen …";
+    const finished=swissMatches.filter(m=>m.result&&Number.isInteger(m.result.teamA)&&Number.isInteger(m.result.teamB)).length;
+    status.textContent=swissMatches.length?finished+" Ergebnisse · "+known+" Paarungen bekannt · "+swissMatches.length+" Slots":"Spielplan wird geladen …";
     const list=swissFilter?swissMatches.filter(m=>m.round===swissFilter):swissMatches;
-    let prevDate="";
-    root.innerHTML=list.map(m=>{
+    const completed=m=>m.result&&Number.isInteger(m.result.teamA)&&Number.isInteger(m.result.teamB);
+    const matchHtml=m=>'<article class="swiss-match" id="'+escapeHTML(m.id)+'">'+
+      '<div class="swiss-match-meta"><span class="swiss-match-format">RUNDE '+m.round+' · '+escapeHTML(m.format.toUpperCase())+'</span><span class="swiss-match-time">'+swissTime(m.startUtc)+'</span><span class="swiss-match-date">'+escapeHTML(swissZone(m.startUtc))+' · Slot '+m.slot+'</span></div>'+
+      '<div class="swiss-versus">'+swissTeam(m.teamA)+'<span class="swiss-vs">'+(completed(m)?m.result.teamA+' : '+m.result.teamB:'VS')+'</span>'+swissTeam(m.teamB,true)+'</div></article>';
+    const groups=[];
+    list.forEach(m=>{
       const day=swissDate(m.startUtc);
-      let prefix="";
-      if(day!==prevDate){prefix='<div class="swiss-day-title">'+escapeHTML(day)+'</div>';prevDate=day;}
-      return prefix+'<article class="swiss-match" id="'+escapeHTML(m.id)+'">'+
-       '<div class="swiss-match-meta"><span class="swiss-match-format">RUNDE '+m.round+' · '+escapeHTML(m.format.toUpperCase())+'</span><span class="swiss-match-time">'+swissTime(m.startUtc)+'</span><span class="swiss-match-date">'+escapeHTML(swissZone(m.startUtc))+' · Slot '+m.slot+'</span></div>'+
-       '<div class="swiss-versus">'+swissTeam(m.teamA)+'<span class="swiss-vs">VS</span>'+swissTeam(m.teamB,true)+'</div></article>';
+      if(!groups.length||groups[groups.length-1].day!==day)groups.push({day,matches:[]});
+      groups[groups.length-1].matches.push(m);
+    });
+    root.innerHTML=groups.map(g=>{
+      const old=g.matches.every(completed);
+      if(old)return '<details class="swiss-archive"><summary>'+escapeHTML(g.day)+' · '+g.matches.length+' abgeschlossene Spiele <span>Aufklappen ▾</span></summary><div class="swiss-archive-games">'+g.matches.map(matchHtml).join("")+'</div></details>';
+      return '<div class="swiss-day-title">'+escapeHTML(g.day)+'</div>'+g.matches.map(matchHtml).join("");
     }).join("")||'<div class="swiss-empty">Für diese Runde sind noch keine Match-Slots eingetragen.</div>';
   }
   async function refreshSwiss(){
