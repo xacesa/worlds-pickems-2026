@@ -1,17 +1,21 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-10-21",
-  "asOf": "2026-10-18",
-  "dataStatus": "manual_snapshot",
-  "sourceUrl": "https://statchecked.com/lol/worlds",
+  "updatedAt": "2026-10-24",
+  "asOf": "2026-10-23T23:20:00Z",
+  "dataStatus": "partial_verified_snapshot",
+  "sourceUrl": "https://pickemstracker.net/",
   "referenceUrl": "https://pem.lol/worlds/2026/pickems",
-  "sourceNote": "Verglichen mit PEM.LOL-Auswertung nach den Play-ins vom 18.10.2026 und StatChecked; kein direkter Live-PEM-Abruf. Die Werte sind vorläufig.",
+  "sourceNote": "28 Spiele laut datiertem Tracker (23.10.2026 23:20 UTC); andere Werte bleiben als ältere, nicht erneut bestätigte Snapshots erhalten. Champion-Schwellen des Trackers (3 Picks) weichen teilweise von den offiziellen Pick'em-Regeln (5 Spiele) ab; diese Kategorien nicht überschrieben. Kein Endergebnis.",
   "results": {},
   "live": {
     "1": {
       "value": "Nocturne",
-      "detail": "95 % Präsenz (Pick oder Ban)"
+      "detail": "92,9 % Präsenz (28 Spiele)",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "2": {
       "value": "Vi",
@@ -22,20 +26,36 @@
       "detail": "3,4 Tode pro Spiel"
     },
     "4": {
-      "value": "Caliste",
-      "detail": "5,4 KDA"
+      "value": "Zeka",
+      "detail": "22,00 KDA (1 Spiel, vorläufig)",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "5": {
-      "value": "Tactical",
-      "detail": "27.549 Schaden pro Spiel"
+      "value": "Supa",
+      "detail": "42.717 Schaden pro Spiel (1 Spiel, vorläufig)",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "6": {
-      "value": "JoJo",
-      "detail": "83 % Killbeteiligung"
+      "value": "Gleichstand",
+      "detail": "Creme, Alvaro, ShowMaker, SkewMond und Kino: je 100 % Killbeteiligung (je 1 Spiel)",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "7": {
-      "value": "Gleichstand",
-      "detail": "Peyz 0 Kills · Gumayusi 0 Kills"
+      "value": "Gumayusi",
+      "detail": "Peyz 0 Kills · Gumayusi 4 Kills",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "8": {
       "value": "616",
@@ -43,19 +63,35 @@
     },
     "9": {
       "value": "Nein",
-      "detail": "Teemo bisher 0-mal gepickt (noch nicht endgültig)"
+      "detail": "Teemo bisher nicht gepickt; Turnier läuft",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "10": {
-      "value": "84",
-      "detail": "bisher 84 unterschiedliche Champions"
+      "value": "89",
+      "detail": "89 verschiedene Champions in 28 Spielen",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "11": {
       "value": "Nach",
-      "detail": "12 von 22 Spielen nach 32:00 Minuten"
+      "detail": "16 Spiele ab 32:00 Minuten · 12 darunter (28 Spiele)",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "12": {
-      "value": "12",
-      "detail": "Höchste Kills in einem Spiel; Ziel mindestens 15"
+      "value": "Ja",
+      "detail": "Zeka erreichte 17 Kills in einem Spiel",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     },
     "13": {
       "value": "436",
@@ -78,8 +114,12 @@
       "detail": "HLE und T1 noch im Turnier"
     },
     "18": {
-      "value": "Karmine Corp",
-      "detail": "kürzester Sieg bisher: rund 26,9 Minuten"
+      "value": "Hanwha Life Esports",
+      "detail": "kürzester Sieg bisher: 23,9 Minuten gegen TES",
+      "asOf": "2026-10-23T23:20:00Z",
+      "updatedAt": "2026-10-24",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_28_games"
     }
   }
 }
