@@ -2,10 +2,10 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig.",
+  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig. Ergebnisse Runde 1: 7 Partien bestätigt; TSW gegen LYON noch offen.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -15,7 +15,10 @@
       "format": "Bo1",
       "teamA": "GEN",
       "teamB": "IG",
-      "result": null
+      "result": {
+        "teamA": 1,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r1-m2",
@@ -25,7 +28,10 @@
       "format": "Bo1",
       "teamA": "HLE",
       "teamB": "TES",
-      "result": null
+      "result": {
+        "teamA": 1,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r1-m3",
@@ -35,7 +41,10 @@
       "format": "Bo1",
       "teamA": "BLG",
       "teamB": "MKOI",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r1-m4",
@@ -45,7 +54,10 @@
       "format": "Bo1",
       "teamA": "AL",
       "teamB": "KC",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r1-m5",
@@ -55,7 +67,10 @@
       "format": "Bo1",
       "teamA": "G2",
       "teamB": "DK",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r1-m6",
@@ -65,7 +80,10 @@
       "format": "Bo1",
       "teamA": "TLAW",
       "teamB": "CFO",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r1-m7",
@@ -75,7 +93,10 @@
       "format": "Bo1",
       "teamA": "LOS",
       "teamB": "T1",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r1-m8",
@@ -376,5 +397,7 @@
       ]
     }
   },
-  "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026."
+  "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
+  "resultsAsOf": "2026-10-23T23:00:00Z",
+  "resultsSourceUrl": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship"
 }
