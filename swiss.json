@@ -5,7 +5,7 @@
   "updatedAt": "2026-10-24",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig. Ergebnisse Runde 1: 7 Partien bestätigt; TSW gegen LYON noch offen.",
+  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig. Ergebnisse Runde 1: 7 Partien bestätigt; Runde 1 abgeschlossen; LYON gewann gegen TSW. Runde 2: Paarungen bestätigt laut Liquipedia-Screenshot, Reihenfolge vorläufig (Auslosungsreihenfolge).",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -106,7 +106,10 @@
       "format": "Bo1",
       "teamA": "TSW",
       "teamB": "LYON",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r2-m1",
@@ -114,8 +117,8 @@
       "slot": 1,
       "startUtc": "2026-10-24T17:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "DK",
+      "teamB": "T1",
       "result": null
     },
     {
@@ -124,8 +127,8 @@
       "slot": 2,
       "startUtc": "2026-10-24T18:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "CFO",
+      "teamB": "MKOI",
       "result": null
     },
     {
@@ -134,8 +137,8 @@
       "slot": 3,
       "startUtc": "2026-10-24T19:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "HLE",
+      "teamB": "GEN",
       "result": null
     },
     {
@@ -144,8 +147,8 @@
       "slot": 4,
       "startUtc": "2026-10-24T20:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "LYON",
+      "teamB": "KC",
       "result": null
     },
     {
@@ -154,8 +157,8 @@
       "slot": 5,
       "startUtc": "2026-10-24T21:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "G2",
+      "teamB": "LOS",
       "result": null
     },
     {
@@ -164,8 +167,8 @@
       "slot": 6,
       "startUtc": "2026-10-24T22:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "IG",
+      "teamB": "TSW",
       "result": null
     },
     {
@@ -174,8 +177,8 @@
       "slot": 7,
       "startUtc": "2026-10-24T23:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "TES",
+      "teamB": "AL",
       "result": null
     },
     {
@@ -184,8 +187,8 @@
       "slot": 8,
       "startUtc": "2026-10-25T00:00:00Z",
       "format": "Bo1",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "TLAW",
+      "teamB": "BLG",
       "result": null
     },
     {
@@ -399,5 +402,7 @@
   },
   "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
   "resultsAsOf": "2026-10-23T23:00:00Z",
-  "resultsSourceUrl": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship"
+  "resultsSourceUrl": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship",
+  "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
+  "round2OrderStatus": "provisional: draw order, official match order not yet announced"
 }
