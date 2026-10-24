@@ -5,7 +5,7 @@
   "updatedAt": "2026-10-24",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig. Ergebnisse Runde 1: 7 Partien bestätigt; Runde 1 abgeschlossen; LYON gewann gegen TSW. Runde 2: Paarungen bestätigt laut Liquipedia-Screenshot, Reihenfolge vorläufig (Auslosungsreihenfolge).",
+  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer. Die Picks werden in qualifierPredictions gepflegt, nicht je Match. Spielplan und Zeiten getrennt davon. Runden 2-5: Paarungen noch offen, Slots vorläufig. Ergebnisse Runde 1: 7 Partien bestätigt; Runde 1 abgeschlossen; LYON gewann gegen TSW. Runde 2: Paarungen bestätigt laut Liquipedia-Screenshot, Spielreihenfolge und Zeiten gemäß aktualisiertem Spielplan vom 24.10.2026.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -117,8 +117,8 @@
       "slot": 1,
       "startUtc": "2026-10-24T17:00:00Z",
       "format": "Bo1",
-      "teamA": "DK",
-      "teamB": "T1",
+      "teamA": "AL",
+      "teamB": "TES",
       "result": null
     },
     {
@@ -137,8 +137,8 @@
       "slot": 3,
       "startUtc": "2026-10-24T19:00:00Z",
       "format": "Bo1",
-      "teamA": "HLE",
-      "teamB": "GEN",
+      "teamA": "G2",
+      "teamB": "LOS",
       "result": null
     },
     {
@@ -157,8 +157,8 @@
       "slot": 5,
       "startUtc": "2026-10-24T21:00:00Z",
       "format": "Bo1",
-      "teamA": "G2",
-      "teamB": "LOS",
+      "teamA": "TSW",
+      "teamB": "IG",
       "result": null
     },
     {
@@ -167,8 +167,8 @@
       "slot": 6,
       "startUtc": "2026-10-24T22:00:00Z",
       "format": "Bo1",
-      "teamA": "IG",
-      "teamB": "TSW",
+      "teamA": "GEN",
+      "teamB": "HLE",
       "result": null
     },
     {
@@ -177,8 +177,8 @@
       "slot": 7,
       "startUtc": "2026-10-24T23:00:00Z",
       "format": "Bo1",
-      "teamA": "TES",
-      "teamB": "AL",
+      "teamA": "T1",
+      "teamB": "DK",
       "result": null
     },
     {
@@ -404,5 +404,5 @@
   "resultsAsOf": "2026-10-23T23:00:00Z",
   "resultsSourceUrl": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship",
   "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
-  "round2OrderStatus": "provisional: draw order, official match order not yet announced"
+  "round2OrderStatus": "updated schedule: exact match order and start times from user screenshot, 24 Oct 2026"
 }
