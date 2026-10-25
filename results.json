@@ -1,125 +1,157 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-10-24",
-  "asOf": "2026-10-23T23:20:00Z",
-  "dataStatus": "partial_verified_snapshot",
+  "updatedAt": "2026-10-25",
+  "asOf": "2026-10-25T05:00:00Z",
+  "dataStatus": "provisional_38_games",
   "sourceUrl": "https://pickemstracker.net/",
   "referenceUrl": "https://pem.lol/worlds/2026/pickems",
-  "sourceNote": "28 Spiele laut datiertem Tracker (23.10.2026 23:20 UTC); andere Werte bleiben als ältere, nicht erneut bestätigte Snapshots erhalten. Champion-Schwellen des Trackers (3 Picks) weichen teilweise von den offiziellen Pick'em-Regeln (5 Spiele) ab; diese Kategorien nicht überschrieben. Kein Endergebnis.",
+  "sourceNote": "Nach 38 gespielten Worlds-Partien; Datenstand 25.10.2026 05:00 UTC (Pick'Ems Tracker/Leaguepedia). Bei Siegesrate und durchschnittlichen Champion-Toden werden nur Champions mit mindestens 5 gespielten Partien als aktuelle Spitzenreiter gewertet; Tracker-Basisranking zeigt zunächst Spieler mit mindestens 3 Partien. Alle 18 Anzeigen vorläufig, keine endgültige Bewertung. Rekordfragen 12/13 bereits nachweislich erfüllt, werden aber hier als Zwischenstand geführt.",
   "results": {},
   "live": {
     "1": {
       "value": "Nocturne",
-      "detail": "92,9 % Präsenz (28 Spiele)",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "detail": "94,7 % Präsenz in 38 Spielen (Pick oder Ban)",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "2": {
       "value": "Vi",
-      "detail": "100 % Siegesrate, mindestens 5 Spiele"
+      "detail": "85,7 % Siegesrate in 7 Spielen; Rang 1 unter Champions mit mindestens 5 Einsätzen",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "3": {
-      "value": "K'Sante",
-      "detail": "3,4 Tode pro Spiel"
+      "value": "Camille",
+      "detail": "4,4 Tode pro Spiel bei 5 Einsätzen; Pantheon (4,8) hat erst 4 Einsätze und erfüllt die 5-Spiele-Regel nicht",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "4": {
-      "value": "Zeka",
-      "detail": "22,00 KDA (1 Spiel, vorläufig)",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "Gumayusi",
+      "detail": "20,00 KDA in 2 Spielen (vorläufig)",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "5": {
-      "value": "Supa",
-      "detail": "42.717 Schaden pro Spiel (1 Spiel, vorläufig)",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "Berserker",
+      "detail": "33.842 Schaden pro Spiel in 2 Spielen (vorläufig)",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "6": {
-      "value": "Gleichstand",
-      "detail": "Creme, Alvaro, ShowMaker, SkewMond und Kino: je 100 % Killbeteiligung (je 1 Spiel)",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "Zeka",
+      "detail": "95,8 % Killbeteiligung in 2 Spielen (vorläufig)",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "7": {
-      "value": "Gumayusi",
-      "detail": "Peyz 0 Kills · Gumayusi 4 Kills",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "Gleichstand",
+      "detail": "Peyz 5 Kills · Gumayusi 5 Kills",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "8": {
-      "value": "616",
-      "detail": "Fakers bisherige Worlds-Kills, Ziel 700"
+      "value": "Noch nicht",
+      "detail": "Faker hat 623 von 700 Karriere-WM-Kills; vor Worlds 2026: 616",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "9": {
-      "value": "Nein",
-      "detail": "Teemo bisher nicht gepickt; Turnier läuft",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "Noch nicht",
+      "detail": "Teemo bis zum Datenstand von 38 Spielen kein einziges Mal gepickt; Ausgang bleibt offen",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "10": {
-      "value": "89",
-      "detail": "89 verschiedene Champions in 28 Spielen",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "value": "90",
+      "detail": "Bisher 90 unterschiedliche Champions in 38 Spielen",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "11": {
       "value": "Nach",
-      "detail": "16 Spiele ab 32:00 Minuten · 12 darunter (28 Spiele)",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "detail": "20 Spiele mit mindestens 32 Minuten · 18 Spiele unter 32 Minuten",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "12": {
       "value": "Ja",
-      "detail": "Zeka erreichte 17 Kills in einem Spiel",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "detail": "Zeka erreichte bereits 17 Kills in einem Spiel; Schwelle 15 erfüllt",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     },
     "13": {
-      "value": "436",
-      "detail": "Höchster CS-Wert in einem Spiel; Ziel 450"
+      "value": "Ja",
+      "detail": "Smash erreichte 507 CS und Peyz 472 CS; Schwelle 450 erfüllt",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "14": {
       "value": "Noch offen",
-      "detail": "Final-MVP erst nach dem Finale"
+      "detail": "Final-MVP und dessen Rolle werden erst beim Finale entschieden",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "15": {
-      "value": "0",
-      "detail": "noch keine qualifizierten Regionen für Knockouts"
+      "value": "Noch offen",
+      "detail": "Noch keine Region für die Knockout-Phase qualifiziert; Qualifikation beginnt ab Runde 3",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "16": {
       "value": "Noch offen",
-      "detail": "LCS-Qualifikation entscheidet sich in der Swiss Stage"
+      "detail": "Ob ein LCS-Team die Knockout-Phase erreicht, ist noch nicht entschieden",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "17": {
       "value": "Noch offen",
-      "detail": "HLE und T1 noch im Turnier"
+      "detail": "HLE und T1 stehen nach Runde 2 beide bei 1:1",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
+      "sourceUrl": "https://pickemstracker.net/",
+      "dataStatus": "provisional_38_games"
     },
     "18": {
       "value": "Hanwha Life Esports",
-      "detail": "kürzester Sieg bisher: 23,9 Minuten gegen TES",
-      "asOf": "2026-10-23T23:20:00Z",
-      "updatedAt": "2026-10-24",
+      "detail": "Kürzester Sieg bisher: 23,9 Minuten gegen Top Esports",
+      "asOf": "2026-10-25T05:00:00Z",
+      "updatedAt": "2026-10-25",
       "sourceUrl": "https://pickemstracker.net/",
-      "dataStatus": "provisional_28_games"
+      "dataStatus": "provisional_38_games"
     }
   }
 }
