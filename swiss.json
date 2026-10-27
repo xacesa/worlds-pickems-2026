@@ -2,10 +2,10 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 sowie fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runde 1 und 2 vollständig. Runde 3: vier bestätigte Resultate vom 25.10.2026 (IG 1:0 HLE, TES 1:0 G2, DK 2:0 MKOI, GEN 2:1 LYON). DK und GEN qualifiziert mit 3:0. Weitere vier Paarungen am 26.10. stehen fest, Ergebnisse noch offen. Runde 4 und 5: Paarungen noch nicht bestätigt, Slots vorläufig.",
+  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. GEN und DK mit 3:0 qualifiziert. TSW und AL mit 0:3 ausgeschieden. Runde 4: alle sechs Bo3-Paarungen und geplante UTC-Anstoßzeiten für 28.-30.10.2026 bestätigt, Ergebnisse offen. Runde 5: Paarungen noch unbekannt, Slots vorläufig.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -275,7 +275,10 @@
       "format": "Bo1",
       "teamA": "CFO",
       "teamB": "T1",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r3-m6",
@@ -285,7 +288,10 @@
       "format": "Bo1",
       "teamA": "BLG",
       "teamB": "KC",
-      "result": null
+      "result": {
+        "teamA": 1,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r3-m7",
@@ -295,7 +301,10 @@
       "format": "Bo3",
       "teamA": "LOS",
       "teamB": "TSW",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r3-m8",
@@ -305,7 +314,10 @@
       "format": "Bo3",
       "teamA": "TLAW",
       "teamB": "AL",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r4-m1",
@@ -313,8 +325,8 @@
       "slot": 1,
       "startUtc": "2026-10-28T20:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "MKOI",
+      "teamB": "T1",
       "result": null
     },
     {
@@ -323,8 +335,8 @@
       "slot": 2,
       "startUtc": "2026-10-28T23:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "IG",
+      "teamB": "LYON",
       "result": null
     },
     {
@@ -333,8 +345,8 @@
       "slot": 3,
       "startUtc": "2026-10-29T20:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "KC",
+      "teamB": "CFO",
       "result": null
     },
     {
@@ -343,8 +355,8 @@
       "slot": 4,
       "startUtc": "2026-10-29T23:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "TES",
+      "teamB": "BLG",
       "result": null
     },
     {
@@ -353,8 +365,8 @@
       "slot": 5,
       "startUtc": "2026-10-30T20:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "TLAW",
+      "teamB": "LOS",
       "result": null
     },
     {
@@ -363,8 +375,8 @@
       "slot": 6,
       "startUtc": "2026-10-30T23:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "HLE",
+      "teamB": "G2",
       "result": null
     },
     {
@@ -437,10 +449,12 @@
     }
   },
   "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
-  "resultsAsOf": "2026-10-26T02:40:00Z",
-  "resultsSourceUrl": "https://www.gosugamers.net/lol/news/79416-dplus-kia-and-gen-g-advance-to-knockout-stage-in-worlds-2026-swiss-stage-day-3",
+  "resultsAsOf": "2026-10-27T02:50:00Z",
+  "resultsSourceUrl": "https://www.gosugamers.net/lol/news/79422-team-secret-whales-anyone-s-legend-are-the-first-teams-eliminated-from-worlds-2026-swiss-stage",
   "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
   "round2OrderStatus": "updated schedule: exact match order and start times from user screenshot, 24 Oct 2026",
   "round3Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event/matches",
-  "round3OrderStatus": "announced match order and dates as checked 2026-10-25, subject to schedule changes"
+  "round3OrderStatus": "announced match order and dates as checked 2026-10-25, subject to schedule changes",
+  "round4Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event",
+  "round4OrderStatus": "Bestätigte Runde-4-Paarungen und UTC-Anstoßzeiten nach Sheep Esports (Stand 27.10.2026 02:50 UTC); Beginn bei Serienverzögerung variabel."
 }
