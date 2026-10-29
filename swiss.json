@@ -2,10 +2,10 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-29",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. GEN und DK mit 3:0 qualifiziert. TSW und AL mit 0:3 ausgeschieden. Runde 4: alle sechs Bo3-Paarungen und geplante UTC-Anstoßzeiten für 28.-30.10.2026 bestätigt, Ergebnisse offen. Runde 5: Paarungen noch unbekannt, Slots vorläufig.",
+  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. GEN und DK mit 3:0 qualifiziert; T1 und IG mit 3:1 qualifiziert (28.10.: T1 2:0 MKOI, IG 2:1 LYON). TSW und AL mit 0:3 ausgeschieden. Runde 4: zwei Bo3-Ergebnisse bestätigt, vier Partien noch offen. Runde 5: Paarungen noch unbekannt, Slots vorläufig.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -327,7 +327,10 @@
       "format": "Bo3",
       "teamA": "MKOI",
       "teamB": "T1",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 2
+      }
     },
     {
       "id": "swiss-r4-m2",
@@ -337,7 +340,10 @@
       "format": "Bo3",
       "teamA": "IG",
       "teamB": "LYON",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r4-m3",
@@ -449,8 +455,8 @@
     }
   },
   "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
-  "resultsAsOf": "2026-10-27T02:50:00Z",
-  "resultsSourceUrl": "https://www.gosugamers.net/lol/news/79422-team-secret-whales-anyone-s-legend-are-the-first-teams-eliminated-from-worlds-2026-swiss-stage",
+  "resultsAsOf": "2026-10-29T02:30:00Z",
+  "resultsSourceUrl": "https://www.sheepesports.com/en/articles/t1-and-invictus-gaming-qualify-for-worlds-2026-playoffs-mkoi-and-lyon-get-one-more-life/en",
   "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
   "round2OrderStatus": "updated schedule: exact match order and start times from user screenshot, 24 Oct 2026",
   "round3Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event/matches",
