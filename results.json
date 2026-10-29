@@ -1,157 +1,157 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-10-27",
-  "asOf": "2026-10-27T02:50:00Z",
-  "dataStatus": "provisional_51_games",
+  "updatedAt": "2026-10-29",
+  "asOf": "2026-10-29T02:30:00Z",
+  "dataStatus": "provisional_56_games",
   "sourceUrl": "https://pem.lol/worlds/2026/pickems",
   "referenceUrl": "https://pickemstracker.net/",
-  "sourceNote": "51 ausgewertete Partien, übereinstimmender Datenstand PEM.LOL und Pick'Ems Tracker (Tracker aktualisiert 27.10.2026 02:50 UTC). Alle 18 Kategorien überprüft. Bei Killbeteiligung bestehen methodische Abweichungen: PEM.LOL Zeka 92,5 %, Tracker SkewMond 93,9 %; Quelle und Konflikt in der Kategorie markiert. Kein finales Ergebnis und keine Punktevergabe. Runde 3 abgeschlossen, Round-4-Auslosung bestätigt.",
+  "sourceNote": "56 gespielte Partien (PEM.LOL: 30 Spiele >=32:00 + 26 <32:00; Pick'Ems Tracker: 56 Spiele, Update 29.10.2026 02:30 UTC). Alle 18 Kategorien mit PEM.LOL und Tracker abgeglichen. Quelle PEM.LOL bevorzugt, Tracker zur zeitlichen Plausibilisierung. Bei Killbeteiligung bestehen quellenabhängige Abweichungen (PEM.LOL Zeka 92,5 %; Tracker SkewMond 93,9 %), ausdrücklich als Konflikt markiert. Keine endgültigen Ergebnisse oder Punkte vergeben. T1 und IG haben sich am 28.10. für Knockouts qualifiziert.",
   "results": {},
   "live": {
     "1": {
       "value": "Nocturne",
-      "detail": "94,1 % Präsenz (Pick oder Ban), Datenstand 51 Spiele",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "91,1 % Präsenz (Pick oder Ban) in 56 Spielen",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "2": {
       "value": "Cassiopeia",
-      "detail": "85,7 % Siegesrate (6 Siege, 1 Niederlage; 7 Einsätze, Mindestgrenze 5 erfüllt)",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "85,7 % Siegesrate: 6 Siege, 1 Niederlage (7 Spiele, Mindestgrenze 5 erfüllt)",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "3": {
       "value": "Pantheon",
-      "detail": "4,80 Tode pro Spiel bei 5 Einsätzen (Mindestgrenze erfüllt); Alistar folgt mit 3,85",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "4,80 durchschnittliche Tode in 5 Spielen (Mindestgrenze 5 erfüllt); Alistar 3,87",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "4": {
-      "value": "Gleichstand",
-      "detail": "Smash und Keria führen mit jeweils 10,67 KDA (Smash 4 Spiele, Keria 3 Spiele)",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "value": "Smash",
+      "detail": "10,67 KDA, Canyon 10,50; bisheriger Gleichstand mit Keria ist aufgehoben",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "5": {
-      "value": "Supa",
-      "detail": "30.324 durchschnittlicher Schaden pro Spiel in 4 Spielen",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "value": "Yeon",
+      "detail": "29.038 durchschnittlicher Schaden pro Spiel (4 Spiele), vor Hans Sama mit 28.370",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "6": {
       "value": "Zeka",
-      "detail": "PEM.LOL: Zeka 92,5 % Killbeteiligung; Pick'Ems Tracker: SkewMond 93,9 %. Quellen unterscheiden sich bei der Berechnung, kein gesicherter alleiniger Spitzenreiter.",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Widerspruch zwischen Quellen bei 56 Spielen: PEM.LOL Zeka 92,5 %, Pick'Ems Tracker SkewMond 93,9 % (Zeka dort 93,5 %). Kein quellenübergreifend gesicherter Spitzenreiter.",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games_conflicting_sources"
+      "dataStatus": "provisional_56_games_conflicting_sources"
     },
     "7": {
       "value": "Peyz",
-      "detail": "Peyz 8 Kills · Gumayusi 5 Kills (Zwischenstand)",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Peyz 18 Kills · Gumayusi 5 Kills",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "8": {
       "value": "Noch nicht",
-      "detail": "Faker bei 625 von 700 Karriere-WM-Kills (616 vor Worlds 2026); Turnier läuft",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Faker 635 von 700 Karriere-WM-Kills (616 vor Worlds 2026), Turnier läuft",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "9": {
       "value": "Noch nicht",
-      "detail": "Teemo bis zum Datenstand von 51 Spielen nicht gepickt; endgültige Entscheidung offen",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Teemo bis zum Datenstand von 56 Spielen nicht gepickt; endgültiger Ausgang offen",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "10": {
-      "value": "96",
-      "detail": "96 verschiedene Champions bisher ausgewählt (51 Spiele)",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "value": "98",
+      "detail": "Bisher 98 verschiedene Champions in 56 Spielen ausgewählt",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "11": {
       "value": "Nach",
-      "detail": "28 Spiele ab 32:00 Minuten · 23 Spiele unter 32:00 Minuten (51 Spiele)",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "30 Spiele ab 32:00 Minuten, 26 Spiele unter 32:00 Minuten (56 Spiele)",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "12": {
       "value": "Ja",
-      "detail": "Zeka erzielte bereits 17 Kills in einem Spiel; Schwelle 15 erreicht",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Zeka erreichte 17 Kills in einem Spiel, Schwelle 15 nachweislich erfüllt; keine finale Punktevergabe",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "13": {
       "value": "Ja",
-      "detail": "Yeon erreichte 544 CS, Smash 507, Peyz 472, Hope 463; Schwelle 450 erreicht",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Yeon erreichte 544 CS, Smash 507 und Peyz 478; Schwelle 450 nachweislich erfüllt; keine finale Punktevergabe",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "14": {
       "value": "Noch offen",
-      "detail": "Die Rolle des Final-MVP steht erst nach dem Finale fest",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Final-MVP und dessen Rolle stehen erst nach dem Finale fest",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "15": {
       "value": "Noch offen",
-      "detail": "GEN und DK (beide LCK) sind qualifiziert; bisher 1 Region sicher in den Knockouts, Endzahl offen",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "2 Regionen bereits sicher in Knockouts: LCK (GEN, DK, T1) und LPL (IG). Endzahl offen",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "16": {
       "value": "Noch offen",
-      "detail": "Noch kein LCS-Team qualifiziert: LYON bei 2:1, Team Liquid bei 1:2; Turnier läuft",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Noch kein LCS-Team für Knockouts qualifiziert; LYON bei 2:2, Team Liquid bei 1:2. Entscheidung offen",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "17": {
       "value": "Noch offen",
-      "detail": "T1 steht bei 2:1, HLE bei 1:2. Beide noch im Turnier; endgültige Platzierung offen",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "T1 für Knockouts qualifiziert (3:1), HLE noch im Turnier (1:2). Endplatzierung weiterhin offen",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     },
     "18": {
       "value": "Hanwha Life Esports",
-      "detail": "Kürzester Sieg bislang 23:51 Minuten gegen Top Esports",
-      "asOf": "2026-10-27T02:50:00Z",
-      "updatedAt": "2026-10-27",
+      "detail": "Kürzester Sieg bislang 23:51 Minuten gegen Top Esports (HLE vs TES)",
+      "asOf": "2026-10-29T02:30:00Z",
+      "updatedAt": "2026-10-29",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_51_games"
+      "dataStatus": "provisional_56_games"
     }
   }
 }
