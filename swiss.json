@@ -2,10 +2,10 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-30",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. GEN und DK mit 3:0 qualifiziert; T1 und IG mit 3:1 qualifiziert (28.10.: T1 2:0 MKOI, IG 2:1 LYON). TSW und AL mit 0:3 ausgeschieden. Runde 4: zwei Bo3-Ergebnisse bestätigt, vier Partien noch offen. Runde 5: Paarungen noch unbekannt, Slots vorläufig.",
+  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. Runde 4: 4 Bo3-Ergebnisse bestätigt (28.10.: T1 2:0 MKOI, IG 2:1 LYON; 29.10. Ortsdatum USA: KC 2:0 CFO, TES 2:1 BLG). GEN, DK, T1, IG und TES für Knockouts qualifiziert. TSW, AL und CFO ausgeschieden. Runde 4: TLAW-LOS und HLE-G2 noch offen; Runde 5 Paarungen unbekannt, Slots vorläufig.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -353,7 +353,10 @@
       "format": "Bo3",
       "teamA": "KC",
       "teamB": "CFO",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r4-m4",
@@ -363,7 +366,10 @@
       "format": "Bo3",
       "teamA": "TES",
       "teamB": "BLG",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 1
+      }
     },
     {
       "id": "swiss-r4-m5",
@@ -455,12 +461,13 @@
     }
   },
   "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
-  "resultsAsOf": "2026-10-29T02:30:00Z",
-  "resultsSourceUrl": "https://www.sheepesports.com/en/articles/t1-and-invictus-gaming-qualify-for-worlds-2026-playoffs-mkoi-and-lyon-get-one-more-life/en",
+  "resultsAsOf": "2026-10-30T03:02:49.845Z",
+  "resultsSourceUrl": "https://pem.lol/worlds/2026/pickems",
   "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
   "round2OrderStatus": "updated schedule: exact match order and start times from user screenshot, 24 Oct 2026",
   "round3Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event/matches",
   "round3OrderStatus": "announced match order and dates as checked 2026-10-25, subject to schedule changes",
   "round4Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event",
-  "round4OrderStatus": "Bestätigte Runde-4-Paarungen und UTC-Anstoßzeiten nach Sheep Esports (Stand 27.10.2026 02:50 UTC); Beginn bei Serienverzögerung variabel."
+  "round4OrderStatus": "Bestätigte Runde-4-Paarungen und UTC-Anstoßzeiten nach Sheep Esports (Stand 27.10.2026 02:50 UTC); Beginn bei Serienverzögerung variabel.",
+  "resultsAdditionalSourceUrl": "https://www.sheepesports.com/de/articles/worlds-2026-blg-to-the-knockouts-kc-lives-to-see-another-day/en"
 }
