@@ -2,10 +2,10 @@
   "format": "worlds-2026-swiss",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "sourceUrl": "https://lolesports.com/en-US/leagues/lcs",
   "officialSource": "https://lolesports.com/en-GB/news/worlds-2026-primer",
-  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-3 abgeschlossen. Runde 4: 4 Bo3-Ergebnisse bestätigt (28.10.: T1 2:0 MKOI, IG 2:1 LYON; 29.10. Ortsdatum USA: KC 2:0 CFO, TES 2:1 BLG). GEN, DK, T1, IG und TES für Knockouts qualifiziert. TSW, AL und CFO ausgeschieden. Runde 4: TLAW-LOS und HLE-G2 noch offen; Runde 5 Paarungen unbekannt, Slots vorläufig.",
+  "notes": "Swiss Crystal Ball: Pro Person ein Team 3:0, ein Team 3:1, ein Team 3:2 und fünf weitere Weiterkommer; Tipps ausschließlich in qualifierPredictions. Runden 1-4 abgeschlossen. Runde 4 am 30.10.: TLAW 1:2 LOS und HLE 2:0 G2. GEN, DK, T1, IG und TES für Knockouts qualifiziert. TSW, AL, CFO, TLAW und G2 ausgeschieden. Runde 5: KC–MKOI (17 UTC), LOS–LYON (20 UTC), HLE–BLG (23 UTC), alle Bo3; noch ohne Ergebnis. Startzeiten angesetzt, nicht als tatsächlicher Matchbeginn bestätigt.",
   "matches": [
     {
       "id": "swiss-r1-m1",
@@ -379,7 +379,10 @@
       "format": "Bo3",
       "teamA": "TLAW",
       "teamB": "LOS",
-      "result": null
+      "result": {
+        "teamA": 1,
+        "teamB": 2
+      }
     },
     {
       "id": "swiss-r4-m6",
@@ -389,7 +392,10 @@
       "format": "Bo3",
       "teamA": "HLE",
       "teamB": "G2",
-      "result": null
+      "result": {
+        "teamA": 2,
+        "teamB": 0
+      }
     },
     {
       "id": "swiss-r5-m1",
@@ -397,8 +403,8 @@
       "slot": 1,
       "startUtc": "2026-10-31T17:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "KC",
+      "teamB": "MKOI",
       "result": null
     },
     {
@@ -407,8 +413,8 @@
       "slot": 2,
       "startUtc": "2026-10-31T20:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "LOS",
+      "teamB": "LYON",
       "result": null
     },
     {
@@ -417,8 +423,8 @@
       "slot": 3,
       "startUtc": "2026-10-31T23:00:00Z",
       "format": "Bo3",
-      "teamA": null,
-      "teamB": null,
+      "teamA": "HLE",
+      "teamB": "BLG",
       "result": null
     }
   ],
@@ -461,13 +467,16 @@
     }
   },
   "predictionsSource": "Tony: letzter Screenshot vom 23.10.2026 (G2 3:0, GEN 3:1); Judith: Screenshot vom 23.10.2026; Alex: Screenshot vom 22.10.2026.",
-  "resultsAsOf": "2026-10-30T03:02:49.845Z",
-  "resultsSourceUrl": "https://pem.lol/worlds/2026/pickems",
+  "resultsAsOf": "2026-10-31T03:03:55Z",
+  "resultsSourceUrl": "https://www.lolumen.com/lcs/worlds/bracket",
   "round2Source": "Liquipedia screenshot provided by user, 24 Oct 2026",
   "round2OrderStatus": "updated schedule: exact match order and start times from user screenshot, 24 Oct 2026",
   "round3Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event/matches",
   "round3OrderStatus": "announced match order and dates as checked 2026-10-25, subject to schedule changes",
   "round4Source": "https://www.sheepesports.com/en/lol/events/2026-world-championship-main-event",
   "round4OrderStatus": "Bestätigte Runde-4-Paarungen und UTC-Anstoßzeiten nach Sheep Esports (Stand 27.10.2026 02:50 UTC); Beginn bei Serienverzögerung variabel.",
-  "resultsAdditionalSourceUrl": "https://www.sheepesports.com/de/articles/worlds-2026-blg-to-the-knockouts-kc-lives-to-see-another-day/en"
+  "resultsAdditionalSourceUrl": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship",
+  "round5Source": "https://ggez.gg/worlds/schedule",
+  "round5AdditionalSource": "https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship",
+  "round5OrderStatus": "Paarungen und angesetzte Startzeiten in UTC am 31.10.2026 03:03Z mit ggez.gg englischem Spielplan und Wikipedia abgeglichen; Startzeiten geplant, Verzögerungen möglich."
 }
