@@ -600,6 +600,76 @@ footer{border-color:#285da2;color:#9ac3ea}
     .swiss-match{grid-template-columns:82px minmax(0,1fr)}
   }
 
+
+/* KNOCKOUT STAGE — Worlds 2026 | coherent gold/navy visual style */
+.ko-hero{margin:26px 0 22px;padding:40px clamp(22px,4.6vw,52px);position:relative;overflow:hidden;border:1px solid #80684288;background:radial-gradient(ellipse at 91% 9%,#9a702d48,transparent 44%),radial-gradient(ellipse at 36% 106%,#203c6478,transparent 60%),linear-gradient(125deg,#111d2c,#0b1626 63%,#111d2d);box-shadow:0 20px 75px #0006}
+.ko-hero:before{content:"";position:absolute;right:-92px;top:-128px;width:365px;height:365px;border:1px solid #e0bb7544;border-radius:50%;box-shadow:0 0 0 50px #d7b2700c,0 0 0 100px #d7b27009;pointer-events:none}
+.ko-hero > *{position:relative}
+.ko-kicker{font-size:11px;letter-spacing:2.2px;text-transform:uppercase;font-weight:900;color:#dbb875;display:flex;align-items:center;gap:9px}
+.ko-kicker:before{content:"✦";font-size:14px;color:#f5dfae}
+.ko-hero h1{margin:16px 0 12px;font-size:clamp(44px,5.8vw,78px);font-weight:950;letter-spacing:-2px;line-height:1.04;color:#f6f7fc}
+.ko-hero h1 span{color:#e9c483}
+.ko-hero p{max-width:710px;color:#aebed0;font-size:14px;line-height:1.7;margin:0}
+.ko-hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.ko-hero-stat{min-width:126px;padding:10px 16px;border:1px solid #8e774a55;background:#111e2bd9;display:flex;flex-direction:column;gap:2px}
+.ko-hero-stat strong{font-size:21px;color:#f4dbac;font-weight:900}
+.ko-hero-stat span{color:#b0bcc7;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:850}
+.ko-section{margin:28px 0 38px}
+.ko-headline{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:19px}
+.ko-headline h2{font-size:clamp(24px,3.4vw,36px);line-height:1.15;color:#eef4fa;letter-spacing:-.7px;margin:5px 0 0;font-weight:900}
+.ko-headline p{color:#9bafc0;font-size:12px;max-width:380px;line-height:1.6;margin:0}
+.ko-scroll-note{display:none;color:#acb7c3;font-size:11px;margin:-2px 0 9px}
+.ko-bracket-scroll{overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:9px;scrollbar-color:#7e6948 #121e2a}
+.ko-bracket{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;min-width:785px;min-height:585px;padding:16px;border:1px solid #2b3b4a;background:linear-gradient(90deg,#121e2a,#0d1724 50%,#121d2b)}
+.ko-round{display:flex;flex-direction:column;gap:17px;min-width:0}
+.ko-round-title{font-size:11px;color:#d5b878;font-weight:950;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #74604155;padding:0 0 14px}
+.ko-round-title small{display:block;margin-top:4px;font-size:10px;letter-spacing:0;text-transform:none;color:#8798ab}
+.ko-round-games{display:flex;flex-direction:column;justify-content:space-around;gap:16px;flex:1}
+.ko-game{position:relative;border:1px solid #344b5e;background:linear-gradient(120deg,#142336,#101d2e);padding:13px;min-width:0;box-shadow:0 4px 18px #0002}
+.ko-game:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#b59656;opacity:.75}
+.ko-game.is-final{border-color:#b5985c;background:linear-gradient(135deg,#242b30,#142336)}
+.ko-game-meta{display:flex;justify-content:space-between;gap:5px;color:#9fb2c6;font-size:10px;margin-bottom:10px;font-weight:800}
+.ko-game-meta strong{color:#dec38f;letter-spacing:.5px;font-size:10px}
+.ko-team-row{display:flex;align-items:center;gap:9px;padding:8px 6px;min-height:46px;border:1px solid transparent}
+.ko-team-row+.ko-team-row{border-top:1px solid #31475a}
+.ko-team-row.is-winner{border:1px solid #b89a6250;background:#b39a5819}
+.ko-team-row.is-pending{color:#8fa0b1}
+.ko-team-logo{width:31px;height:31px;display:grid;place-items:center;flex-shrink:0;background:#213346;border:1px solid #42566a;color:#9bb4cb;font-size:10px;font-weight:900}
+.ko-team-logo img{width:83%;height:83%;object-fit:contain}
+.ko-team-code{font-weight:900;font-size:16px;color:#f2f6f9}
+.ko-team-row.is-pending .ko-team-code{font-size:12px;color:#8699ac}
+.ko-team-name{font-size:10px;color:#879eb4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.ko-team-copy{display:flex;flex-direction:column;min-width:0;flex:1}
+.ko-team-score{color:#d0ddea;font-weight:900;font-size:17px}
+.ko-team-row.is-winner .ko-team-score{color:#f3d797}
+.ko-game-foot{border-top:1px solid #2c4053;margin-top:8px;padding-top:8px;font-size:10px;color:#97a7b7;display:flex;justify-content:space-between;gap:7px}
+.ko-champion{margin-top:10px;padding:10px;border:1px solid #ad8c5066;background:radial-gradient(circle at 80% 50%,#6e542e33,transparent 75%),#101a25;color:#eed6a5;text-align:center;font-weight:850;font-size:12px}
+.ko-champion span{display:block;color:#e9f1fc;font-size:14px;margin-top:4px}
+.ko-picks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.ko-pick-person{background:#111e2c;border:1px solid #34495e;min-width:0;overflow:hidden}
+.ko-pick-person-head{display:flex;align-items:center;gap:10px;padding:15px;background:linear-gradient(110deg,#1e3144,#111e2d);border-bottom:2px solid var(--pcolor)}
+.ko-pick-initial{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;color:#081625;background:var(--pcolor);font-size:13px;font-weight:950;border-radius:50%}
+.ko-pick-person-head strong{font-size:16px;font-weight:900;color:#eaf0f6}
+.ko-pick-person-head small{margin-left:auto;font-size:11px;color:#9aafbf;font-weight:800}
+.ko-pick-group{padding:12px 14px 0}
+.ko-pick-group-title{color:#c3a775;font-size:10px;font-weight:900;letter-spacing:1.2px;margin:0 0 7px}
+.ko-pick-line{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #293b4e;min-height:41px}
+.ko-pick-line-label{font-size:11px;color:#99abc0;font-weight:800}
+.ko-pick-line-value{display:flex;align-items:center;gap:6px;color:#f5f7fb;font-size:12px;font-weight:900}
+.ko-pick-line-value .ko-team-logo{height:24px;width:24px}
+.ko-pick-line-value.is-open{font-weight:750;color:#7892aa}
+.ko-pick-champion{margin:13px 14px 14px;padding:11px 12px;border:1px solid #9b814d7a;background:#7760351c;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ko-pick-champion span{font-size:10px;font-weight:900;letter-spacing:1px;color:#d5b778}
+.ko-pick-champion strong{font-size:14px;color:#f0daaa;font-weight:950}
+.ko-pick-message{margin:12px 0 0;font-size:11px;line-height:1.65;color:#93a9bd}
+.ko-pick-empty{border:1px dashed #725f423f;background:#0d1722;padding:10px 14px;color:#a4aeb8;font-size:11px;line-height:1.65;margin-top:15px}
+.ko-error{padding:22px;border:1px solid #8e654d;background:#35211c;color:#eed0bb}
+.swiss-finished{margin:0 0 22px;padding:12px 17px;display:flex;gap:12px;align-items:center;justify-content:space-between;border:1px solid #64b39b50;background:#12302577;color:#d7f3ea;font-weight:800;font-size:12px}
+.swiss-finished a{color:#f5dbad;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1050px){.ko-picks-grid{grid-template-columns:1fr}.ko-pick-person{max-width:none}.ko-pick-group{padding-top:10px}.ko-pick-person .ko-pick-group{padding-left:17px;padding-right:17px}}
+@media(max-width:850px){.ko-scroll-note{display:block}.ko-headline{align-items:start;flex-direction:column;gap:7px}}
+@media(max-width:700px){.ko-hero{padding:27px 21px}.ko-hero h1{font-size:clamp(40px,9vw,57px)}.ko-hero-stats{gap:8px}.ko-hero-stat{min-width:0;flex:1;padding:9px}.ko-bracket{min-width:740px}.ko-pick-person-head strong{font-size:15px}.swiss-finished{align-items:start;flex-direction:column;gap:8px}}
+
 </style>
 </head>
 <body>
@@ -613,13 +683,14 @@ footer{border-color:#285da2;color:#9ac3ea}
     <nav class="topnav" aria-label="Hauptnavigation">
       <button type="button" class="navlink active" data-scroll="start">Übersicht</button>
       <button type="button" class="navlink active" data-page="crystal">Crystal Ball</button>
+      <button type="button" class="navlink" data-page="knockout">K.-o.-Phase</button>
       <button type="button" class="navlink" data-page="swiss">Swiss Stage</button>
       <button type="button" class="navlink" data-scroll="management">Live-Tracker</button>
     </nav>
     <span class="head-label">JUDITH &nbsp;VS&nbsp; TONY &nbsp;VS&nbsp; ALEX</span>
   </div>
 </header>
-<div class="page-switcher-mobile" aria-label="Worlds Pick'em Bereiche"><button type="button" data-page="crystal" class="active">CRYSTAL BALL</button><button type="button" data-page="swiss">SWISS STAGE</button></div>
+<div class="page-switcher-mobile" aria-label="Worlds Pick'em Bereiche"><button type="button" data-page="crystal" class="active">CRYSTAL BALL</button><button type="button" data-page="knockout">K.-O.-PHASE</button><button type="button" data-page="swiss">SWISS STAGE</button></div>
 <main class="container" id="start">
  <div id="crystalPage" class="app-page">
   <section class="hero event-hero" aria-labelledby="hero-title">
@@ -690,7 +761,7 @@ footer{border-color:#285da2;color:#9ac3ea}
 
   <div id="swissPage" class="app-page" hidden>
     <section class="swiss-hero" aria-labelledby="swiss-title">
-      <div class="swiss-kicker">2026 WORLD CHAMPIONSHIP · SWISS STAGE</div>
+      <div class="swiss-kicker">2026 WORLD CHAMPIONSHIP · SWISS STAGE · ABGESCHLOSSEN</div>
       <h1 id="swiss-title">SWISS <span>STAGE</span></h1>
       <p>Unsere Tipps beziehen sich auf die <strong>acht Teams, die die Swiss Stage überstehen</strong>. Pro Person wird je ein Team für 3:0, 3:1 und 3:2 festgelegt. Fünf weitere Weiterkommen-Tipps ergänzen die Auswahl. Darunter findet ihr den Spielplan.</p>
       <div class="swiss-stage-stats">
@@ -700,6 +771,7 @@ footer{border-color:#285da2;color:#9ac3ea}
       </div>
     </section>
 
+    <div class="swiss-finished"><span>✓ Swiss Stage abgeschlossen · Alle acht Viertelfinalisten stehen fest</span><a href="#knockout" data-page="knockout">Zum K.-o.-Turnierbaum ↗</a></div>
     <section class="swiss-predict-section" aria-labelledby="swiss-pred-title">
       <div class="swiss-pred-intro">
         <div><div class="swiss-kicker">OUR SWISS PICKS</div><h2 id="swiss-pred-title">Wer kommt weiter?</h2></div>
@@ -711,7 +783,7 @@ footer{border-color:#285da2;color:#9ac3ea}
     <section class="swiss-section" aria-label="Spielplan">
       <div class="swiss-section-head">
         <div><div class="swiss-kicker">MATCH SCHEDULE</div><h2>Swiss-Stage-Spielplan</h2></div>
-        <p>Die Anstoßzeiten werden automatisch in der Zeitzone deines Geräts angezeigt, einschließlich Sommer- und Winterzeit. Spätere Matches können sich durch längere Serien verschieben. Paarungen der Runden 2 bis 5 folgen nach den Auslosungen.</p>
+        <p>Die Anstoßzeiten werden automatisch in der Zeitzone deines Geräts angezeigt, einschließlich Sommer- und Winterzeit. Spätere Matches können sich durch längere Serien verschieben. Alle 33 Begegnungen sind beendet. Zur Ansicht einfach den jeweiligen abgeschlossenen Tag aufklappen.</p>
       </div>
       <div class="swiss-round-tabs" id="swissRoundTabs" role="group" aria-label="Swiss-Runde auswählen">
         <button type="button" class="swiss-round-tab active" data-swiss-round="0">Alle Runden</button>
@@ -721,6 +793,41 @@ footer{border-color:#285da2;color:#9ac3ea}
         <span>Quelle: <a href="https://lolesports.com" target="_blank" rel="noopener noreferrer">LoL Esports</a> · <a href="https://www.sheepesports.com/en/cs/events/2026-world-championship-main-event/matches" target="_blank" rel="noopener noreferrer">Matchübersicht</a></span>
       </div>
       <div class="swiss-match-list" id="swissMatchList" aria-live="polite"></div>
+    </section>
+  </div>
+
+
+  <div id="knockoutPage" class="app-page" hidden>
+    <section class="ko-hero" aria-labelledby="knockout-title">
+      <div class="ko-kicker">2026 WORLD CHAMPIONSHIP · THE ROAD TO THE FINAL</div>
+      <h1 id="knockout-title">K.-O.-<span>PHASE</span></h1>
+      <p>Acht Teams. Sieben Best-of-five-Serien. Ein Weltmeister. Der offizielle Turnierbaum mit den Viertelfinals, Halbfinals und dem Finale sowie euren persönlichen Tipps von Judith, Tony und Alex.</p>
+      <div class="ko-hero-stats">
+        <div class="ko-hero-stat"><strong>8</strong><span>Qualifizierte Teams</span></div>
+        <div class="ko-hero-stat"><strong>7</strong><span>Bo5-Serien</span></div>
+        <div class="ko-hero-stat"><strong id="koPicksCount">0 / 21</strong><span>Tipps eingetragen</span></div>
+      </div>
+    </section>
+
+    <section class="ko-section" aria-labelledby="ko-bracket-title">
+      <div class="ko-headline">
+        <div><div class="ko-kicker">OFFICIAL BRACKET</div><h2 id="ko-bracket-title">Der Weg zum Weltmeister</h2></div>
+        <p>Viertelfinale → Halbfinale → Finale. Uhrzeiten in deiner Ortszeit. Sieger rücken nach bestätigtem Ergebnis automatisch weiter.</p>
+      </div>
+      <p class="ko-scroll-note">↔ Wische seitlich, um den gesamten Turnierbaum zu sehen.</p>
+      <div class="ko-bracket-scroll" tabindex="0" aria-label="K.-o.-Turnierbaum horizontal scrollen">
+        <div id="knockoutBracket" class="ko-bracket" aria-live="polite"><div class="ko-error">Turnierbaum wird geladen …</div></div>
+      </div>
+      <p class="ko-pick-message">Quelle: <a href="https://lolesports.com" target="_blank" rel="noopener noreferrer">LoL Esports</a>. Die Swiss Stage ist abgeschlossen. <a href="#swiss" data-page="swiss">Swiss-Ergebnisse und Tipps ansehen</a>.</p>
+    </section>
+
+    <section class="ko-section" aria-labelledby="ko-picks-title">
+      <div class="ko-headline">
+        <div><div class="ko-kicker">OUR KNOCKOUT PICKS</div><h2 id="ko-picks-title">Unsere Turnier-Tipps</h2></div>
+        <p>Vier Viertelfinal-Sieger, zwei Halbfinal-Sieger und ein Weltmeister pro Person. Wir übernehmen eure Tipps erst, wenn ihr sie uns schickt.</p>
+      </div>
+      <div id="knockoutPredictions" class="ko-picks-grid" aria-live="polite"></div>
+      <p class="ko-pick-empty">Noch keine K.-o.-Tipps eingetragen. Schickt mir einfach eure Screenshots oder die Gewinner pro Runde. Judiths, Tonys und Alex' Tipps werden dann unabhängig voneinander hinterlegt.</p>
     </section>
   </div>
 
@@ -922,12 +1029,109 @@ footer{border-color:#285da2;color:#9ac3ea}
       }
     }
   }
+
+  // Official Worlds knockout stage: independent data file for actual results and each participant's picks.
+  const KO_IDS=["qf1","qf2","qf3","qf4","sf1","sf2","final"];
+  const KO_ROUNDS=[["Viertelfinale","3. – 6. November",["qf1","qf2","qf3","qf4"]],["Halbfinale","7. – 8. November",["sf1","sf2"]],["Finale","14. November",["final"]]];
+  let knockoutMatches=[],knockoutPredictions={},knockoutUpdatedAt=null;
+  const koById=id=>knockoutMatches.find(m=>m.id===id);
+  const koWinner=m=>{
+    if(!m||!m.result)return null;
+    const a=Number(m.result.teamA),b=Number(m.result.teamB);
+    if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0||Math.max(a,b)!==3||Math.min(a,b)>2||a===b)return null;
+    return a>b?koTeam(m,"A"):koTeam(m,"B");
+  };
+  const koTeam=(m,side)=>{
+    if(!m)return null;
+    const from=m["from"+side];
+    return from?koWinner(koById(from)):swissSafeCode(m["team"+side]);
+  };
+  const koLogo=code=>{
+    const link=code?swissLogo(code):"";
+    return '<span class="ko-team-logo">'+(link?'<img src="'+escapeHTML(link)+'" alt="" loading="lazy">':escapeHTML(code||"?"))+'</span>';
+  };
+  const koDate=iso=>new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
+  const koRow=(code,description,score,winner)=>{
+    const known=!!code;
+    const meta=known?SWISS_TEAM_META[code]:null;
+    return '<div class="ko-team-row'+(winner?' is-winner':'')+(known?'':' is-pending')+'">'+
+      koLogo(code)+'<div class="ko-team-copy"><strong class="ko-team-code">'+escapeHTML(code||description)+'</strong>'+
+      (known?'<span class="ko-team-name">'+escapeHTML(meta?meta[0]:"")+'</span>':'')+'</div>'+
+      (score!==null&&score!==undefined?'<span class="ko-team-score">'+score+'</span>':'')+'</div>';
+  };
+  const koGame=id=>{
+    const m=koById(id);
+    if(!m)return '<div class="ko-game">Begegnung folgt.</div>';
+    const a=koTeam(m,"A"),b=koTeam(m,"B"),win=koWinner(m),finished=!!win;
+    const fromDesc=side=>m["from"+side]?"Sieger "+m["from"+side].toUpperCase():"Noch offen";
+    const roundLabel=m.round==="quarterfinal"?"VF "+m.slot:m.round==="semifinal"?"HF "+m.slot:"FINALE";
+    return '<article class="ko-game'+(m.round==="final"?' is-final':'')+'">'+
+      '<div class="ko-game-meta"><strong>'+roundLabel+' · BO5</strong><span>'+koDate(m.startUtc)+'</span></div>'+
+      koRow(a,fromDesc("A"),finished?m.result.teamA:null,win===a&&finished)+
+      koRow(b,fromDesc("B"),finished?m.result.teamB:null,win===b&&finished)+
+      '<div class="ko-game-foot"><span>'+(finished?'ABGESCHLOSSEN':'NOCH NICHT GESPIELT')+'</span><span>'+(finished?'Sieger: '+escapeHTML(win):'Best of 5')+'</span></div>'+
+      '</article>';
+  };
+  function renderKnockout(){
+    const bracket=document.getElementById("knockoutBracket");
+    const picks=document.getElementById("knockoutPredictions");
+    if(!bracket||!picks)return;
+    if(!knockoutMatches.length){
+      bracket.innerHTML='<div class="ko-error">K.-o.-Spielplan wird geladen …</div>';
+      return;
+    }
+    bracket.innerHTML=KO_ROUNDS.map(([name,dates,ids])=>{
+      return '<section class="ko-round"><div class="ko-round-title">'+name+'<small>'+dates+'</small></div>'+
+        '<div class="ko-round-games">'+ids.map(koGame).join("")+'</div>'+
+        (name==="Finale"?'<div class="ko-champion">✦ WORLD CHAMPION 2026<span>'+escapeHTML(koWinner(koById("final"))||"NOCH OFFEN")+'</span></div>':'')+
+        '</section>';
+    }).join("");
+    let picksFilled=0;
+    picks.innerHTML=PLAYERS.map(p=>{
+      const source=knockoutPredictions[p.name]||{};
+      let count=0;
+      const line=(id,label)=>{
+        const code=swissSafeCode(source[id]);
+        if(code){count++;picksFilled++;}
+        return '<div class="ko-pick-line"><span class="ko-pick-line-label">'+label+'</span>'+
+          '<span class="ko-pick-line-value'+(code?'':' is-open')+'">'+(code?koLogo(code)+escapeHTML(code):'NOCH OFFEN')+'</span></div>';
+      };
+      const champion=swissSafeCode(source.final);
+      const groups=[["VIERTELFINALE",["qf1","qf2","qf3","qf4"]],["HALBFINALE",["sf1","sf2"]]];
+      const content=groups.map(([label,ids])=>'<div class="ko-pick-group"><h3 class="ko-pick-group-title">'+label+'</h3>'+ids.map((id,i)=>line(id,(label==="VIERTELFINALE"?"VF ":"HF ")+(i+1))).join("")+'</div>').join("");
+      if(champion){count++;picksFilled++;}
+      return '<article class="ko-pick-person" style="--pcolor:'+p.color+'">'+
+        '<div class="ko-pick-person-head"><span class="ko-pick-initial">'+escapeHTML(p.initial)+'</span><strong>'+escapeHTML(p.name)+'</strong><small>'+count+' / 7 PICKS</small></div>'+
+        content+'<div class="ko-pick-champion"><span>✦ WELTMEISTER-TIPP</span><strong>'+(champion?koLogo(champion)+escapeHTML(champion):'NOCH OFFEN')+'</strong></div>'+
+        '</article>';
+    }).join("");
+    document.getElementById("koPicksCount").textContent=picksFilled+" / 21";
+  }
+  async function refreshKnockout(){
+    try{
+      const res=await fetch("./knockout.json?stamp="+Date.now(),{cache:"no-store"});
+      if(!res.ok)throw Error("HTTP "+res.status);
+      const d=await res.json();
+      if(d.format!=="worlds-2026-knockout"||d.version!==1||!Array.isArray(d.matches))throw Error("Ungültige K.-o.-Datei");
+      knockoutMatches=d.matches.filter(m=>KO_IDS.includes(m.id)&&typeof m.startUtc==="string"&&!Number.isNaN(Date.parse(m.startUtc)));
+      knockoutPredictions=d.predictions&&typeof d.predictions==="object"&&!Array.isArray(d.predictions)?d.predictions:{};
+      knockoutUpdatedAt=d.updatedAt||null;
+      renderKnockout();
+    }catch(e){
+      if(!knockoutMatches.length){
+        document.getElementById("knockoutBracket").innerHTML='<div class="ko-error">K.-o.-Spielplan ist gerade nicht erreichbar. Bitte neu laden.</div>';
+      }
+    }
+  }
+
   function switchPage(page,scroll=true){
-    const target=page==="swiss"?"swiss":"crystal";
+    const target=page==="swiss"?"swiss":page==="knockout"?"knockout":"crystal";
     document.getElementById("crystalPage").hidden=target!=="crystal";
     document.getElementById("swissPage").hidden=target!=="swiss";
+    document.getElementById("knockoutPage").hidden=target!=="knockout";
     document.querySelectorAll("[data-page]").forEach(btn=>{const active=btn.dataset.page===target;btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",String(active));});
-    if(location.hash!==(target==="swiss"?"#swiss":"#crystal"))history.replaceState(null,"",target==="swiss"?"#swiss":"#crystal");
+    const hash="#"+target;
+    if(location.hash!==hash)history.replaceState(null,"",hash);
     if(scroll)window.scrollTo({top:0,behavior:"smooth"});
   }
 
@@ -1099,13 +1303,16 @@ footer{border-color:#285da2;color:#9ac3ea}
   $("#syncBtn")?.addEventListener("click",()=>refreshRemote(true));
   renderAll();
   renderSwiss();
+  renderKnockout();
   refreshRemote(false);
   refreshSwiss();
-  switchPage(location.hash.toLowerCase()==="#swiss"?"swiss":"crystal",false);
-  window.addEventListener("hashchange",()=>switchPage(location.hash.toLowerCase()==="#swiss"?"swiss":"crystal",false));
+  refreshKnockout();
+  const pageFromHash=()=>["#swiss","#knockout"].includes(location.hash.toLowerCase())?location.hash.slice(1).toLowerCase():"crystal";
+  switchPage(pageFromHash(),false);
+  window.addEventListener("hashchange",()=>switchPage(pageFromHash(),false));
   // Prüft während eines offenen Tabs auf aktualisierte zentrale Dateien. Die
   // Erzeugung der Datei durch einen täglichen Job wird separat konfiguriert.
-  setInterval(()=>{refreshRemote(false);refreshSwiss();},30*60*1000);
+  setInterval(()=>{refreshRemote(false);refreshSwiss();refreshKnockout();},30*60*1000);
 })();
 </script>
 </body>
