@@ -1,0 +1,117 @@
+{
+  "format": "worlds-2026-knockout",
+  "version": 1,
+  "timezone": "UTC",
+  "updatedAt": "2026-11-01",
+  "status": "upcoming",
+  "sourceUrl": "https://www.invenglobal.com/articles/27983/dk-vs-blg-matchup-and-more-quarterfinal-draw-results",
+  "scheduleSource": "https://www.redbull.com/eu-en/league-of-legends-worlds-2026-guide",
+  "notes": "Acht qualifizierte Teams. Viertelfinals vom 3.–6.11., Halbfinals am 7.–8.11., Finale am 14.11. Alle Spiele Bo5. Termine UTC, lokalisierte Anzeige im Browser. Halbfinale/Finale ergeben sich aus bestätigten Siegerteams. Tippdaten werden nur nach Übermittlung eingetragen, unabhängig von offiziellen Resultaten.",
+  "matches": [
+    {
+      "id": "qf1",
+      "round": "quarterfinal",
+      "slot": 1,
+      "startUtc": "2026-11-03T22:00:00Z",
+      "format": "Bo5",
+      "teamA": "DK",
+      "teamB": "BLG",
+      "result": null
+    },
+    {
+      "id": "qf2",
+      "round": "quarterfinal",
+      "slot": 2,
+      "startUtc": "2026-11-04T22:00:00Z",
+      "format": "Bo5",
+      "teamA": "KC",
+      "teamB": "T1",
+      "result": null
+    },
+    {
+      "id": "qf3",
+      "round": "quarterfinal",
+      "slot": 3,
+      "startUtc": "2026-11-05T22:00:00Z",
+      "format": "Bo5",
+      "teamA": "GEN",
+      "teamB": "LYON",
+      "result": null
+    },
+    {
+      "id": "qf4",
+      "round": "quarterfinal",
+      "slot": 4,
+      "startUtc": "2026-11-06T22:00:00Z",
+      "format": "Bo5",
+      "teamA": "TES",
+      "teamB": "IG",
+      "result": null
+    },
+    {
+      "id": "sf1",
+      "round": "semifinal",
+      "slot": 1,
+      "startUtc": "2026-11-07T22:00:00Z",
+      "format": "Bo5",
+      "teamA": null,
+      "teamB": null,
+      "fromA": "qf1",
+      "fromB": "qf2",
+      "result": null
+    },
+    {
+      "id": "sf2",
+      "round": "semifinal",
+      "slot": 2,
+      "startUtc": "2026-11-08T22:00:00Z",
+      "format": "Bo5",
+      "teamA": null,
+      "teamB": null,
+      "fromA": "qf3",
+      "fromB": "qf4",
+      "result": null
+    },
+    {
+      "id": "final",
+      "round": "final",
+      "slot": 1,
+      "startUtc": "2026-11-14T19:00:00Z",
+      "format": "Bo5",
+      "teamA": null,
+      "teamB": null,
+      "fromA": "sf1",
+      "fromB": "sf2",
+      "result": null
+    }
+  ],
+  "predictions": {
+    "Judith": {
+      "qf1": null,
+      "qf2": null,
+      "qf3": null,
+      "qf4": null,
+      "sf1": null,
+      "sf2": null,
+      "final": null
+    },
+    "Tony": {
+      "qf1": null,
+      "qf2": null,
+      "qf3": null,
+      "qf4": null,
+      "sf1": null,
+      "sf2": null,
+      "final": null
+    },
+    "Alex": {
+      "qf1": null,
+      "qf2": null,
+      "qf3": null,
+      "qf4": null,
+      "sf1": null,
+      "sf2": null,
+      "final": null
+    }
+  }
+}
