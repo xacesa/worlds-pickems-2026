@@ -114,5 +114,14 @@
       "final": "T1"
     }
   },
-  "predictionsSource": "Alex: erster Screenshot vom 02.11.2026; Tony: zweiter Screenshot vom 02.11.2026. Screenshots zeigen einen anders sortierten Viertelfinalbaum; Tipps sind den Paarungen zugeordnet, nicht der optischen Position."
+  "predictionsSource": "Alex: erster Screenshot vom 02.11.2026; Tony: zweiter Screenshot vom 02.11.2026. Screenshots zeigen einen anders sortierten Viertelfinalbaum; Tipps sind den Paarungen zugeordnet, nicht der optischen Position.",
+  "scoring": {
+    "pointsPerCorrectPick": {
+      "quarterfinal": 10,
+      "semifinal": 20,
+      "final": 80
+    },
+    "maximumPointsPerPlayer": 160,
+    "rule": "10 Punkte je korrekt vorhergesagtem Viertelfinal-Sieger, 20 Punkte je Halbfinal-Sieger und 80 Punkte für den Weltmeister. Punkte erst nach bestätigtem Bo5-Endergebnis des jeweiligen Matches. Kein Punkt für unrichtige oder fehlende Tipps. Andere Turnierphasen separat."
+  }
 }
