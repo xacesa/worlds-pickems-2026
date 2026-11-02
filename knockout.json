@@ -96,22 +96,23 @@
       "final": null
     },
     "Tony": {
-      "qf1": null,
-      "qf2": null,
-      "qf3": null,
-      "qf4": null,
-      "sf1": null,
-      "sf2": null,
-      "final": null
+      "qf1": "IG",
+      "qf2": "GEN",
+      "qf3": "BLG",
+      "qf4": "KC",
+      "sf1": "GEN",
+      "sf2": "BLG",
+      "final": "GEN"
     },
     "Alex": {
-      "qf1": null,
-      "qf2": null,
-      "qf3": null,
-      "qf4": null,
-      "sf1": null,
-      "sf2": null,
-      "final": null
+      "qf1": "IG",
+      "qf2": "GEN",
+      "qf3": "DK",
+      "qf4": "T1",
+      "sf1": "GEN",
+      "sf2": "T1",
+      "final": "T1"
     }
-  }
+  },
+  "predictionsSource": "Alex: erster Screenshot vom 02.11.2026; Tony: zweiter Screenshot vom 02.11.2026. Screenshots zeigen einen anders sortierten Viertelfinalbaum; Tipps sind den Paarungen zugeordnet, nicht der optischen Position."
 }
