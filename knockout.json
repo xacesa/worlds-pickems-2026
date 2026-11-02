@@ -2,11 +2,11 @@
   "format": "worlds-2026-knockout",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-02",
   "status": "upcoming",
-  "sourceUrl": "https://www.invenglobal.com/articles/27983/dk-vs-blg-matchup-and-more-quarterfinal-draw-results",
-  "scheduleSource": "https://www.redbull.com/eu-en/league-of-legends-worlds-2026-guide",
-  "notes": "Acht qualifizierte Teams. Viertelfinals vom 3.–6.11., Halbfinals am 7.–8.11., Finale am 14.11. Alle Spiele Bo5. Termine UTC, lokalisierte Anzeige im Browser. Halbfinale/Finale ergeben sich aus bestätigten Siegerteams. Tippdaten werden nur nach Übermittlung eingetragen, unabhängig von offiziellen Resultaten.",
+  "sourceUrl": "https://lolesports.com/en-GB",
+  "scheduleSource": "https://lolesports.com/en-GB",
+  "notes": "Korrigierte offizielle Viertelfinal-Reihenfolge und UTC-Anstoßzeiten (Riot LoL Esports, geprüft am 02.11.2026): 03.11 TES–IG, 04.11 GEN–LYON, 05.11 DK–BLG, 06.11 T1–KC, jeweils 22:00 UTC/23:00 MEZ. Halbfinals 07./08.11. je 22:00 UTC, Finale 14.11. 19:00 UTC. Die Sieger von qf1+qf2 bestreiten sf1 (07.11.), die Sieger von qf3+qf4 sf2 (08.11.). Sieben Bo5. Alle Ergebnisse offen. Private Tipps von Judith, Tony und Alex bleiben unberührt.",
   "matches": [
     {
       "id": "qf1",
@@ -14,8 +14,8 @@
       "slot": 1,
       "startUtc": "2026-11-03T22:00:00Z",
       "format": "Bo5",
-      "teamA": "DK",
-      "teamB": "BLG",
+      "teamA": "TES",
+      "teamB": "IG",
       "result": null
     },
     {
@@ -24,8 +24,8 @@
       "slot": 2,
       "startUtc": "2026-11-04T22:00:00Z",
       "format": "Bo5",
-      "teamA": "KC",
-      "teamB": "T1",
+      "teamA": "GEN",
+      "teamB": "LYON",
       "result": null
     },
     {
@@ -34,8 +34,8 @@
       "slot": 3,
       "startUtc": "2026-11-05T22:00:00Z",
       "format": "Bo5",
-      "teamA": "GEN",
-      "teamB": "LYON",
+      "teamA": "DK",
+      "teamB": "BLG",
       "result": null
     },
     {
@@ -44,8 +44,8 @@
       "slot": 4,
       "startUtc": "2026-11-06T22:00:00Z",
       "format": "Bo5",
-      "teamA": "TES",
-      "teamB": "IG",
+      "teamA": "T1",
+      "teamB": "KC",
       "result": null
     },
     {
