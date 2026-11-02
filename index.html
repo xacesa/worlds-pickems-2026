@@ -670,6 +670,30 @@ footer{border-color:#285da2;color:#9ac3ea}
 @media(max-width:850px){.ko-scroll-note{display:block}.ko-headline{align-items:start;flex-direction:column;gap:7px}}
 @media(max-width:700px){.ko-hero{padding:27px 21px}.ko-hero h1{font-size:clamp(40px,9vw,57px)}.ko-hero-stats{gap:8px}.ko-hero-stat{min-width:0;flex:1;padding:9px}.ko-bracket{min-width:740px}.ko-pick-person-head strong{font-size:15px}.swiss-finished{align-items:start;flex-direction:column;gap:8px}}
 
+
+/* K.-o.-Punktesystem: 10 Punkte/VF, 20/HF, 80/Finale */
+.ko-scoring-explanation{font-size:12px;color:#9eb2c5;line-height:1.65;margin:-5px 0 17px}
+.ko-scoring-explanation strong{color:#ebd3a0}
+.ko-scoreboard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:0 0 20px}
+.ko-score-person{min-width:0;border:1px solid #32485d;background:linear-gradient(125deg,#172638,#111c2b);padding:14px 16px 15px}
+.ko-score-top{display:flex;gap:9px;align-items:center;margin-bottom:8px}
+.ko-score-top .ko-pick-initial{width:26px;height:26px;font-size:11px}
+.ko-score-top strong{font-size:13px;color:#e9eff5;font-weight:850}
+.ko-score-total{font-size:28px;line-height:1.1;font-weight:950;color:#f1d7a1;font-variant-numeric:tabular-nums}
+.ko-score-total small{font-size:12px;color:#9aafc1;font-weight:750}
+.ko-score-progress{margin-top:7px;font-size:10px;color:#a4b4c3}
+.ko-pick-line.is-correct .ko-pick-line-value,.ko-pick-champion.is-correct strong{color:#a7e0c0}
+.ko-pick-line.is-wrong .ko-pick-line-value,.ko-pick-champion.is-wrong strong{color:#e8a8a5}
+.ko-pick-line-status{font-size:10px;font-weight:850;margin-left:5px;white-space:nowrap;color:#8ca1b5;font-variant-numeric:tabular-nums}
+.ko-pick-line.is-correct .ko-pick-line-status,.ko-pick-champion.is-correct .ko-pick-line-status{color:#a7e0c0}
+.ko-pick-line.is-wrong .ko-pick-line-status,.ko-pick-champion.is-wrong .ko-pick-line-status{color:#e8a8a5}
+.ko-pick-champion .ko-pick-result-group{display:flex;gap:7px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.ko-pick-champion .ko-pick-result-group strong{display:flex;align-items:center;gap:5px}
+.ko-pick-person-head .ko-pick-points{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.ko-pick-person-head .ko-pick-points b{font-size:16px;font-weight:950;color:#e9d1a1;line-height:1}
+.ko-pick-person-head .ko-pick-points small{margin-left:0}
+@media(max-width:700px){.ko-scoreboard{grid-template-columns:1fr;gap:8px}.ko-score-person{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px;padding:11px 13px}.ko-score-top{margin:0}.ko-score-progress{grid-column:1/-1;margin:3px 0 0}.ko-score-total{font-size:23px}}
+
 </style>
 </head>
 <body>
@@ -826,6 +850,8 @@ footer{border-color:#285da2;color:#9ac3ea}
         <div><div class="ko-kicker">OUR KNOCKOUT PICKS</div><h2 id="ko-picks-title">Unsere Turnier-Tipps</h2></div>
         <p>Vier Viertelfinal-Sieger, zwei Halbfinal-Sieger und ein Weltmeister pro Person. Wir übernehmen eure Tipps erst, wenn ihr sie uns schickt.</p>
       </div>
+      <p class="ko-scoring-explanation">Punkteverteilung wie im offiziellen Pick’em: <strong>10 Punkte je richtigem Viertelfinale</strong>, <strong>20 Punkte je richtigem Halbfinale</strong> und <strong>80 Punkte für den Weltmeister</strong>. Maximal 160 Punkte pro Person. Die Wertung erfolgt erst nach einem bestätigten Matchergebnis.</p>
+      <div id="knockoutScores" class="ko-scoreboard" aria-live="polite"></div>
       <div id="knockoutPredictions" class="ko-picks-grid" aria-live="polite"></div>
       <p class="ko-pick-empty">Noch keine K.-o.-Tipps eingetragen. Schickt mir einfach eure Screenshots oder die Gewinner pro Runde. Judiths, Tonys und Alex' Tipps werden dann unabhängig voneinander hinterlegt.</p>
     </section>
@@ -1033,7 +1059,7 @@ footer{border-color:#285da2;color:#9ac3ea}
   // Official Worlds knockout stage: independent data file for actual results and each participant's picks.
   const KO_IDS=["qf1","qf2","qf3","qf4","sf1","sf2","final"];
   const KO_ROUNDS=[["Viertelfinale","3. – 6. November",["qf1","qf2","qf3","qf4"]],["Halbfinale","7. – 8. November",["sf1","sf2"]],["Finale","14. November",["final"]]];
-  let knockoutMatches=[],knockoutPredictions={},knockoutUpdatedAt=null;
+  let knockoutMatches=[],knockoutPredictions={},knockoutUpdatedAt=null,knockoutScoring={quarterfinal:10,semifinal:20,final:80};
   const koById=id=>knockoutMatches.find(m=>m.id===id);
   const koWinner=m=>{
     if(!m||!m.result)return null;
@@ -1072,10 +1098,31 @@ footer{border-color:#285da2;color:#9ac3ea}
       '<div class="ko-game-foot"><span>'+(finished?'ABGESCHLOSSEN':'NOCH NICHT GESPIELT')+'</span><span>'+(finished?'Sieger: '+escapeHTML(win):'Best of 5')+'</span></div>'+
       '</article>';
   };
+
+  const koPointValue=id=>{
+    const m=koById(id);
+    const points=m?knockoutScoring[m.round]:0;
+    return Number.isInteger(points)&&points>=0?points:0;
+  };
+  const koPickEvaluation=(source,id)=>{
+    const code=swissSafeCode(source?.[id]);
+    const winner=koWinner(koById(id)); // returns null until the verified Bo5 has a winner
+    const settled=!!winner;
+    const correct=settled&&code===winner;
+    return {code,winner,settled,correct,points:correct?koPointValue(id):0};
+  };
+  const koPlayerScore=source=>KO_IDS.reduce((acc,id)=>{
+    const entry=koPickEvaluation(source,id);
+    acc.points+=entry.points;
+    if(entry.settled)acc.decided++;
+    if(entry.correct)acc.correct++;
+    return acc;
+  },{points:0,decided:0,correct:0});
   function renderKnockout(){
     const bracket=document.getElementById("knockoutBracket");
     const picks=document.getElementById("knockoutPredictions");
-    if(!bracket||!picks)return;
+    const scores=document.getElementById("knockoutScores");
+    if(!bracket||!picks||!scores)return;
     if(!knockoutMatches.length){
       bracket.innerHTML='<div class="ko-error">K.-o.-Spielplan wird geladen …</div>';
       return;
@@ -1086,23 +1133,46 @@ footer{border-color:#285da2;color:#9ac3ea}
         (name==="Finale"?'<div class="ko-champion">✦ WORLD CHAMPION 2026<span>'+escapeHTML(koWinner(koById("final"))||"NOCH OFFEN")+'</span></div>':'')+
         '</section>';
     }).join("");
+    const maxPoints=KO_IDS.reduce((total,id)=>total+koPointValue(id),0);
+    const played=KO_IDS.filter(id=>!!koWinner(koById(id))).length;
     let picksFilled=0;
+    scores.innerHTML=PLAYERS.map(p=>{
+      const player=koPlayerScore(knockoutPredictions[p.name]||{});
+      return '<article class="ko-score-person" style="--pcolor:'+p.color+'">'+
+        '<div class="ko-score-top"><span class="ko-pick-initial">'+escapeHTML(p.initial)+'</span><strong>'+escapeHTML(p.name)+'</strong></div>'+
+        '<div class="ko-score-total">'+player.points+' <small>/ '+maxPoints+' P.</small></div>'+
+        '<div class="ko-score-progress">'+player.correct+' richtig · '+played+' von 7 Begegnungen entschieden</div>'+
+        '</article>';
+    }).join("");
     picks.innerHTML=PLAYERS.map(p=>{
       const source=knockoutPredictions[p.name]||{};
       let count=0;
+      const playerScore=koPlayerScore(source);
       const line=(id,label)=>{
-        const code=swissSafeCode(source[id]);
+        const result=koPickEvaluation(source,id);
+        const code=result.code;
         if(code){count++;picksFilled++;}
-        return '<div class="ko-pick-line"><span class="ko-pick-line-label">'+label+'</span>'+
-          '<span class="ko-pick-line-value'+(code?'':' is-open')+'">'+(code?koLogo(code)+escapeHTML(code):'NOCH OFFEN')+'</span></div>';
+        const status=result.settled?(result.correct?'✓ +'+result.points:'✕ 0'):(code?'· '+koPointValue(id)+' P.':'');
+        const cls=result.settled?(result.correct?' is-correct':' is-wrong'):'';
+        return '<div class="ko-pick-line'+cls+'"><span class="ko-pick-line-label">'+label+'</span>'+
+          '<span class="ko-pick-line-value'+(code?'':' is-open')+'">'+
+          (code?koLogo(code)+escapeHTML(code):'NOCH OFFEN')+
+          '<span class="ko-pick-line-status">'+status+'</span></span></div>';
       };
-      const champion=swissSafeCode(source.final);
-      const groups=[["VIERTELFINALE",["qf1","qf2","qf3","qf4"]],["HALBFINALE",["sf1","sf2"]]];
-      const content=groups.map(([label,ids])=>'<div class="ko-pick-group"><h3 class="ko-pick-group-title">'+label+'</h3>'+ids.map((id,i)=>line(id,(label==="VIERTELFINALE"?"VF ":"HF ")+(i+1))).join("")+'</div>').join("");
+      const championEval=koPickEvaluation(source,"final");
+      const champion=championEval.code;
+      const groups=[["VIERTELFINALE · "+koPointValue("qf1")+" P. / TIPP",["qf1","qf2","qf3","qf4"]],["HALBFINALE · "+koPointValue("sf1")+" P. / TIPP",["sf1","sf2"]]];
+      const content=groups.map(([label,ids])=>'<div class="ko-pick-group"><h3 class="ko-pick-group-title">'+label+'</h3>'+
+        ids.map((id,i)=>line(id,(ids.length===4?"VF ":"HF ")+(i+1))).join("")+'</div>').join("");
       if(champion){count++;picksFilled++;}
+      const championStatus=championEval.settled?(championEval.correct?'✓ +'+championEval.points:'✕ 0'):(champion?'· '+koPointValue("final")+' P.':'');
+      const championClass=championEval.settled?(championEval.correct?' is-correct':' is-wrong'):'';
       return '<article class="ko-pick-person" style="--pcolor:'+p.color+'">'+
-        '<div class="ko-pick-person-head"><span class="ko-pick-initial">'+escapeHTML(p.initial)+'</span><strong>'+escapeHTML(p.name)+'</strong><small>'+count+' / 7 PICKS</small></div>'+
-        content+'<div class="ko-pick-champion"><span>✦ WELTMEISTER-TIPP</span><strong>'+(champion?koLogo(champion)+escapeHTML(champion):'NOCH OFFEN')+'</strong></div>'+
+        '<div class="ko-pick-person-head"><span class="ko-pick-initial">'+escapeHTML(p.initial)+'</span><strong>'+escapeHTML(p.name)+'</strong>'+
+        '<div class="ko-pick-points"><b>'+playerScore.points+' P.</b><small>'+count+' / 7 PICKS</small></div></div>'+
+        content+'<div class="ko-pick-champion'+championClass+'"><span>✦ WELTMEISTER-TIPP</span>'+
+        '<div class="ko-pick-result-group"><strong>'+(champion?koLogo(champion)+escapeHTML(champion):'NOCH OFFEN')+'</strong>'+
+        '<span class="ko-pick-line-status">'+championStatus+'</span></div></div>'+
         '</article>';
     }).join("");
     document.getElementById("koPicksCount").textContent=picksFilled+" / 21";
@@ -1115,6 +1185,12 @@ footer{border-color:#285da2;color:#9ac3ea}
       if(d.format!=="worlds-2026-knockout"||d.version!==1||!Array.isArray(d.matches))throw Error("Ungültige K.-o.-Datei");
       knockoutMatches=d.matches.filter(m=>KO_IDS.includes(m.id)&&typeof m.startUtc==="string"&&!Number.isNaN(Date.parse(m.startUtc)));
       knockoutPredictions=d.predictions&&typeof d.predictions==="object"&&!Array.isArray(d.predictions)?d.predictions:{};
+      const points=d.scoring&&d.scoring.pointsPerCorrectPick;
+      knockoutScoring={
+        quarterfinal:Number.isInteger(points?.quarterfinal)&&points.quarterfinal>=0?points.quarterfinal:10,
+        semifinal:Number.isInteger(points?.semifinal)&&points.semifinal>=0?points.semifinal:20,
+        final:Number.isInteger(points?.final)&&points.final>=0?points.final:80
+      };
       knockoutUpdatedAt=d.updatedAt||null;
       renderKnockout();
     }catch(e){
