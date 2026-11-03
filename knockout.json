@@ -2,7 +2,7 @@
   "format": "worlds-2026-knockout",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "status": "upcoming",
   "sourceUrl": "https://lolesports.com/en-GB",
   "scheduleSource": "https://lolesports.com/en-GB",
@@ -87,13 +87,13 @@
   ],
   "predictions": {
     "Judith": {
-      "qf1": null,
-      "qf2": null,
-      "qf3": null,
-      "qf4": null,
-      "sf1": null,
-      "sf2": null,
-      "final": null
+      "qf1": "IG",
+      "qf2": "GEN",
+      "qf3": "DK",
+      "qf4": "KC",
+      "sf1": "GEN",
+      "sf2": "KC",
+      "final": "GEN"
     },
     "Tony": {
       "qf1": "IG",
@@ -114,7 +114,7 @@
       "final": "T1"
     }
   },
-  "predictionsSource": "Alex: erster Screenshot vom 02.11.2026; Tony: zweiter Screenshot vom 02.11.2026. Screenshots zeigen einen anders sortierten Viertelfinalbaum; Tipps sind den Paarungen zugeordnet, nicht der optischen Position.",
+  "predictionsSource": "Alex: erster Screenshot vom 02.11.2026; Tony: zweiter Screenshot vom 02.11.2026. Screenshots zeigen einen anders sortierten Viertelfinalbaum; Tipps sind den Paarungen zugeordnet, nicht der optischen Position. Judith: Screenshot vom 03.11.2026 (DK, KC, IG, GEN; Halbfinals KC und GEN; Champion GEN).",
   "scoring": {
     "pointsPerCorrectPick": {
       "quarterfinal": 10,
