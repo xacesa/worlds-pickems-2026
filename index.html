@@ -694,6 +694,21 @@ footer{border-color:#285da2;color:#9ac3ea}
 .ko-pick-person-head .ko-pick-points small{margin-left:0}
 @media(max-width:700px){.ko-scoreboard{grid-template-columns:1fr;gap:8px}.ko-score-person{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px;padding:11px 13px}.ko-score-top{margin:0}.ko-score-progress{grid-column:1/-1;margin:3px 0 0}.ko-score-total{font-size:23px}}
 
+
+/* Tipps von Judith, Tony und Alex direkt an den Teams im Turnierbaum */
+.ko-inline-pickers{display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.ko-inline-pick{display:inline-flex;align-items:center;justify-content:center;min-width:19px;height:19px;padding:0 4px;background:color-mix(in srgb,var(--pick-color) 16%,#132235);border:1px solid color-mix(in srgb,var(--pick-color) 58%,#1f3144);border-radius:4px;color:var(--pick-color);font-size:10px;font-weight:950;line-height:1}
+.ko-game-picks{border-top:1px solid #31485c;margin-top:9px;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+.ko-game-picks-heading{font-size:9px;font-weight:900;letter-spacing:1px;text-transform:uppercase;color:#8dabbf}
+.ko-game-picks-list{display:flex;gap:5px;flex-wrap:wrap}
+.ko-game-picks-entry{display:inline-flex;align-items:center;gap:4px;padding:3px 5px;border-radius:4px;background:#14283a;border:1px solid #344d63;color:#d4e0eb;font-size:10px;font-weight:850}
+.ko-game-picks-entry b{font-weight:950;color:var(--pick-color)}
+.ko-game-picks-entry.is-hit{border-color:#4b997b;color:#b8e9cb}
+.ko-game-picks-entry.is-miss{opacity:.6;text-decoration:line-through}
+.ko-picks-legend{display:flex;flex-wrap:wrap;gap:13px;margin:9px 0 14px;align-items:center;color:#b5c7d7;font-size:11px}
+.ko-picks-legend .ko-inline-pick{margin-right:4px}
+@media(max-width:850px){.ko-game{padding:11px}.ko-team-row{gap:6px}.ko-game-picks-list{gap:4px}}
+
 </style>
 </head>
 <body>
@@ -838,6 +853,7 @@ footer{border-color:#285da2;color:#9ac3ea}
         <div><div class="ko-kicker">OFFICIAL BRACKET</div><h2 id="ko-bracket-title">Der Weg zum Weltmeister</h2></div>
         <p>Viertelfinale → Halbfinale → Finale. Uhrzeiten in deiner Ortszeit. Sieger rücken nach bestätigtem Ergebnis automatisch weiter.</p>
       </div>
+      <div class="ko-picks-legend" aria-label="Farbliche Kennzeichnung eurer Tipps"><span><span class="ko-inline-pick" style="--pick-color:var(--judith)">J</span>Judith</span><span><span class="ko-inline-pick" style="--pick-color:var(--tony)">T</span>Tony</span><span><span class="ko-inline-pick" style="--pick-color:var(--alex)">A</span>Alex</span></div>
       <p class="ko-scroll-note">↔ Wische seitlich, um den gesamten Turnierbaum zu sehen.</p>
       <div class="ko-bracket-scroll" tabindex="0" aria-label="K.-o.-Turnierbaum horizontal scrollen">
         <div id="knockoutBracket" class="ko-bracket" aria-live="polite"><div class="ko-error">Turnierbaum wird geladen …</div></div>
@@ -1077,13 +1093,31 @@ footer{border-color:#285da2;color:#9ac3ea}
     return '<span class="ko-team-logo">'+(link?'<img src="'+escapeHTML(link)+'" alt="" loading="lazy">':escapeHTML(code||"?"))+'</span>';
   };
   const koDate=iso=>new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(new Date(iso));
-  const koRow=(code,description,score,winner)=>{
+
+  const koNameBadge=p=>'<span class="ko-inline-pick" style="--pick-color:'+p.color+'" title="'+escapeHTML(p.name)+'" aria-label="'+escapeHTML(p.name)+'">'+escapeHTML(p.initial)+'</span>';
+  const koPickersFor=(matchId,code)=>PLAYERS.filter(p=>{
+    const guess=knockoutPredictions[p.name]?.[matchId];
+    return !!code && guess===code;
+  });
+  const koRow=(matchId,code,description,score,winner)=>{
     const known=!!code;
     const meta=known?SWISS_TEAM_META[code]:null;
+    const pickedBy=koPickersFor(matchId,code);
     return '<div class="ko-team-row'+(winner?' is-winner':'')+(known?'':' is-pending')+'">'+
       koLogo(code)+'<div class="ko-team-copy"><strong class="ko-team-code">'+escapeHTML(code||description)+'</strong>'+
       (known?'<span class="ko-team-name">'+escapeHTML(meta?meta[0]:"")+'</span>':'')+'</div>'+
+      (pickedBy.length?'<div class="ko-inline-pickers" aria-label="Getippt von: '+escapeHTML(pickedBy.map(p=>p.name).join(", "))+'">'+pickedBy.map(koNameBadge).join("")+'</div>':'')+
       (score!==null&&score!==undefined?'<span class="ko-team-score">'+score+'</span>':'')+'</div>';
+  };
+  const koGamePicks=id=>{
+    const m=koById(id),winner=koWinner(m);
+    const list=PLAYERS.map(p=>{
+      const code=swissSafeCode(knockoutPredictions[p.name]?.[id]);
+      if(!code)return '<span class="ko-game-picks-entry" style="--pick-color:'+p.color+'"><b>'+escapeHTML(p.initial)+'</b> –</span>';
+      const cls=winner?(code===winner?' is-hit':' is-miss'):'';
+      return '<span class="ko-game-picks-entry'+cls+'" style="--pick-color:'+p.color+'" title="'+escapeHTML(p.name)+' tippt '+escapeHTML(code)+'"><b>'+escapeHTML(p.initial)+'</b>'+escapeHTML(code)+'</span>';
+    }).join("");
+    return '<div class="ko-game-picks"><span class="ko-game-picks-heading">Eure Tipps</span><div class="ko-game-picks-list">'+list+'</div></div>';
   };
   const koGame=id=>{
     const m=koById(id);
@@ -1093,9 +1127,10 @@ footer{border-color:#285da2;color:#9ac3ea}
     const roundLabel=m.round==="quarterfinal"?"VF "+m.slot:m.round==="semifinal"?"HF "+m.slot:"FINALE";
     return '<article class="ko-game'+(m.round==="final"?' is-final':'')+'">'+
       '<div class="ko-game-meta"><strong>'+roundLabel+' · BO5</strong><span>'+koDate(m.startUtc)+'</span></div>'+
-      koRow(a,fromDesc("A"),finished?m.result.teamA:null,win===a&&finished)+
-      koRow(b,fromDesc("B"),finished?m.result.teamB:null,win===b&&finished)+
+      koRow(id,a,fromDesc("A"),finished?m.result.teamA:null,win===a&&finished)+
+      koRow(id,b,fromDesc("B"),finished?m.result.teamB:null,win===b&&finished)+
       '<div class="ko-game-foot"><span>'+(finished?'ABGESCHLOSSEN':'NOCH NICHT GESPIELT')+'</span><span>'+(finished?'Sieger: '+escapeHTML(win):'Best of 5')+'</span></div>'+
+      koGamePicks(id)+
       '</article>';
   };
 
