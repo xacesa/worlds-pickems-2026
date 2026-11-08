@@ -2,11 +2,11 @@
   "format": "worlds-2026-knockout",
   "version": 1,
   "timezone": "UTC",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-08",
   "status": "semifinals",
   "sourceUrl": "https://lolesports.com/en-GB",
   "scheduleSource": "https://lolesports.com/en-GB",
-  "notes": "Korrigierte offizielle Viertelfinal-Reihenfolge und UTC-Anstoßzeiten (Riot LoL Esports, geprüft am 02.11.2026): 03.11 TES–IG, 04.11 GEN–LYON, 05.11 DK–BLG, 06.11 T1–KC, jeweils 22:00 UTC/23:00 MEZ. Halbfinals 07./08.11. je 22:00 UTC, Finale 14.11. 19:00 UTC. Die Sieger von qf1+qf2 bestreiten sf1 (07.11.), die Sieger von qf3+qf4 sf2 (08.11.). Sieben Bo5. Alle Ergebnisse offen. Private Tipps von Judith, Tony und Alex bleiben unberührt. Ergebnisse vom 05.11.2026: qf1 TES 1:3 IG, qf2 GEN 3:0 LYON, durch datierte Matchberichte und Games-of-Legends-Spielübersicht bestätigt. Die private Tippmatrix bleibt unverändert.",
+  "notes": "Korrigierte offizielle Viertelfinal-Reihenfolge und UTC-Anstoßzeiten (Riot LoL Esports, geprüft am 02.11.2026): 03.11 TES–IG, 04.11 GEN–LYON, 05.11 DK–BLG, 06.11 T1–KC, jeweils 22:00 UTC/23:00 MEZ. Halbfinals 07./08.11. je 22:00 UTC, Finale 14.11. 19:00 UTC. Die Sieger von qf1+qf2 bestreiten sf1 (07.11.), die Sieger von qf3+qf4 sf2 (08.11.). Sieben Bo5. Alle Ergebnisse offen. Private Tipps von Judith, Tony und Alex bleiben unberührt. Ergebnisse vom 05.11.2026: qf1 TES 1:3 IG, qf2 GEN 3:0 LYON, durch datierte Matchberichte und Games-of-Legends-Spielübersicht bestätigt. Die private Tippmatrix bleibt unverändert. Halbfinale 1: IG 0:3 GEN am 07.11.2026 (verifiziert 08.11.2026); zweites Halbfinale noch offen. Private Tipps unverändert.",
   "matches": [
     {
       "id": "qf1",
@@ -78,7 +78,12 @@
       "teamB": null,
       "fromA": "qf1",
       "fromB": "qf2",
-      "result": null
+      "result": {
+        "teamA": 0,
+        "teamB": 3
+      },
+      "resultSourceUrl": "https://www.sheepesports.com/de/articles/gen-g-sweep-ig-and-become-the-first-finalists-of-worlds-2026/en",
+      "resultAsOf": "2026-11-08T03:01:21Z"
     },
     {
       "id": "sf2",
