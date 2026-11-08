@@ -1,37 +1,37 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-11-07",
-  "asOf": "2026-11-07",
-  "dataStatus": "provisional_87_games",
+  "updatedAt": "2026-11-08",
+  "asOf": "2026-11-08",
+  "dataStatus": "provisional_90_games",
   "sourceUrl": "https://pem.lol/worlds/2026/pickems",
   "referenceUrl": "https://statchecked.com/lol/worlds",
-  "sourceNote": "PEM.LOL geprüft am 07.11.2026 um ca. 04:00 MEZ; zugrunde liegender Match-Datenstand: 87 abgeschlossene Games (80 bis GEN–LYON, 3 DK–BLG, 4 T1–KC). Letztes auf PEM.LOL ausgewiesenes Match: KC 1:3 T1. Werte der 18 Kategorien vorläufig, nicht als offiziell endgültig gewertet. Match-Datenstand (87 Spiele) ist vom Abrufdatum getrennt; ältere Zwischenstände bleiben über die Git-Historie erhalten. Kategorie 6 quellenabhängig.",
+  "sourceNote": "PEM.LOL abgerufen am 08.11.2026 gegen 04:01 MEZ; letzter ausgewiesener Matchabschluss IG 0:3 GEN vom 07.11.2026. Statistischer Match-Datenstand: 90 abgeschlossene Einzelspiele, belegt durch 51 Spiele über und 39 unter 32 Minuten. Nur vier geänderte Kategorieeinträge aktualisiert (1,2,3,11); andere unveränderte oder nicht erneut vollständig verifizierbare Werte behalten ihren bisherigen asOf/updatedAt/dataStatus ausdrücklich als ältere Daten. Alle 18 Kategorien weiterhin vorläufig, keine Endwertung und keine Kristallkugel-Punkte.",
   "results": {},
   "live": {
     "1": {
       "value": "Nocturne",
-      "detail": "92 % Pick/Ban-Präsenz nach 87 Spielen",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "91,1 % Pick/Ban-Präsenz nach 90 abgeschlossenen Spielen",
+      "asOf": "2026-11-08",
+      "updatedAt": "2026-11-08",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_90_games"
     },
     "2": {
-      "value": "Gnar",
-      "detail": "72,7 % Siegesrate (8 Siege, 3 Niederlagen) bei mindestens 5 Spielen",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "value": "Ahri, Ashe, Galio, Xin Zhao",
+      "detail": "Gleichstand bei 71,4 % Siegesrate (jeweils 5 Siege, 2 Niederlagen; mindestens 5 Spiele)",
+      "asOf": "2026-11-08",
+      "updatedAt": "2026-11-08",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_90_games"
     },
     "3": {
-      "value": "Leona",
-      "detail": "4,57 durchschnittliche Tode pro Spiel (mindestens 5 Einsätze); Rell folgt mit 4,4",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "value": "Rell",
+      "detail": "4,4 durchschnittliche Tode pro Spiel bei mindestens 5 Einsätzen; Leona folgt mit 4,25",
+      "asOf": "2026-11-08",
+      "updatedAt": "2026-11-08",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_90_games"
     },
     "4": {
       "value": "Peyz",
@@ -91,11 +91,11 @@
     },
     "11": {
       "value": "Nach",
-      "detail": "49 Spiele über 32:00 Minuten, 38 unter 32:00 Minuten (87 Spiele)",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "51 Spiele über 32:00 Minuten, 39 unter 32:00 Minuten (90 Spiele)",
+      "asOf": "2026-11-08",
+      "updatedAt": "2026-11-08",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_90_games"
     },
     "12": {
       "value": "Ja",
