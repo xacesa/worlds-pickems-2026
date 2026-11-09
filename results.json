@@ -1,157 +1,157 @@
 {
   "format": "worlds-2026-results",
   "version": 1,
-  "updatedAt": "2026-11-08",
-  "asOf": "2026-11-08",
-  "dataStatus": "provisional_90_games",
+  "updatedAt": "2026-11-09",
+  "asOf": "2026-11-09",
+  "dataStatus": "provisional_94_games",
   "sourceUrl": "https://pem.lol/worlds/2026/pickems",
   "referenceUrl": "https://statchecked.com/lol/worlds",
-  "sourceNote": "PEM.LOL abgerufen am 08.11.2026 gegen 04:01 MEZ; letzter ausgewiesener Matchabschluss IG 0:3 GEN vom 07.11.2026. Statistischer Match-Datenstand: 90 abgeschlossene Einzelspiele, belegt durch 51 Spiele über und 39 unter 32 Minuten. Nur vier geänderte Kategorieeinträge aktualisiert (1,2,3,11); andere unveränderte oder nicht erneut vollständig verifizierbare Werte behalten ihren bisherigen asOf/updatedAt/dataStatus ausdrücklich als ältere Daten. Alle 18 Kategorien weiterhin vorläufig, keine Endwertung und keine Kristallkugel-Punkte.",
+  "sourceNote": "PEM.LOL abgerufen am 09.11.2026 gegen 04:04 MEZ (03:04 UTC); letzter angezeigter Matchabschluss T1 1:3 BLG im zweiten Halbfinale. Statistischer Match-Datenstand: 94 abgeschlossene Einzelspiele (54 über und 40 unter 32 Minuten), getrennt vom Abrufzeitpunkt. Alle 18 Kategorieeinträge erneut anhand der aktuell angezeigten PEM.LOL-Ranglisten und Events geprüft; bei unveränderten Werten wurde die erneute Verifizierung datiert. Alle 18 Werte bleiben vorläufig, keine offiziellen Kristallkugel-Endergebnisse und keine Punktevergabe.",
   "results": {},
   "live": {
     "1": {
       "value": "Nocturne",
-      "detail": "91,1 % Pick/Ban-Präsenz nach 90 abgeschlossenen Spielen",
-      "asOf": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "detail": "88,3 % Pick/Ban-Präsenz nach 94 abgeschlossenen Einzelspielen",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_90_games"
+      "dataStatus": "provisional_94_games"
     },
     "2": {
-      "value": "Ahri, Ashe, Galio, Xin Zhao",
-      "detail": "Gleichstand bei 71,4 % Siegesrate (jeweils 5 Siege, 2 Niederlagen; mindestens 5 Spiele)",
-      "asOf": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "value": "Ashe",
+      "detail": "73,3 % Siegesrate (11 Siege, 4 Niederlagen; mindestens 5 Spiele); Galio und Xin Zhao folgen mit 71,4 %",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_90_games"
+      "dataStatus": "provisional_94_games"
     },
     "3": {
       "value": "Rell",
-      "detail": "4,4 durchschnittliche Tode pro Spiel bei mindestens 5 Einsätzen; Leona folgt mit 4,25",
-      "asOf": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "detail": "4,4 durchschnittliche Tode pro Spiel (mindestens 5 Einsätze); Leona folgt mit 4,25",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_90_games"
+      "dataStatus": "provisional_94_games"
     },
     "4": {
-      "value": "Peyz",
-      "detail": "10,5 KDA (T1); Knight folgt mit 10,46",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "value": "Canyon",
+      "detail": "9,62 KDA; Knight folgt mit 9,2",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "5": {
       "value": "Yeon",
       "detail": "28.625 durchschnittlicher Schaden pro Spiel; Tactical folgt mit 27.549",
-      "asOf": "2026-11-05T03:00:00Z",
-      "updatedAt": "2026-11-05",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_80_games"
+      "dataStatus": "provisional_94_games"
     },
     "6": {
       "value": "CoreJJ",
-      "detail": "86,3 % Killbeteiligung laut PEM.LOL, Alvaro 86,2 %; quellenabhängige Methodik, weiterhin vorläufig",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "86,3 % Killbeteiligung laut PEM.LOL; Alvaro folgt mit 86,2 %; quellenabhängige Methodik, vorläufig",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games_source_specific_prior_conflict"
+      "dataStatus": "provisional_94_games"
     },
     "7": {
       "value": "Peyz",
-      "detail": "53 Kills gegenüber Gumayusi 25; T1 noch im Turnier",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "64 Kills gegenüber Gumayusi 25; T1 im Halbfinale ausgeschieden",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "8": {
       "value": "Noch nicht",
-      "detail": "Faker 653 von 700 Karriere-WM-Kills; T1 im Halbfinale",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "Faker steht bei 667 von 700 Karriere-WM-Kills; T1 ist ausgeschieden",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "9": {
       "value": "Noch nicht",
-      "detail": "Teemo nach 87 Spielen weiterhin nicht gepickt",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "Teemo laut PEM.LOL nach 94 Spielen nicht gepickt",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "10": {
       "value": "103",
-      "detail": "103 unterschiedliche Champions nach 87 Spielen eingesetzt",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "103 unterschiedliche Champions nach 94 Spielen eingesetzt",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "11": {
       "value": "Nach",
-      "detail": "51 Spiele über 32:00 Minuten, 39 unter 32:00 Minuten (90 Spiele)",
-      "asOf": "2026-11-08",
-      "updatedAt": "2026-11-08",
+      "detail": "54 Spiele über 32:00 Minuten, 40 unter 32:00 Minuten (94 abgeschlossene Spiele)",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_90_games"
+      "dataStatus": "provisional_94_games"
     },
     "12": {
       "value": "Ja",
       "detail": "Zeka erreichte 17 Kills in einem Spiel, Schwelle 15 überschritten; noch keine offizielle Endwertung",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "13": {
       "value": "Ja",
       "detail": "Yeon erreichte 544 CS in einem Spiel, Schwelle 450 überschritten; noch keine offizielle Endwertung",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "14": {
       "value": "Noch offen",
-      "detail": "Final-MVP-Rolle erst nach dem Finale bekannt",
-      "asOf": "2026-11-05T03:00:00Z",
-      "updatedAt": "2026-11-05",
+      "detail": "Final-MVP-Rolle laut PEM.LOL weiterhin TBD; Finale steht aus",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_80_games"
+      "dataStatus": "provisional_94_games"
     },
     "15": {
       "value": "4",
-      "detail": "Vier Regionen in den Knockouts: LCK, LPL, LEC, LCS; vorläufig bis zur offiziellen Endwertung",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "Vier Regionen in den Knockouts: LCK, LPL, LEC und LCS",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "16": {
       "value": "Ja",
-      "detail": "LYON erreichte die Knockouts als LCS-Team; vorläufig bis zur offiziellen Endwertung",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "LYON erreichte die Knockouts als LCS-Team",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "17": {
       "value": "T1",
-      "detail": "T1 im Halbfinale, HLE auf Rang 9–11 ausgeschieden; vorläufig bis zur offiziellen Endwertung",
-      "asOf": "2026-11-07",
-      "updatedAt": "2026-11-07",
+      "detail": "T1 auf Rang 3–4 ausgeschieden, HLE auf Rang 9–11; T1 höher platziert",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_87_games"
+      "dataStatus": "provisional_94_games"
     },
     "18": {
       "value": "Hanwha Life Esports",
-      "detail": "Kürzester Sieg weiterhin HLE gegen TES in 23:51; Turnier läuft",
-      "asOf": "2026-11-05T03:00:00Z",
-      "updatedAt": "2026-11-05",
+      "detail": "Kürzester Sieg laut PEM.LOL weiterhin HLE gegen TES in 23:51",
+      "asOf": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "sourceUrl": "https://pem.lol/worlds/2026/pickems",
-      "dataStatus": "provisional_80_games"
+      "dataStatus": "provisional_94_games"
     }
   }
 }
